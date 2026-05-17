@@ -1,16 +1,63 @@
-# React + Vite
+# FastCode Homepage 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, scalable, and responsive B2B tech startup homepage. Built to provide a premium, enterprise-grade feel with glassmorphism, dynamic scroll animations, and a rich dark navy/orange color palette.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Modern UI/UX**: Premium aesthetic tailored for B2B tech startups.
+- **Responsive Design**: Flawless experience across Mobile, Tablet, and Desktop.
+- **Glassmorphism & Animations**: Fluid scroll effects using `framer-motion` and blurred translucent components.
+- **Developer Experience**: Fully configured with Vite, ESLint, Prettier, and Tailwind CSS v4.
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Formatting & Linting**: [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/cable8mm/etern.co.kr.git
+   cd etern.co.kr
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and visit `http://localhost:5173`.
+
+## 📜 Available Scripts
+
+- `npm run dev` - Starts the local development server.
+- `npm run build` - Builds the app for production into the `dist` folder.
+- `npm run preview` - Locally preview the production build.
+- `npm run lint` - Runs ESLint to check for code quality and formatting issues.
+- `npm run lint:fix` - Automatically fixes linting and formatting issues.
+- `npm run format` - Runs Prettier to format all codebase files (JSON, CSS, Markdown, JS, etc.).
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! 
+Please check out the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
+
+## 📄 License
+
+This project is [MIT](LICENSE) licensed.
