@@ -1,0 +1,39 @@
+name: Deploy to GitHub Pages on Release 🚀
+
+on:
+  release:
+    types: [published] # 릴리스가 정식 발행(Published)되었을 때만 실행
+
+# 빌드 및 배포를 위해 GitHub 토큰 권한을 설정합니다.
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm' # npm 캐시 활성화로 빌드 속도 향상
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Lint
+        run: npm run lint
+
+      - name: Build Project
+        run: npm run build
+
+      # GitHub Pages 배포를 위해 JamesIves/github-pages-deploy-action 사용
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # Vite가 빌드한 정적 파일 폴더
+          branch: gh-pages # 배포된 파일들이 들어갈 브러치 (자동 생성됨)
