@@ -27,17 +27,20 @@ A modern, scalable, and responsive B2B tech startup homepage. Built to provide a
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/cable8mm/etern.co.kr.git
    cd etern.co.kr
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Start the development server:
+
    ```bash
    npm run dev
    ```
@@ -55,7 +58,7 @@ A modern, scalable, and responsive B2B tech startup homepage. Built to provide a
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! 
+Contributions, issues, and feature requests are welcome!
 Please check out the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
 
 ## 📄 License
