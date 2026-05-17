@@ -1,7 +1,8 @@
 # FastCode 홈페이지 🚀
 
 [![CI](https://github.com/cable8mm/etern.co.kr/actions/workflows/ci.yml/badge.svg)](https://github.com/cable8mm/etern.co.kr/actions/workflows/ci.yml)
-[![CI](https://github.com/cable8mm/etern.co.kr/actions/workflows/release.yml/badge.svg)](https://github.com/cable8mm/etern.co.kr/actions/workflows/release.yml)
+[![Release](https://github.com/cable8mm/etern.co.kr/actions/workflows/release.yml/badge.svg)](https://github.com/cable8mm/etern.co.kr/actions/workflows/release.yml)
+[![Update Changelog](https://github.com/cable8mm/etern.co.kr/actions/workflows/update-changelog.yml/badge.svg)](https://github.com/cable8mm/etern.co.kr/actions/workflows/update-changelog.yml)
 
 모던하고 확장 가능하며 반응형으로 제작된 B2B 테크 스타트업 홈페이지입니다. 글래스모피즘(Glassmorphism), 동적인 스크롤 애니메이션, 다크 네이비와 오렌지의 풍부한 컬러 팔레트를 활용하여 프리미엄 엔터프라이즈급 느낌을 제공하도록 구축되었습니다.
 
