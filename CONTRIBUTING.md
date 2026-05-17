@@ -1,45 +1,49 @@
-# Contributing to FastCode Homepage
+# FastCode 홈페이지 기여하기
 
-First off, thank you for considering contributing to the FastCode Homepage! We value your time and effort.
+가장 먼저, FastCode 홈페이지 프로젝트에 기여하는 것을 고려해 주셔서 감사합니다! 여러분의 시간과 노력을 소중하게 생각합니다.
 
-## How Can I Contribute?
+## 어떻게 기여할 수 있나요?
 
-### 1. Reporting Bugs
-- Make sure you are on the latest version.
-- Use the GitHub Issues tab to report a bug.
-- Include a clear description of the bug, steps to reproduce, and any relevant error messages.
+### 1. 버그 리포팅
 
-### 2. Suggesting Enhancements
-- Enhancement suggestions are tracked as GitHub issues.
-- Provide a clear and detailed explanation of the feature you want.
-- Describe the current behavior and the behavior you'd like to see.
+- 최신 버전을 사용하고 있는지 확인해 주세요.
+- 버그를 신고하려면 GitHub의 Issues 탭을 이용해 주세요.
+- 버그에 대한 명확한 설명, 재현 방법, 관련 에러 메시지를 포함해 주세요.
 
-### 3. Pull Requests
-- Fork the repository and create your branch from `main`.
-- If you've added code that should be tested, add tests.
-- Ensure your code follows the established coding standards (run `npm run lint` and `npm run format`).
-- Issue that pull request!
+### 2. 기능 개선 제안
 
-## Code Style
+- 기능 개선 제안은 GitHub 이슈를 통해 추적됩니다.
+- 원하시는 기능에 대해 명확하고 자세하게 설명해 주세요.
+- 현재의 동작 방식과 변경되었으면 하는 동작 방식을 함께 적어주세요.
 
-This project uses **ESLint** and **Prettier** to enforce code style. Before submitting a PR, please make sure your code passes the linting checks:
+### 3. 풀 리퀘스트 (Pull Requests)
+
+- 레포지토리를 포크(Fork)한 후 `main` 브랜치에서 새로운 브랜치를 생성해 주세요.
+- 테스트가 필요한 코드를 추가한 경우, 가급적 테스트 코드도 함께 작성해 주세요.
+- 코드가 기존의 코딩 표준을 준수하는지 확인해 주세요 (`npm run lint` 및 `npm run format` 실행).
+- 준비가 완료되면 풀 리퀘스트를 생성해 주세요!
+
+## 코드 스타일
+
+이 프로젝트는 **ESLint**와 **Prettier**를 사용하여 코드 스타일을 유지합니다. PR을 제출하기 전에 코드가 린트(Lint) 검사를 완벽하게 통과하는지 확인해 주세요:
 
 ```bash
-# Format your code
+# 전체 코드 포맷팅 (Prettier)
 npm run format
 
-# Check for linting errors
+# 린트 에러 및 포맷팅 위반 검사 (ESLint)
 npm run lint
 
-# Automatically fix fixable linting errors
+# 수정 가능한 린트 에러 및 포맷팅 자동 수정
 npm run lint:fix
 ```
 
-## Commit Messages
+## 커밋 메시지 규칙
 
-We follow the [Conventional Commits](https://www.conventionalcommits.org/) specification. Please ensure your commit messages follow this format:
-- `feat: added new feature`
-- `fix: resolved bug in layout`
-- `docs: updated README`
+우리는 [Conventional Commits (관례적 커밋)](https://www.conventionalcommits.org/ko/v1.0.0/) 스펙을 따릅니다. 커밋 메시지가 다음 형식을 따르도록 작성해 주세요:
 
-Thank you for contributing!
+- `feat: 새로운 기능 추가`
+- `fix: 레이아웃 버그 수정`
+- `docs: README 업데이트`
+
+프로젝트에 기여해 주셔서 진심으로 감사합니다!
