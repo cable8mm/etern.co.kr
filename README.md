@@ -24,7 +24,7 @@
 
 - Node.js (v18 이상 권장)
 - npm 또는 yarn
-- *선택 사항:* [Laravel Herd](https://herd.laravel.com/) 또는 [Laravel Valet](https://laravel.com/docs/valet)
+- _선택 사항:_ [Laravel Herd](https://herd.laravel.com/) 또는 [Laravel Valet](https://laravel.com/docs/valet)
 
 ### 설치 방법
 
@@ -43,33 +43,33 @@
 
 3. 개발 서버를 실행합니다:
 
-**방법 1:** 표준 개발 방식 (기본값 - 별도 설정 필요 없음)
-Laravel Herd나 Valet을 사용하지 않는 경우, 기본 Vite 서버를 실행하면 됩니다:
+   **방법 1:** 표준 개발 방식 (기본값 - 별도 설정 필요 없음)
+   Laravel Herd나 Valet을 사용하지 않는 경우, 기본 Vite 서버를 실행하면 됩니다:
 
    ```bash
    npm run dev
    ```
 
-브라우저를 열고 <http://localhost:5173> 에 접속합니다.
+   브라우저를 열고 <http://localhost:5173> 에 접속합니다.
 
-**방법 2:** Laravel Herd / Valet 연동 (선택 사항)
+   **방법 2:** Laravel Herd / Valet 연동 (선택 사항)
 
-macOS에서 Herd 또는 Valet을 사용하고 있으며, HTTPS 기반의 로컬 `.test` 도메인(<https://etern.co.kr.test>)으로 원활하게 개발하고 싶다면, 스마트 자동화 스크립트를 통해 Nginx 리버스 프록시 설정과 Vite 서버 동기화를 한 번에 처리할 수 있습니다.
+   macOS에서 Herd 또는 Valet을 사용하고 있으며, HTTPS 기반의 로컬 `.test` 도메인(<https://etern.co.kr.test>)으로 원활하게 개발하고 싶다면, 스마트 자동화 스크립트를 통해 Nginx 리버스 프록시 설정과 Vite 서버 동기화를 한 번에 처리할 수 있습니다.
 
-1. 먼저 로컬 도메인을 연결하고 보안(HTTPS) 설정을 완료합니다:
+4. 먼저 로컬 도메인을 연결하고 보안(HTTPS) 설정을 완료합니다:
 
    ```bash
    herd link && herd secure
    # Valet 사용 시: valet link && valet secure
    ```
 
-2. 스크립트에 실행 권한을 부여합니다 (최초 1회만 필요):
+5. 스크립트에 실행 권한을 부여합니다 (최초 1회만 필요):
 
    ```bash
    chmod +x herd.sh
    ```
 
-3. 자동화 스크립트를 실행합니다. Nginx를 업데이트하고 로컬 웹 서버를 재시작한 뒤 Vite를 함께 실행합니다:
+6. 자동화 스크립트를 실행합니다. Nginx를 업데이트하고 로컬 웹 서버를 재시작한 뒤 Vite를 함께 실행합니다:
 
    ```bash
    # 기본 포트 5173으로 실행
@@ -81,7 +81,7 @@ macOS에서 Herd 또는 Valet을 사용하고 있으며, HTTPS 기반의 로컬 
 
    브라우저를 열고 <https://etern.co.kr.test> 에 접속합니다.
 
-4. **종료하기:** 터미널에서 `Ctrl + C`를 누르기만 하면 됩니다. 스크립트가 종료 신호를 가로채 커스텀 Nginx 프록시 블록을 제거하고 Herd/Valet을 원래 상태로 자동 복구합니다.
+7. **종료하기:** 터미널에서 `Ctrl + C`를 누르기만 하면 됩니다. 스크립트가 종료 신호를 가로채 커스텀 Nginx 프록시 블록을 제거하고 Herd/Valet을 원래 상태로 자동 복구합니다.
 
 ## 📜 사용 가능한 스크립트 (Scripts)
 
