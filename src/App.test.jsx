@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import App from './App';
 
 describe('FastCodeHomepage App Component', () => {
@@ -16,7 +16,8 @@ describe('FastCodeHomepage App Component', () => {
 
   it('renders the main slogan', () => {
     render(<App />);
-    const sloganElement = screen.getByText(/기술로 비즈니스의 문제를 해결하는/i);
+    const sloganElement =
+      screen.getByText(/기술로 비즈니스의 문제를 해결하는/i);
     expect(sloganElement).toBeInTheDocument();
   });
 
