@@ -29,7 +29,11 @@ jobs:
           npm run lint
           npx prettier --check .
 
-      # 2단계: Build Test (기존 composer tests 대응)
+      # 2단계: Run Tests (새로운 Vitest 연동)
+      - name: Run Unit Tests
+        run: npm run test
+
+      # 3단계: Build Test (기존 composer tests 대응)
       # React(Vite)는 정적 빌드가 성공하면 문법과 타입 에러가 없다는 완벽한 방증입니다.
       - name: Run Build Test
         run: npm run build

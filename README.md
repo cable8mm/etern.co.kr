@@ -16,6 +16,7 @@
 - **애니메이션**: [Framer Motion](https://www.framer.com/motion/)
 - **아이콘**: [Lucide React](https://lucide.dev/)
 - **포맷팅 & 린트**: [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)
+- **테스트**: [Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/)
 
 ## 🚀 시작하기
 
@@ -93,6 +94,8 @@ macOS에서 Herd 또는 Valet을 사용하고 있으며, HTTPS 기반의 로컬 
 - `npm run lint` - ESLint를 실행하여 코드 품질 및 포맷팅 문제를 검사합니다.
 - `npm run lint:fix` - 린트 및 포맷팅 문제를 자동으로 수정합니다.
 - `npm run format` - Prettier를 실행하여 코드베이스의 모든 파일(JSON, CSS, Markdown, JS 등)을 포맷팅합니다.
+- `npm run test` - Vitest를 사용하여 단위 테스트를 1회 실행합니다 (CI 환경에 적합).
+- `npm run test:watch` - 코드가 변경될 때마다 테스트를 자동으로 다시 실행하는 Watch 모드로 테스트를 구동합니다.
 
 ## 🤝 기여하기 (Contributing)
 
