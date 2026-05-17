@@ -4,10 +4,8 @@
 
 ### What's Changed
 
-* Set dev environment by [@cable8mm](https://github.com/cable8mm) in <https://github.com/cable8mm/etern.co.kr/pull/1>
+* Set dev environment by [@cable8mm](https://github.com/cable8mm) in [https://github.com/cable8mm/etern.co.kr/pull/1](https://github.com/cable8mm/etern.co.kr/pull/1)
 
-<https://github.com/cable8mm/etern.co.kr/pull/1>
-*
 **Full Changelog**: [https://github.com/cable8mm/etern.co.kr/commits/v1.0.0](https://github.com/cable8mm/etern.co.kr/commits/v1.0.0)
 
 ### New Contributors
