@@ -1,5 +1,13 @@
 # Release Notes
 
+## v2.1.1 - 2026-05-18
+
+### What's Changed
+
+* Fix homepage section orders by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/9
+
+**Full Changelog**: https://github.com/cable8mm/etern.co.kr/compare/v2.1.0...v2.1.1
+
 ## v2.1.0 - 2026-05-18
 
 ### What's Changed
