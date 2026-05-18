@@ -4,7 +4,7 @@ import App from './App';
 
 describe('Legacy Revival Studio site', () => {
   beforeEach(() => {
-    window.history.pushState({}, '', '/');
+    window.history.pushState({}, '', '/en');
     window.scrollTo = vi.fn();
   });
 
@@ -37,7 +37,7 @@ describe('Legacy Revival Studio site', () => {
 
     fireEvent.click(screen.getByRole('link', { name: 'Projects' }));
 
-    expect(window.location.pathname).toBe('/projects');
+    expect(window.location.pathname).toBe('/en/projects');
     expect(
       screen.getByRole('heading', {
         name: /A growing archive of revived software/i,
@@ -46,7 +46,7 @@ describe('Legacy Revival Studio site', () => {
   });
 
   it('renders a future-ready project detail route', () => {
-    window.history.pushState({}, '', '/projects/archive-record-template');
+    window.history.pushState({}, '', '/en/projects/archive-record-template');
 
     render(<App />);
 

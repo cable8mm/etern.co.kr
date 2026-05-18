@@ -60,6 +60,23 @@ function normalizePath(pathname) {
   return trimmed || '/';
 }
 
+function parseLanguageFromPath(path) {
+  if (path.startsWith('/en/') || path === '/en') {
+    return 'en';
+  }
+  return 'ko';
+}
+
+function stripLanguagePrefix(path) {
+  if (path.startsWith('/en/')) {
+    return path.slice(3) || '/';
+  }
+  if (path === '/en') {
+    return '/';
+  }
+  return path;
+}
+
 function parseHref(href) {
   const url = new URL(href, window.location.origin);
   return {
@@ -118,9 +135,17 @@ function navigateTo(href) {
 }
 
 function Link({ href, className, children, onNavigate, ...props }) {
+  const { i18n } = useTranslation();
+  const isEn = (i18n.language || 'ko').startsWith('en');
+
+  let actualHref = href;
+  if (isEn && href.startsWith('/')) {
+    actualHref = `/en${href === '/' ? '' : href}`;
+  }
+
   return (
     <a
-      href={href}
+      href={actualHref}
       className={className}
       onClick={(event) => {
         if (
@@ -136,7 +161,7 @@ function Link({ href, className, children, onNavigate, ...props }) {
 
         event.preventDefault();
         onNavigate?.();
-        navigateTo(href);
+        navigateTo(actualHref);
       }}
       {...props}
     >
@@ -171,8 +196,19 @@ function Header({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
   const { t, i18n } = useTranslation();
 
   const toggleLanguage = () => {
-    const nextLang = (i18n.language || 'ko').startsWith('ko') ? 'en' : 'ko';
-    i18n.changeLanguage(nextLang);
+    const isEn = (i18n.language || 'ko').startsWith('en');
+    const nextLang = isEn ? 'ko' : 'en';
+
+    const pathWithoutLang = stripLanguagePrefix(window.location.pathname);
+    let newPath;
+    if (nextLang === 'en') {
+      newPath = `/en${pathWithoutLang === '/' ? '' : pathWithoutLang}`;
+    } else {
+      newPath = pathWithoutLang;
+    }
+
+    const newUrl = `${newPath === '' ? '/' : newPath}${window.location.hash}`;
+    navigateTo(newUrl);
   };
 
   return (
@@ -835,10 +871,20 @@ function resolvePage(path) {
 }
 
 export default function App() {
-  const path = usePathname();
+  const rawPath = usePathname();
+  const path = stripLanguagePrefix(rawPath);
+  const lang = parseLanguageFromPath(rawPath);
   const page = useMemo(() => resolvePage(path), [path]);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (i18n.language !== lang) {
+      i18n.changeLanguage(lang);
+    }
+    document.documentElement.lang = lang;
+  }, [lang, i18n]);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 12);
@@ -852,7 +898,7 @@ export default function App() {
     if (window.location.hash) {
       scrollToSection(window.location.hash.slice(1));
     }
-  }, [path]);
+  }, [rawPath]);
 
   return (
     <div className="min-h-screen bg-[#f5f7f4] text-zinc-900 selection:bg-zinc-900 selection:text-zinc-50">

@@ -9,6 +9,11 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    detection: {
+      order: ['path', 'localStorage', 'navigator'],
+      lookupFromPathIndex: 0,
+    },
+    supportedLngs: ['ko', 'en'],
     resources: {
       en: { translation: en },
       ko: { translation: ko },
