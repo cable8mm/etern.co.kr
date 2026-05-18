@@ -102,10 +102,13 @@ function scrollToSection(id) {
 
 function usePathname() {
   const [path, setPath] = useState(() =>
-    normalizePath(window.location.pathname),
+    typeof window !== 'undefined'
+      ? normalizePath(window.location.pathname)
+      : '/',
   );
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const handleNavigation = () => {
       setPath(normalizePath(window.location.pathname));
     };
@@ -672,11 +675,10 @@ function BeforeAfterShowcase() {
               {t('before_after.legacy_state')}
             </div>
             <pre className="text-zinc-400 overflow-x-auto text-xs leading-relaxed whitespace-pre-wrap">
-              {`Fatal error: Uncaught Error: Call to undefined function mysql_connect() in /var/www/html/db.php:12
-Stack trace:
-#0 /var/www/html/index.php(4): require_once()
-#1 {main}
-  thrown in /var/www/html/db.php on line 12`}
+              {`[LEGACY FAILURE]
+Deprecated runtime detected
+Database connection unavailable
+Application boot aborted`}
             </pre>
           </div>
           <div className="bg-zinc-900 p-6 md:p-10">
@@ -908,6 +910,14 @@ function ProjectDetailPage({ slug }) {
   );
 }
 
+function ServicesPage() {
+  return (
+    <PageShell>
+      <ServicesSection />
+    </PageShell>
+  );
+}
+
 function PhilosophyPage() {
   const { t } = useTranslation();
   return (
@@ -1031,6 +1041,10 @@ function resolvePage(path) {
     return <PhilosophyPage />;
   }
 
+  if (path === '/services') {
+    return <ServicesPage />;
+  }
+
   if (path === '/about') {
     return <AboutPage />;
   }
@@ -1042,8 +1056,9 @@ function resolvePage(path) {
   return <NotFoundPage />;
 }
 
-export default function App() {
-  const rawPath = usePathname();
+export default function App({ ssrPath } = {}) {
+  const browserPath = usePathname();
+  const rawPath = ssrPath || browserPath;
   const path = stripLanguagePrefix(rawPath);
   const lang = parseLanguageFromPath(rawPath);
   const page = useMemo(() => resolvePage(path), [path]);
@@ -1055,8 +1070,105 @@ export default function App() {
     if (i18n.language !== lang) {
       i18n.changeLanguage(lang);
     }
-    document.documentElement.lang = lang;
+    if (typeof window !== 'undefined') {
+      document.documentElement.lang = lang;
+    }
   }, [lang, i18n]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const baseTitle = 'Legacy Revival Studio';
+    let pageTitle;
+    let descriptionText =
+      '오래된 웹사이트를 복원하고 다시 살아 움직이게 합니다.';
+
+    if (path === '/') {
+      if (lang === 'ko') {
+        pageTitle = '레거시 리바이벌 스튜디오';
+        descriptionText =
+          '오래된 웹사이트를 복원하고 다시 살아 움직이게 합니다.';
+      } else {
+        pageTitle = 'Legacy Revival Studio';
+        descriptionText =
+          'A project dedicated to reviving old software, preserving digital artifacts, and modernizing legacy systems while respecting their original intent.';
+      }
+    } else if (path === '/projects') {
+      if (lang === 'ko') {
+        pageTitle = `프로젝트 아카이브 | ${baseTitle}`;
+        descriptionText =
+          '부활한 소프트웨어의 작동 상태, 복원 과정, 레거시 시스템 현대화 패치 내역을 문서화한 아카이브 아티팩트 목록입니다.';
+      } else {
+        pageTitle = `Restoration Projects | ${baseTitle}`;
+        descriptionText =
+          'A catalog of revived software systems, technical recovery notes, and legacy modernization blueprints.';
+      }
+    } else if (path.startsWith('/projects/')) {
+      const slug = path.replace('/projects/', '');
+      const projectTitle = i18n.t(`project_data.${slug}.title`, {
+        defaultValue: slug,
+      });
+      const projectSummary = i18n.t(`project_data.${slug}.summary`, {
+        defaultValue: '',
+      });
+      pageTitle = `${projectTitle} | ${baseTitle}`;
+      if (projectSummary) {
+        descriptionText = projectSummary;
+      }
+    } else if (path === '/philosophy') {
+      if (lang === 'ko') {
+        pageTitle = `엔지니어링 철학 | ${baseTitle}`;
+        descriptionText =
+          '역사를 재디자인하지 않고 원본의 의도를 보존하는 기술적 태도, 소프트웨어의 부패를 방지하고 영속성을 보장하는 아카이브 우선주의 철학을 소개합니다.';
+      } else {
+        pageTitle = `Preservation Philosophy | ${baseTitle}`;
+        descriptionText =
+          'Our engineering principles for digital software preservation. We avoid rewriting history, focusing instead on making legacy systems runnable and resilient.';
+      }
+    } else if (path === '/services') {
+      if (lang === 'ko') {
+        pageTitle = `복원 서비스 안내 | ${baseTitle}`;
+        descriptionText =
+          '구형 코드 분석(레거시 리뷰), 시스템 복구 가능성 평가, 의존성 현대화 및 낡은 웹 서비스를 작동 가능한 상태로 되살리는 전문 엔지니어링 서비스를 제공합니다.';
+      } else {
+        pageTitle = `Preservation Services | ${baseTitle}`;
+        descriptionText =
+          'Technical legacy review, feasibility assessments, runtime environment modernization, and end-to-end restoration of aging software.';
+      }
+    } else if (path === '/about') {
+      if (lang === 'ko') {
+        pageTitle = `스튜디오 소개 | ${baseTitle}`;
+        descriptionText =
+          '오래되었지만 가치 있는 사내 시스템, 낡은 웹 앱, 문서화되지 않은 DB를 연구하고 조용히 소멸하지 않도록 런타임을 재현하는 기술 보존 스튜디오입니다.';
+      } else {
+        pageTitle = `About the Studio | ${baseTitle}`;
+        descriptionText =
+          'A dedicated technical preservation studio breathing new life into aging web services, undocumented databases, and systems organizations depend on but hesitate to touch.';
+      }
+    } else if (path === '/contact') {
+      if (lang === 'ko') {
+        pageTitle = `복원 의뢰 및 문의 | ${baseTitle}`;
+        descriptionText =
+          '구형 시스템 백업본, 데이터베이스 덤프, 낡은 소스코드만으로도 상담이 가능합니다. 레거시 소프트웨어 복구 및 작동 가능성 문의를 보내주세요.';
+      } else {
+        pageTitle = `Consultation & Contact | ${baseTitle}`;
+        descriptionText =
+          'Initiate a software recovery consultation. Whether you have partial source code, database dumps, or legacy backups, we can help restore original behavior.';
+      }
+    } else {
+      pageTitle = `404 Not Found | ${baseTitle}`;
+    }
+
+    document.title = pageTitle;
+
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', descriptionText);
+  }, [path, lang, i18n]);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 12);
