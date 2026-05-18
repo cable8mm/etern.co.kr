@@ -1,5 +1,15 @@
 # Release Notes
 
+## v2.3.0 - 2026-05-18
+
+### What's Changed
+
+* Add aki in project by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/12
+* Add tanz station project by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/13
+* SEO by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/14
+
+**Full Changelog**: https://github.com/cable8mm/etern.co.kr/compare/v2.2.0...v2.3.0
+
 ## v2.2.0 - 2026-05-18
 
 ### What's Changed
