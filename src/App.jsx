@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   Archive,
   ArrowRight,
@@ -13,88 +14,46 @@ import {
   ShieldCheck,
   Terminal,
   X,
+  Globe,
 } from 'lucide-react';
 import { projects } from './data/projects';
 
 const navLinks = [
-  { name: 'Projects', href: '/projects' },
-  { name: 'Philosophy', href: '/philosophy' },
-  { name: 'Workflow', href: '/#workflow' },
-  { name: 'Services', href: '/#services' },
-  { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' },
+  { key: 'projects', href: '/projects' },
+  { key: 'philosophy', href: '/philosophy' },
+  { key: 'workflow', href: '/#workflow' },
+  { key: 'services', href: '/#services' },
+  { key: 'about', href: '/about' },
+  { key: 'contact', href: '/contact' },
 ];
 
 const principles = [
   {
-    title: 'Software disappears too easily',
-    body: 'Code rots, hosting ends, dependencies break, and valuable systems become unreachable long before their usefulness is gone.',
+    key: 'disappears',
     icon: FileClock,
   },
   {
-    title: 'Data outlives products',
-    body: 'A service may vanish, but its records, workflows, and historical decisions can remain meaningful for decades.',
+    key: 'data',
     icon: Database,
   },
   {
-    title: 'Original behavior matters',
-    body: 'Revival starts by understanding how the old system actually worked before deciding what should change.',
+    key: 'behavior',
     icon: ShieldCheck,
   },
 ];
 
-const workflow = [
-  'Collect original artifacts',
-  'Make the system run locally',
-  'Document current behavior',
-  'Apply minimal compatibility fixes',
-  'Modernize only where needed',
-];
+const workflow = ['0', '1', '2', '3', '4'];
 
 const services = [
-  {
-    title: 'Legacy Recovery',
-    body: 'Restore outdated PHP applications, abandoned admin panels, broken dependencies, and old database-backed services.',
-    icon: Archive,
-  },
-  {
-    title: 'Local Resurrection',
-    body: 'Create reproducible local environments with Docker, one-command startup, and clear recovery notes.',
-    icon: Terminal,
-  },
-  {
-    title: 'Selective Modernization',
-    body: 'Upgrade runtimes, replace unsafe dependencies, and patch security issues without erasing the original structure.',
-    icon: ServerCog,
-  },
-  {
-    title: 'Historical Preservation',
-    body: 'Keep source snapshots, database dumps, configuration, and file structure intact before any modernization begins.',
-    icon: BookMarked,
-  },
+  { key: 'recovery', icon: Archive },
+  { key: 'resurrection', icon: Terminal },
+  { key: 'modernization', icon: ServerCog },
+  { key: 'preservation', icon: BookMarked },
 ];
 
-const preservationRules = [
-  'Preserve source code, database dumps, configuration, and file structure.',
-  'Separate raw artifacts from runtime, analysis, migration, and documentation work.',
-  'Document behavior before compatibility fixes or modernization patches.',
-  'Prefer small, reversible changes that reduce migration risk.',
-];
+const preservationRules = ['0', '1', '2', '3'];
 
-const tools = [
-  'Git',
-  'Docker',
-  'Docker Compose',
-  'Linux containers',
-  'PHP',
-  'Node.js',
-  'Python',
-  'MySQL',
-  'PostgreSQL',
-  'SQLite',
-  'Static analysis',
-  'Migration scripts',
-];
+const tools = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
 
 function normalizePath(pathname) {
   const trimmed = pathname.replace(/\/+$/, '');
@@ -209,6 +168,13 @@ function PageShell({ children }) {
 }
 
 function Header({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const nextLang = (i18n.language || 'en').startsWith('ko') ? 'en' : 'ko';
+    i18n.changeLanguage(nextLang);
+  };
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300 ${
@@ -244,20 +210,36 @@ function Header({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
               href={link.href}
               className="text-sm text-zinc-600 transition-colors hover:text-zinc-950"
             >
-              {link.name}
+              {t(`nav.${link.key}`)}
             </Link>
           ))}
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-zinc-500 hover:text-zinc-950"
+          >
+            <Globe size={14} />
+            {(i18n.language || 'en').startsWith('ko') ? 'EN' : 'KO'}
+          </button>
         </div>
 
-        <button
-          type="button"
-          className="flex h-10 w-10 items-center justify-center border border-zinc-300 bg-[#f5f7f4] text-zinc-900 md:hidden"
-          onClick={() => setMobileMenuOpen((open) => !open)}
-          aria-label="Toggle navigation"
-          aria-expanded={mobileMenuOpen}
-        >
-          {mobileMenuOpen ? <X size={19} /> : <Menu size={19} />}
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-zinc-500"
+          >
+            <Globe size={14} />
+            {(i18n.language || 'en').startsWith('ko') ? 'EN' : 'KO'}
+          </button>
+          <button
+            type="button"
+            className="flex h-10 w-10 items-center justify-center border border-zinc-300 bg-[#f5f7f4] text-zinc-900"
+            onClick={() => setMobileMenuOpen((open) => !open)}
+            aria-label="Toggle navigation"
+            aria-expanded={mobileMenuOpen}
+          >
+            {mobileMenuOpen ? <X size={19} /> : <Menu size={19} />}
+          </button>
+        </div>
       </nav>
 
       {mobileMenuOpen && (
@@ -270,7 +252,7 @@ function Header({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
                 onNavigate={() => setMobileMenuOpen(false)}
                 className="py-3 text-left text-base text-zinc-700"
               >
-                {link.name}
+                {t(`nav.${link.key}`)}
               </Link>
             ))}
           </div>
@@ -281,36 +263,41 @@ function Header({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
 }
 
 function CorePrinciplePanel() {
+  const { t } = useTranslation();
   return (
     <aside
       className="border border-zinc-300 bg-[#e9efe8] p-6 md:p-8"
-      aria-label="Core principle"
+      aria-label={t('core_principle.title')}
     >
       <div className="mb-8 flex items-center gap-3 border-b border-zinc-300 pb-5">
         <GitBranch size={22} className="text-zinc-700" />
         <div>
-          <p className="text-sm font-semibold text-zinc-950">Core principle</p>
+          <p className="text-sm font-semibold text-zinc-950">
+            {t('core_principle.title')}
+          </p>
           <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-            v0.1 recovery doctrine
+            {t('core_principle.version')}
           </p>
         </div>
       </div>
       <blockquote className="text-3xl font-semibold leading-tight text-zinc-950 md:text-4xl">
-        Revive first. Rewrite only when necessary.
+        {t('core_principle.quote')}
       </blockquote>
       <dl className="mt-9 grid gap-5 text-sm">
         <div className="border-t border-zinc-300 pt-5">
-          <dt className="font-semibold text-zinc-950">Preserve originals</dt>
+          <dt className="font-semibold text-zinc-950">
+            {t('core_principle.preserve_title')}
+          </dt>
           <dd className="mt-2 leading-6 text-zinc-600">
-            Source snapshots, database dumps, configuration, and file structure
-            remain intact.
+            {t('core_principle.preserve_desc')}
           </dd>
         </div>
         <div className="border-t border-zinc-300 pt-5">
-          <dt className="font-semibold text-zinc-950">Make it runnable</dt>
+          <dt className="font-semibold text-zinc-950">
+            {t('core_principle.runnable_title')}
+          </dt>
           <dd className="mt-2 leading-6 text-zinc-600">
-            A revived system starts, performs core functions, and has its
-            behavior documented.
+            {t('core_principle.runnable_desc')}
           </dd>
         </div>
       </dl>
@@ -319,6 +306,7 @@ function CorePrinciplePanel() {
 }
 
 function PhilosophySummary() {
+  const { t } = useTranslation();
   return (
     <section
       id="philosophy-preview"
@@ -326,26 +314,24 @@ function PhilosophySummary() {
     >
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="Philosophy"
-          title="Preservation is an engineering practice."
+          eyebrow={t('philosophy.eyebrow')}
+          title={t('philosophy.title')}
         >
-          Legacy Revival Studio treats old systems as working artifacts:
-          imperfect, specific, historically useful, and worth understanding
-          before they are changed.
+          {t('philosophy.description')}
         </SectionHeading>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {principles.map((item) => (
             <article
-              key={item.title}
+              key={item.key}
               className="border border-zinc-200 bg-[#f5f7f4] p-6"
             >
               <item.icon className="mb-8 text-zinc-700" size={24} />
               <h3 className="text-xl font-semibold text-zinc-950">
-                {item.title}
+                {t(`philosophy.items.${item.key}.title`)}
               </h3>
               <p className="mt-4 text-sm leading-7 text-zinc-600">
-                {item.body}
+                {t(`philosophy.items.${item.key}.body`)}
               </p>
             </article>
           ))}
@@ -356,15 +342,15 @@ function PhilosophySummary() {
 }
 
 function WorkflowSection() {
+  const { t } = useTranslation();
   return (
     <section id="workflow" className="scroll-mt-24 px-5 py-24 md:px-8 md:py-32">
       <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-[0.85fr_1.15fr] md:gap-20">
         <SectionHeading
-          eyebrow="Recovery workflow"
-          title="Start by making the old system run."
+          eyebrow={t('workflow.eyebrow')}
+          title={t('workflow.title')}
         >
-          The first milestone is not a redesign. It is a reproducible runtime,
-          documented behavior, and a clear map of what must be preserved.
+          {t('workflow.description')}
         </SectionHeading>
 
         <ol className="border-y border-zinc-300">
@@ -376,7 +362,9 @@ function WorkflowSection() {
               <span className="font-mono text-sm text-zinc-500">
                 {String(index + 1).padStart(2, '0')}
               </span>
-              <span className="text-xl font-medium text-zinc-950">{step}</span>
+              <span className="text-xl font-medium text-zinc-950">
+                {t(`workflow.steps.${step}`)}
+              </span>
             </li>
           ))}
         </ol>
@@ -386,6 +374,7 @@ function WorkflowSection() {
 }
 
 function ServicesSection() {
+  const { t } = useTranslation();
   return (
     <section
       id="services"
@@ -393,23 +382,21 @@ function ServicesSection() {
     >
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="Services"
-          title="Careful recovery for systems people are afraid to touch."
+          eyebrow={t('services.eyebrow')}
+          title={t('services.title')}
         >
-          The work can begin with a dead website, an old database dump, a
-          forgotten internal tool, or a source archive with no working
-          environment.
+          {t('services.description')}
         </SectionHeading>
 
         <div className="mt-14 grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-2">
           {services.map((service) => (
-            <article key={service.title} className="bg-white p-7">
+            <article key={service.key} className="bg-white p-7">
               <service.icon className="mb-8 text-zinc-700" size={24} />
               <h3 className="text-2xl font-semibold text-zinc-950">
-                {service.title}
+                {t(`services.items.${service.key}.title`)}
               </h3>
               <p className="mt-4 text-sm leading-7 text-zinc-600">
-                {service.body}
+                {t(`services.items.${service.key}.body`)}
               </p>
             </article>
           ))}
@@ -420,13 +407,14 @@ function ServicesSection() {
 }
 
 function TechnicalGroundSection() {
+  const { t } = useTranslation();
   return (
     <section className="px-5 py-24 md:px-8 md:py-32">
       <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-[1fr_1fr] md:gap-20">
         <div>
           <SectionHeading
-            eyebrow="Preservation rules"
-            title="Originals are never overwritten."
+            eyebrow={t('technical.preservation_rules_eyebrow')}
+            title={t('technical.preservation_rules_title')}
           />
           <ul className="mt-10 space-y-5">
             {preservationRules.map((rule) => (
@@ -435,7 +423,9 @@ function TechnicalGroundSection() {
                   className="mt-1 shrink-0 text-zinc-800"
                   size={18}
                 />
-                <span className="leading-7">{rule}</span>
+                <span className="leading-7">
+                  {t(`technical.rules.${rule}`)}
+                </span>
               </li>
             ))}
           </ul>
@@ -443,8 +433,8 @@ function TechnicalGroundSection() {
 
         <div>
           <SectionHeading
-            eyebrow="Technical ground"
-            title="Durable tools over novelty."
+            eyebrow={t('technical.ground_eyebrow')}
+            title={t('technical.ground_title')}
           />
           <div className="mt-10 flex flex-wrap gap-2">
             {tools.map((tool) => (
@@ -452,7 +442,7 @@ function TechnicalGroundSection() {
                 key={tool}
                 className="border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-700"
               >
-                {tool}
+                {t(`technical.tools.${tool}`)}
               </span>
             ))}
           </div>
@@ -463,6 +453,7 @@ function TechnicalGroundSection() {
 }
 
 function ContactBand() {
+  const { t } = useTranslation();
   return (
     <section
       id="contact"
@@ -471,14 +462,13 @@ function ContactBand() {
       <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[1fr_auto] md:items-end">
         <div>
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-400">
-            Contact
+            {t('contact.eyebrow')}
           </p>
           <h2 className="max-w-3xl text-4xl font-semibold leading-tight tracking-normal md:text-6xl">
-            Have a system everyone is afraid to touch?
+            {t('contact.title')}
           </h2>
           <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-300 md:text-lg">
-            Start by making it run again. Then decide, with evidence, what
-            should be preserved, repaired, or modernized.
+            {t('contact.description')}
           </p>
         </div>
         <a
@@ -493,44 +483,44 @@ function ContactBand() {
 }
 
 function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="bg-zinc-950 px-5 py-8 text-zinc-500 md:px-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 border-t border-zinc-800 pt-8 text-sm md:flex-row md:items-center md:justify-between">
-        <p>© 2026 Legacy Revival Studio.</p>
-        <p>Bring old software back to life.</p>
+        <p>{t('footer.copyright')}</p>
+        <p>{t('footer.slogan')}</p>
       </div>
     </footer>
   );
 }
 
 function HomePage() {
+  const { t } = useTranslation();
   return (
     <main>
       <section className="mx-auto grid min-h-screen max-w-6xl items-center gap-12 px-5 pb-20 pt-28 md:grid-cols-[1.05fr_0.95fr] md:px-8 md:pt-36">
         <div>
           <p className="mb-6 text-sm font-semibold uppercase tracking-[0.24em] text-zinc-500">
-            Archive-first software recovery
+            {t('home.subtitle')}
           </p>
           <h1 className="max-w-4xl text-5xl font-semibold leading-[1.05] tracking-normal text-zinc-950 md:text-7xl">
-            Old software can live again.
+            {t('home.title')}
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-600 md:text-xl">
-            Legacy Revival Studio restores aging web services, internal tools,
-            and forgotten systems so their code, data, and behavior can run
-            again on modern infrastructure.
+            {t('home.description')}
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/projects"
               className="inline-flex items-center justify-center gap-2 bg-zinc-950 px-5 py-3 text-sm font-semibold text-zinc-50 transition-colors hover:bg-zinc-800"
             >
-              Browse the project archive <ArrowRight size={16} />
+              {t('home.browse_archive')} <ArrowRight size={16} />
             </Link>
             <Link
               href="/#workflow"
               className="inline-flex items-center justify-center gap-2 border border-zinc-300 px-5 py-3 text-sm font-semibold text-zinc-800 transition-colors hover:border-zinc-950 hover:text-zinc-950"
             >
-              See the recovery workflow <ArrowRight size={16} />
+              {t('home.see_workflow')} <ArrowRight size={16} />
             </Link>
           </div>
         </div>
@@ -549,6 +539,7 @@ function HomePage() {
 }
 
 function ProjectPreview() {
+  const { t } = useTranslation();
   const featuredProjects = projects.slice(0, 2);
 
   return (
@@ -556,17 +547,16 @@ function ProjectPreview() {
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <SectionHeading
-            eyebrow="Project archive"
-            title="Restored systems should be visible, not forgotten."
+            eyebrow={t('project_preview.eyebrow')}
+            title={t('project_preview.title')}
           >
-            The archive will collect recovery notes, original context, runtime
-            decisions, and modernization boundaries for each revived project.
+            {t('project_preview.description')}
           </SectionHeading>
           <Link
             href="/projects"
             className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-950"
           >
-            View all projects <ArrowRight size={16} />
+            {t('project_preview.view_all')} <ArrowRight size={16} />
           </Link>
         </div>
 
@@ -577,19 +567,19 @@ function ProjectPreview() {
 }
 
 function ProjectGrid({ projects: projectList, emptyLimit }) {
+  const { t } = useTranslation();
+
   if (projectList.length === 0) {
     return (
       <div className="mt-14 border border-dashed border-zinc-300 bg-[#f5f7f4] p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
-          Archive pending
+          {t('project_grid.pending')}
         </p>
         <h3 className="mt-4 text-2xl font-semibold text-zinc-950">
-          No public restoration records yet.
+          {t('project_grid.no_public')}
         </h3>
         <p className="mt-4 max-w-2xl leading-7 text-zinc-600">
-          The project archive is ready for future entries. Each record can link
-          to a dedicated detail page with context, artifacts, runtime notes, and
-          preservation decisions.
+          {t('project_grid.ready')}
         </p>
       </div>
     );
@@ -608,16 +598,16 @@ function ProjectGrid({ projects: projectList, emptyLimit }) {
           className="group bg-white p-7 transition-colors hover:bg-[#f5f7f4]"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
-            {project.status}
+            {t(`project_data.${project.key}.status`)}
           </p>
           <h3 className="mt-5 text-2xl font-semibold text-zinc-950">
-            {project.title}
+            {t(`project_data.${project.key}.title`)}
           </h3>
           <p className="mt-4 text-sm leading-7 text-zinc-600">
-            {project.summary}
+            {t(`project_data.${project.key}.summary`)}
           </p>
           <div className="mt-7 flex items-center gap-2 text-sm font-semibold text-zinc-950">
-            Read recovery record
+            {t('project_grid.read_record')}
             <ArrowRight
               size={16}
               className="transition-transform group-hover:translate-x-1"
@@ -630,17 +620,16 @@ function ProjectGrid({ projects: projectList, emptyLimit }) {
 }
 
 function ProjectsPage() {
+  const { t } = useTranslation();
   return (
     <PageShell>
       <section className="px-5 pb-24 pt-12 md:px-8 md:pb-32 md:pt-20">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
-            eyebrow="Projects"
-            title="A growing archive of revived software."
+            eyebrow={t('projects_page.eyebrow')}
+            title={t('projects_page.title')}
           >
-            Each project record is designed to preserve context: what was found,
-            how it was made runnable, which behaviors were documented, and what
-            changed.
+            {t('projects_page.description')}
           </SectionHeading>
 
           <ProjectGrid projects={projects} />
@@ -651,11 +640,18 @@ function ProjectsPage() {
 }
 
 function ProjectDetailPage({ slug }) {
+  const { t } = useTranslation();
   const project = projects.find((item) => item.slug === slug);
 
   if (!project) {
     return <NotFoundPage />;
   }
+
+  // Retrieve localized project facts and notes
+  const facts =
+    t(`project_data.${project.key}.facts`, { returnObjects: true }) || [];
+  const notes =
+    t(`project_data.${project.key}.notes`, { returnObjects: true }) || [];
 
   return (
     <PageShell>
@@ -665,20 +661,20 @@ function ProjectDetailPage({ slug }) {
             href="/projects"
             className="mb-10 inline-flex items-center gap-2 text-sm font-semibold text-zinc-600 hover:text-zinc-950"
           >
-            Back to projects
+            {t('project_detail.back')}
           </Link>
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
-            {project.status}
+            {t(`project_data.${project.key}.status`)}
           </p>
           <h1 className="text-4xl font-semibold tracking-normal text-zinc-950 md:text-6xl">
-            {project.title}
+            {t(`project_data.${project.key}.title`)}
           </h1>
           <p className="mt-8 text-lg leading-8 text-zinc-600">
-            {project.summary}
+            {t(`project_data.${project.key}.summary`)}
           </p>
 
           <div className="mt-12 grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-2">
-            {project.facts.map((fact) => (
+            {facts.map((fact) => (
               <div key={fact.label} className="bg-white p-6">
                 <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
                   {fact.label}
@@ -690,10 +686,10 @@ function ProjectDetailPage({ slug }) {
 
           <section className="mt-14 border-t border-zinc-300 pt-10">
             <h2 className="text-2xl font-semibold text-zinc-950">
-              Recovery notes
+              {t('project_detail.recovery_notes')}
             </h2>
             <div className="mt-6 space-y-5 text-base leading-8 text-zinc-600">
-              {project.notes.map((note) => (
+              {notes.map((note) => (
                 <p key={note}>{note}</p>
               ))}
             </div>
@@ -705,17 +701,16 @@ function ProjectDetailPage({ slug }) {
 }
 
 function PhilosophyPage() {
+  const { t } = useTranslation();
   return (
     <PageShell>
       <section className="px-5 pb-16 pt-12 md:px-8 md:pb-24 md:pt-20">
         <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-[1fr_0.9fr] md:gap-20">
           <SectionHeading
-            eyebrow="Philosophy"
-            title="Bring old software back to life, functionally."
+            eyebrow={t('philosophy_page.eyebrow')}
+            title={t('philosophy_page.title')}
           >
-            Legacy Revival Studio is not about redesigning history. It is about
-            preserving digital artifacts well enough that they can run, be
-            studied, and remain useful.
+            {t('philosophy_page.description')}
           </SectionHeading>
           <CorePrinciplePanel />
         </div>
@@ -728,34 +723,21 @@ function PhilosophyPage() {
 }
 
 function AboutPage() {
+  const { t } = useTranslation();
   return (
     <PageShell>
       <section className="px-5 pb-24 pt-12 md:px-8 md:pb-32 md:pt-20">
         <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-[0.9fr_1.1fr] md:gap-20">
           <SectionHeading
-            eyebrow="About"
-            title="A small studio for systems that still matter."
+            eyebrow={t('about_page.eyebrow')}
+            title={t('about_page.title')}
           >
-            Legacy Revival Studio grows from the habit of revisiting old
-            projects, making them run again, and refusing to let useful digital
-            work disappear quietly.
+            {t('about_page.description')}
           </SectionHeading>
           <div className="space-y-6 text-base leading-8 text-zinc-600">
-            <p>
-              The studio focuses on aging web services, internal tools,
-              undocumented databases, and codebases that organizations still
-              depend on but hesitate to touch.
-            </p>
-            <p>
-              The work is deliberately modest: recover artifacts, recreate a
-              runtime, document behavior, and only then decide which parts
-              should be modernized.
-            </p>
-            <p>
-              Over time, the public site will also serve as an archive of
-              revived projects and the technical decisions that helped preserve
-              them.
-            </p>
+            <p>{t('about_page.p1')}</p>
+            <p>{t('about_page.p2')}</p>
+            <p>{t('about_page.p3')}</p>
           </div>
         </div>
       </section>
@@ -765,21 +747,21 @@ function AboutPage() {
 }
 
 function ContactPage() {
+  const { t } = useTranslation();
   return (
     <PageShell>
       <section className="px-5 pb-24 pt-12 md:px-8 md:pb-32 md:pt-20">
         <div className="mx-auto max-w-4xl">
           <SectionHeading
-            eyebrow="Contact"
-            title="Start with the artifacts you still have."
+            eyebrow={t('contact.eyebrow')}
+            title={t('contact.title_page')}
           >
-            A source folder, database dump, old server backup, or partial
-            documentation can be enough to begin a recovery conversation.
+            {t('contact.description_page')}
           </SectionHeading>
 
           <div className="mt-12 border border-zinc-300 bg-white p-7">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
-              Email
+              {t('contact.email_label')}
             </p>
             <a
               href="mailto:cable8mm@gmail.com"
@@ -788,9 +770,7 @@ function ContactPage() {
               cable8mm@gmail.com <Mail size={20} />
             </a>
             <p className="mt-6 leading-7 text-zinc-600">
-              Useful first notes include the original runtime, database type,
-              last known working date, hosting environment, and what must not be
-              lost.
+              {t('contact.email_note')}
             </p>
           </div>
         </div>
@@ -800,25 +780,25 @@ function ContactPage() {
 }
 
 function NotFoundPage() {
+  const { t } = useTranslation();
   return (
     <PageShell>
       <section className="px-5 pb-24 pt-12 md:px-8 md:pb-32 md:pt-20">
         <div className="mx-auto max-w-3xl">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
-            Not found
+            {t('not_found.eyebrow')}
           </p>
           <h1 className="text-4xl font-semibold tracking-normal text-zinc-950 md:text-6xl">
-            This archive record does not exist yet.
+            {t('not_found.title')}
           </h1>
           <p className="mt-6 text-lg leading-8 text-zinc-600">
-            The site is structured for future project detail pages, but this
-            route does not currently match a published record.
+            {t('not_found.description')}
           </p>
           <Link
             href="/projects"
             className="mt-10 inline-flex items-center gap-2 bg-zinc-950 px-5 py-3 text-sm font-semibold text-zinc-50"
           >
-            Return to projects <ArrowRight size={16} />
+            {t('not_found.return')} <ArrowRight size={16} />
           </Link>
         </div>
       </section>

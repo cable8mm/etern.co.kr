@@ -81,3 +81,58 @@ A system is considered revived when:
 - core functions work
 - data is intact
 - behavior is documented
+
+## Site Structure
+
+/
+Homepage
+
+/projects
+Revival portfolio archive
+
+/projects/:slug
+Individual project details
+
+/philosophy
+Archive-first philosophy
+
+/services
+Services and pricing
+
+/about
+Studio background
+
+/contact
+Contact information
+
+## Services & Pricing
+
+Legacy Revival Studio should include a service/pricing page.
+
+Purpose:
+Help visitors understand what kinds of work can be requested
+and the expected scale/cost.
+
+Suggested offerings:
+
+### Legacy Review
+
+Quick technical review of an old codebase.
+
+### Revival Assessment
+
+Feasibility analysis and restoration plan.
+
+### Code Modernization
+
+Targeted modernization while preserving original behavior.
+
+### Full Revival Project
+
+End-to-end restoration and deployment.
+
+Pricing may initially be shown as:
+“Starting from …”
+or
+“Custom quote”
+rather than fixed prices.
