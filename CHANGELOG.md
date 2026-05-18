@@ -1,5 +1,14 @@
 # Release Notes
 
+## v2.2.0 - 2026-05-18
+
+### What's Changed
+
+* Add holapet project by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/10
+* Add aipro project by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/11
+
+**Full Changelog**: https://github.com/cable8mm/etern.co.kr/compare/v2.1.1...v2.2.0
+
 ## v2.1.1 - 2026-05-18
 
 ### What's Changed
