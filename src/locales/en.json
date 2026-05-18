@@ -230,11 +230,32 @@
         "Implemented automated Continuous Integration/Continuous Delivery (CI/CD) pipelines using GitHub Actions, eliminating the need for any manual deployments."
       ]
     },
+    "aki-in": {
+      "title": "Aki-in (Instrument Marketplace)",
+      "status": "Revived",
+      "summary": "Restored a legacy Zeroboard 4-based instrument transaction board to the modernized Aki-in platform powered by the CakePHP 2 framework.",
+      "figCaption": "[Fig 3. Aki-in Revived Platform Original Mobile Screenshot, 2024]",
+      "facts": [
+        {
+          "label": "Original Stack",
+          "value": "PHP 5.6 / Zeroboard 4.x / MySQL 5.7"
+        },
+        { "label": "Revived Stack", "value": "PHP 8.2 / CakePHP 2 / MySQL 8" }
+      ],
+      "notes": [
+        "Purged unused legacy fields and tables to streamline the database structure, successfully migrating all operational user and post records.",
+        "Redesigned the primitive, text-based flat-file database schema of Zeroboard 4.x into a modern relational database structure, and built a brand-new custom admin panel using CakePHP 2.",
+        "Upgraded the core interpreter from PHP 5.6 to PHP 8.2 and migrated the backend database layer from MySQL 5.7 to MySQL 8.0.",
+        "Established baseline database seeds and implemented comprehensive unit and system tests to guarantee application stability and deployment reliability.",
+        "Integrated code source tracking using GitHub Private Repositories to enable robust version control and trace historical alterations securely.",
+        "Highly optimized the backend APIs for iOS and Android hybrid mobile applications, resolving legacy query bottlenecks and substantially improving response latencies."
+      ]
+    },
     "template": {
       "title": "Archive Record Template",
       "status": "Reference structure",
       "summary": "A lightweight example record showing how future restoration projects can preserve context, runtime notes, and modernization boundaries.",
-      "figCaption": "[Fig 3. Archive Record Directory Schema Template Snapshot, 2024]",
+      "figCaption": "[Fig 4. Archive Record Directory Schema Template Snapshot, 2024]",
       "facts": [
         { "label": "Artifact type", "value": "Project record scaffold" },
         { "label": "Runtime", "value": "To be documented per project" },
