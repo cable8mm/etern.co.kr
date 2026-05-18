@@ -251,11 +251,27 @@
         "Highly optimized the backend APIs for iOS and Android hybrid mobile applications, resolving legacy query bottlenecks and substantially improving response latencies."
       ]
     },
+    "tanz-station": {
+      "title": "Seoul Tanz Station",
+      "status": "Revived",
+      "summary": "Successfully integrated and deployed a high-performance administration back-office powered by the CakePHP 2 framework alongside the existing Gnuboard 5 website.",
+      "figCaption": "[Fig 4. Seoul Tanz Station Revived Platform Original Web Screenshot, 2022]",
+      "facts": [
+        { "label": "Original Stack", "value": "PHP 5.6 / Gnuboard5 / MySQL 3" },
+        { "label": "Revived Stack", "value": "PHP 7.2 / CakePHP 2 / MySQL 7" }
+      ],
+      "notes": [
+        "Introduced a hybrid architectural approach that maintains the Gnuboard 5 core for frontend community actions while delegating complex business ledgers to CakePHP 2.",
+        "Upgraded core environments from PHP 5.6 to PHP 7.2 and migrated ancient MySQL 3 database schemas to MySQL 7, patching high-risk security bugs and accelerating query responsiveness.",
+        "Transformed legacy static pages (which were previously managed via manual code files) into relational database structures, enabling real-time content changes through a custom admin panel.",
+        "Engineered a database-driven scheduling engine to replace manual HTML uploads for monthly timetables, providing dance instructors and coordinators with an easy-to-use scheduling manager."
+      ]
+    },
     "template": {
       "title": "Archive Record Template",
       "status": "Reference structure",
       "summary": "A lightweight example record showing how future restoration projects can preserve context, runtime notes, and modernization boundaries.",
-      "figCaption": "[Fig 4. Archive Record Directory Schema Template Snapshot, 2024]",
+      "figCaption": "[Fig 5. Archive Record Directory Schema Template Snapshot, 2024]",
       "facts": [
         { "label": "Artifact type", "value": "Project record scaffold" },
         { "label": "Runtime", "value": "To be documented per project" },
