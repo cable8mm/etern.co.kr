@@ -1,9 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-  Archive,
   ArrowRight,
-  BookMarked,
   CheckCircle2,
   Database,
   FileClock,
@@ -11,7 +9,6 @@ import {
   Mail,
   ServerCog,
   ShieldCheck,
-  Terminal,
   X,
   Globe,
   FileSearch,
