@@ -574,6 +574,8 @@ function HomePage() {
         <CorePrinciplePanel />
       </section>
 
+      <StudioMetrics />
+      <BeforeAfterShowcase />
       <ProjectPreview />
       <PhilosophySummary />
       <WorkflowSection />
@@ -581,6 +583,72 @@ function HomePage() {
       <TechnicalGroundSection />
       <ContactBand />
     </main>
+  );
+}
+
+function StudioMetrics() {
+  const { t } = useTranslation();
+  return (
+    <section className="border-y border-zinc-200 bg-[#e9efe8] px-5 py-8 md:px-8">
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 md:flex-row md:items-center md:justify-between font-mono text-sm uppercase tracking-wider text-zinc-600">
+        <div className="flex items-center gap-3">
+          <span className="w-2 h-2 bg-zinc-950 rounded-full"></span>
+          {t('studio_metrics.metric_1')}
+        </div>
+        <div className="flex items-center gap-3">
+          <span className="w-2 h-2 bg-zinc-950 rounded-full"></span>
+          {t('studio_metrics.metric_2')}
+        </div>
+        <div className="flex items-center gap-3">
+          <span className="w-2 h-2 bg-zinc-950 rounded-full"></span>
+          {t('studio_metrics.metric_3')}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function BeforeAfterShowcase() {
+  const { t } = useTranslation();
+  return (
+    <section className="bg-zinc-950 px-5 py-24 text-zinc-50 md:px-8 md:py-32">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-14">
+          <h2 className="text-3xl font-semibold md:text-4xl">
+            {t('before_after.title')}
+          </h2>
+        </div>
+        <div className="grid gap-px bg-zinc-800 border border-zinc-800 md:grid-cols-2 font-mono text-sm">
+          <div className="bg-zinc-900 p-6 md:p-10">
+            <div className="text-zinc-500 mb-6 uppercase tracking-widest text-xs flex items-center gap-2">
+              <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+              {t('before_after.legacy_state')}
+            </div>
+            <pre className="text-zinc-400 overflow-x-auto text-xs leading-relaxed whitespace-pre-wrap">
+              {`Fatal error: Uncaught Error: Call to undefined function mysql_connect() in /var/www/html/db.php:12
+Stack trace:
+#0 /var/www/html/index.php(4): require_once()
+#1 {main}
+  thrown in /var/www/html/db.php on line 12`}
+            </pre>
+          </div>
+          <div className="bg-zinc-900 p-6 md:p-10">
+            <div className="text-[#a8e09f] mb-6 uppercase tracking-widest text-xs flex items-center gap-2">
+              <span className="w-2 h-2 bg-[#a8e09f] rounded-full animate-pulse"></span>
+              {t('before_after.revived_state')}
+            </div>
+            <pre className="text-zinc-300 overflow-x-auto text-xs leading-relaxed whitespace-pre-wrap">
+              {`[OK] Connection established via PDO (SQLite proxy)
+[OK] Legacy routing patched
+[OK] Environment containerized
+[OK] Ready on port 8080
+
+> Service is running perfectly in isolation.`}
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -641,18 +709,33 @@ function ProjectGrid({ projects: projectList, emptyLimit }) {
         <Link
           key={project.slug}
           href={`/projects/${project.slug}`}
-          className="group bg-white p-7 transition-colors hover:bg-[#f5f7f4]"
+          className="group bg-white p-7 transition-colors hover:bg-[#f5f7f4] flex flex-col h-full"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
-            {t(`project_data.${project.key}.status`)}
-          </p>
-          <h3 className="mt-5 text-2xl font-semibold text-zinc-950">
+          <div className="flex items-center justify-between">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+              {project.stack}
+            </p>
+            <span className="text-xs font-mono border border-zinc-200 bg-[#f5f7f4] text-zinc-600 px-2 py-1">
+              {t(`project_data.${project.key}.status`)}
+            </span>
+          </div>
+
+          <h3 className="mt-6 text-2xl font-semibold text-zinc-950">
             {t(`project_data.${project.key}.title`)}
           </h3>
-          <p className="mt-4 text-sm leading-7 text-zinc-600">
+
+          <div className="mt-4 flex items-center gap-3 font-mono text-sm text-zinc-500">
+            <span>{project.originalYear}</span>
+            <ArrowRight size={14} className="text-zinc-300" />
+            <span className="text-zinc-950 font-semibold">
+              {project.revivalYear}
+            </span>
+          </div>
+
+          <p className="mt-6 flex-1 text-sm leading-7 text-zinc-600">
             {t(`project_data.${project.key}.summary`)}
           </p>
-          <div className="mt-7 flex items-center gap-2 text-sm font-semibold text-zinc-950">
+          <div className="mt-8 flex items-center gap-2 text-sm font-semibold text-zinc-950 pt-6 border-t border-zinc-100">
             {t('project_grid.read_record')}
             <ArrowRight
               size={16}

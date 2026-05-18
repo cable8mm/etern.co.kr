@@ -7,6 +7,17 @@
     "about": "About",
     "contact": "Contact"
   },
+
+  "studio_metrics": {
+    "metric_1": "3 Revived Projects",
+    "metric_2": "20+ Years of Software History",
+    "metric_3": "Archive-First Approach"
+  },
+  "before_after": {
+    "title": "Evidence of Restoration",
+    "legacy_state": "Legacy State (2004)",
+    "revived_state": "Revived State (2026)"
+  },
   "home": {
     "subtitle": "Archive-first software recovery",
     "title": "Old software can live again.",
@@ -29,16 +40,16 @@
     "description": "Legacy Revival Studio treats old systems as working artifacts: imperfect, specific, historically useful, and worth understanding before they are changed.",
     "items": {
       "disappears": {
-        "title": "Software disappears too easily",
-        "body": "Code rots, hosting ends, dependencies break, and valuable systems become unreachable long before their usefulness is gone."
+        "title": "Software fades away",
+        "body": "Without active maintenance, code becomes unrunnable. We reverse this decay."
       },
       "data": {
-        "title": "Data outlives products",
-        "body": "A service may vanish, but its records, workflows, and historical decisions can remain meaningful for decades."
+        "title": "State is historical context",
+        "body": "A database is a record of human interaction. We preserve data as artifacts."
       },
       "behavior": {
-        "title": "Original behavior matters",
-        "body": "Revival starts by understanding how the old system actually worked before deciding what should change."
+        "title": "Behavior over perfection",
+        "body": "We don't rewrite code to be modern. We modernize the environment to keep original behavior."
       }
     }
   },
@@ -161,7 +172,36 @@
     "return": "Return to projects"
   },
   "project_data": {
-    "archive_record_template": {
+    "nightdance": {
+      "title": "NightDance Homepage",
+      "status": "Revived",
+      "summary": "Restored an early 2000s PHP/MySQL community board. Successfully containerized and isolated legacy dependencies while maintaining full original functionality.",
+      "facts": [
+        { "label": "Original Stack", "value": "PHP 4.0 / MySQL 3" },
+        {
+          "label": "Revived Stack",
+          "value": "PHP 8.2 (via compatibility layer) / SQLite"
+        }
+      ],
+      "notes": [
+        "Legacy mysql_* functions were safely wrapped using a PDO proxy.",
+        "Directory structures were preserved exactly as they were in 2001."
+      ]
+    },
+    "etern": {
+      "title": "etern.co.kr Archive",
+      "status": "Archived",
+      "summary": "Recovered a static HTML/CGI personal homepage from 1999. Removed broken external trackers and restored original layout on modern browsers.",
+      "facts": [
+        { "label": "Original Stack", "value": "HTML 4 / CGI Scripts" },
+        { "label": "Revived Stack", "value": "Static Build / Nginx" }
+      ],
+      "notes": [
+        "Preserved original non-standard HTML where it didn't break layout.",
+        "Replaced dead external hit counters with static placeholders."
+      ]
+    },
+    "template": {
       "title": "Archive Record Template",
       "status": "Reference structure",
       "summary": "A lightweight example record showing how future restoration projects can preserve context, runtime notes, and modernization boundaries.",
