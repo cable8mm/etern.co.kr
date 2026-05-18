@@ -1,12 +1,16 @@
 # Legacy Revival Studio
 
-Modern restoration for aging web services.
+Reviving old software with care.
 
-## Philosophy
+Legacy Revival Studio restores aging software systems so they can run again on modern infrastructure—without erasing their original logic, structure, or history.
 
-Software should not disappear just because technology changes.
+We believe software should not disappear simply because technology changes.
 
-Many organizations still depend on old systems:
+---
+
+## Why this exists
+
+Many organizations still rely on old systems:
 
 - outdated PHP applications
 - abandoned admin panels
@@ -14,37 +18,54 @@ Many organizations still depend on old systems:
 - broken internal tools
 - unmaintained websites
 
-These systems often still contain valuable business logic and historical data.
+These systems often continue to hold:
 
-Legacy Revival Studio restores them.
+- valuable business logic
+- operational knowledge
+- historical records
+- irreplaceable data
 
-Not by preserving them as museum pieces,
-but by making them runnable again on modern infrastructure.
+Yet they are often abandoned because they seem too old to save.
 
-Core principle:
-
-**Revive first. Rewrite only when necessary.**
+Legacy Revival Studio exists to change that.
 
 ---
 
-## Services
+## Core Principle
+
+**Revive first. Rewrite only when necessary.**
+
+We do not begin with replacement.
+
+We begin with recovery.
+
+The goal is to:
+
+- make old systems runnable again
+- preserve original behavior
+- protect historical data
+- modernize only where needed
+
+---
+
+## What we do
 
 ### Legacy Recovery
 
-Recover and restore old applications.
+Recover and restore aging applications.
 
 Examples:
 
 - PHP 5 → PHP 8
-- old MySQL → modern PostgreSQL/MySQL
-- deprecated frameworks
-- broken dependencies
+- dependency repair
+- deprecated framework recovery
+- configuration restoration
 
 ---
 
 ### Local Resurrection
 
-Make old systems runnable again on a laptop.
+Make old systems runnable again on a modern laptop.
 
 Examples:
 
@@ -62,66 +83,48 @@ Examples:
 
 - security fixes
 - framework upgrades
-- dependency cleanup
 - API replacements
+- dependency cleanup
 
 ---
 
 ### Historical Preservation
 
-Preserve original code and behavior.
+Preserve original code, structure, and behavior.
 
-Never destroy original versions.
+Original artifacts are never destroyed.
 
 ---
 
-## Target Customers
+## Who this helps
 
 - small businesses
 - schools
 - hospitals
 - associations
-- founders with abandoned services
-- organizations with undocumented internal systems
+- founders with abandoned products
+- teams with undocumented internal systems
 
 ---
 
-## Proposed Stack
+## Working Method
 
-### Restoration tools
+Legacy Revival Studio combines:
 
-- Git
-- Docker
-- Docker Compose
-- Linux containers
-
-### Code analysis
-
-- Python
-- AST tools
-- custom migration scripts
-
-### Runtime modernization
-
-- PHP
-- Node.js
-- Python
-- Laravel
-- FastAPI
-
-### Data recovery
-
-- MySQL
-- PostgreSQL
-- SQLite
+- archival preservation
+- Git-based change tracking
+- containerized recovery environments
+- AI-assisted code analysis
+- minimal, reversible modernization
 
 ---
 
-## Success Criteria
+## Success Definition
 
-Legacy Revival Studio succeeds if:
+A project succeeds when:
 
 - old software runs again
 - historical behavior is preserved
 - migration risk is minimized
-- clients regain access to forgotten systems
+- original data remains intact
+- people regain access to forgotten systems
