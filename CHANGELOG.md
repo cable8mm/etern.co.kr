@@ -1,5 +1,13 @@
 # Release Notes
 
+## v2.0.0 - 2026-05-18
+
+### What's Changed
+
+* All new brand by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/4
+
+**Full Changelog**: https://github.com/cable8mm/etern.co.kr/compare/v1.0.1...v2.0.0
+
 ## v1.0.1 - 2026-05-18
 
 ### What's Changed
