@@ -56,24 +56,28 @@
   },
   "services": {
     "eyebrow": "Services",
-    "title": "Careful recovery for systems people are afraid to touch.",
-    "description": "The work can begin with a dead website, an old database dump, a forgotten internal tool, or a source archive with no working environment.",
+    "title": "What can be requested from the studio.",
+    "description": "Legacy Revival Studio takes on specific restoration tasks for aging, abandoned, or undocumented systems.",
     "items": {
-      "recovery": {
-        "title": "Legacy Recovery",
-        "body": "Restore outdated PHP applications, abandoned admin panels, broken dependencies, and old database-backed services."
+      "review": {
+        "title": "Legacy Review",
+        "body": "Analyze the structure and state of old codebases.",
+        "pricing": "By consultation"
       },
-      "resurrection": {
-        "title": "Local Resurrection",
-        "body": "Create reproducible local environments with Docker, one-command startup, and clear recovery notes."
+      "assessment": {
+        "title": "Revival Assessment",
+        "body": "Assess feasibility of restoration, outline required tasks and identify potential risks.",
+        "pricing": "Scope dependent"
       },
       "modernization": {
-        "title": "Selective Modernization",
-        "body": "Upgrade runtimes, replace unsafe dependencies, and patch security issues without erasing the original structure."
+        "title": "Code Modernization",
+        "body": "Modernize frameworks, dependencies, and infrastructure while preserving original behavior.",
+        "pricing": "Project-based engagement"
       },
-      "preservation": {
-        "title": "Historical Preservation",
-        "body": "Keep source snapshots, database dumps, configuration, and file structure intact before any modernization begins."
+      "full_revival": {
+        "title": "Full Revival",
+        "body": "End-to-end restoration to bring an old service fully back to a runnable state.",
+        "pricing": "Project-based engagement"
       }
     }
   },

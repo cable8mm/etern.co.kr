@@ -1,20 +1,20 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-  Archive,
   ArrowRight,
-  BookMarked,
   CheckCircle2,
   Database,
   FileClock,
   GitBranch,
   Mail,
-  Menu,
   ServerCog,
   ShieldCheck,
-  Terminal,
   X,
   Globe,
+  FileSearch,
+  ClipboardCheck,
+  ArchiveRestore,
+  Menu,
 } from 'lucide-react';
 import { projects } from './data/projects';
 
@@ -45,10 +45,10 @@ const principles = [
 const workflow = ['0', '1', '2', '3', '4'];
 
 const services = [
-  { key: 'recovery', icon: Archive },
-  { key: 'resurrection', icon: Terminal },
+  { key: 'review', icon: FileSearch },
+  { key: 'assessment', icon: ClipboardCheck },
   { key: 'modernization', icon: ServerCog },
-  { key: 'preservation', icon: BookMarked },
+  { key: 'full_revival', icon: ArchiveRestore },
 ];
 
 const preservationRules = ['0', '1', '2', '3'];
@@ -426,14 +426,24 @@ function ServicesSection() {
 
         <div className="mt-14 grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-2">
           {services.map((service) => (
-            <article key={service.key} className="bg-white p-7">
-              <service.icon className="mb-8 text-zinc-700" size={24} />
-              <h3 className="text-2xl font-semibold text-zinc-950">
-                {t(`services.items.${service.key}.title`)}
-              </h3>
-              <p className="mt-4 text-sm leading-7 text-zinc-600">
-                {t(`services.items.${service.key}.body`)}
-              </p>
+            <article
+              key={service.key}
+              className="bg-white p-7 flex flex-col h-full"
+            >
+              <div className="flex-1">
+                <service.icon className="mb-8 text-zinc-700" size={24} />
+                <h3 className="text-2xl font-semibold text-zinc-950">
+                  {t(`services.items.${service.key}.title`)}
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-zinc-600">
+                  {t(`services.items.${service.key}.body`)}
+                </p>
+              </div>
+              <div className="mt-10 pt-6 border-t border-zinc-100">
+                <span className="text-xs font-medium uppercase tracking-[0.1em] text-zinc-500">
+                  {t(`services.items.${service.key}.pricing`)}
+                </span>
+              </div>
             </article>
           ))}
         </div>
