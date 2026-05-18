@@ -1,5 +1,16 @@
 # Release Notes
 
+## v2.1.0 - 2026-05-18
+
+### What's Changed
+
+* Emphasize `services` section by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/5
+* Focus on eye tracking by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/6
+* Make appeal about AI and Github by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/7
+* Revise `/contact` page by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/8
+
+**Full Changelog**: https://github.com/cable8mm/etern.co.kr/compare/v2.0.0...v2.1.0
+
 ## v2.0.0 - 2026-05-18
 
 ### What's Changed
