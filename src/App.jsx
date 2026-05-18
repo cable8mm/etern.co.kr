@@ -42,7 +42,13 @@ const principles = [
   },
 ];
 
-const workflow = ['0', '1', '2', '3', '4'];
+const workflow = [
+  { key: 'recover', hash: 'a1b2c3d' },
+  { key: 'analyze', hash: '4f5g6h7' },
+  { key: 'restore', hash: '8i9j0k1' },
+  { key: 'archive', hash: 'l2m3n4o' },
+  { key: 'relaunch', hash: 'p5q6r7s' },
+];
 
 const services = [
   { key: 'review', icon: FileSearch },
@@ -380,30 +386,71 @@ function PhilosophySummary() {
 function WorkflowSection() {
   const { t } = useTranslation();
   return (
-    <section id="workflow" className="scroll-mt-24 px-5 py-24 md:px-8 md:py-32">
+    <section
+      id="workflow"
+      className="scroll-mt-24 bg-white px-5 py-24 md:px-8 md:py-32"
+    >
       <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-[0.85fr_1.15fr] md:gap-20">
-        <SectionHeading
-          eyebrow={t('workflow.eyebrow')}
-          title={t('workflow.title')}
-        >
-          {t('workflow.description')}
-        </SectionHeading>
+        <div>
+          <SectionHeading
+            eyebrow={t('workflow.eyebrow')}
+            title={t('workflow.title')}
+          >
+            {t('workflow.description')}
+          </SectionHeading>
 
-        <ol className="border-y border-zinc-300">
-          {workflow.map((step, index) => (
-            <li
-              key={step}
-              className="grid grid-cols-[3.5rem_1fr] border-b border-zinc-300 py-6 last:border-b-0"
-            >
-              <span className="font-mono text-sm text-zinc-500">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              <span className="text-xl font-medium text-zinc-950">
-                {t(`workflow.steps.${step}`)}
-              </span>
-            </li>
-          ))}
-        </ol>
+          <div className="mt-10 border-l-2 border-zinc-200 pl-6 text-sm text-zinc-600 font-mono space-y-4">
+            <p className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-zinc-400 rounded-full"></span>
+              {t('workflow.git_phil_1')}
+            </p>
+            <p className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-zinc-400 rounded-full"></span>
+              {t('workflow.git_phil_2')}
+            </p>
+            <p className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-zinc-400 rounded-full"></span>
+              {t('workflow.git_phil_3')}
+            </p>
+          </div>
+        </div>
+
+        <div className="relative">
+          <div className="absolute left-4 top-4 bottom-4 w-px bg-zinc-200 hidden md:block"></div>
+          <ol className="space-y-12 md:space-y-10">
+            {workflow.map((step, index) => (
+              <li key={step.key} className="relative pl-0 md:pl-12">
+                <div className="hidden md:flex absolute left-[11px] top-1.5 w-2.5 h-2.5 bg-zinc-950 rounded-full ring-4 ring-white"></div>
+                <div className="flex items-baseline gap-4 mb-2">
+                  <span className="font-mono text-xs text-zinc-400">
+                    commit {step.hash}
+                  </span>
+                  <span className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
+                    Step {String(index + 1).padStart(2, '0')}
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-zinc-950 mb-2">
+                  {t(`workflow.steps.${step.key}.title`)}
+                </h3>
+                <p className="text-sm leading-7 text-zinc-600">
+                  {t(`workflow.steps.${step.key}.body`)}
+                </p>
+                {step.key === 'analyze' && (
+                  <div className="mt-4 inline-flex items-center gap-2 border border-zinc-200 bg-[#f5f7f4] px-2.5 py-1.5 text-xs font-mono text-zinc-600">
+                    <span className="w-1.5 h-1.5 bg-[#a8e09f] rounded-full animate-pulse"></span>
+                    AI-assisted process
+                  </div>
+                )}
+                {step.key === 'archive' && (
+                  <div className="mt-4 inline-flex items-center gap-2 border border-zinc-200 bg-[#f5f7f4] px-2.5 py-1.5 text-xs font-mono text-zinc-600">
+                    <GitBranch size={12} className="text-zinc-500" />
+                    Git-preserved history
+                  </div>
+                )}
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </section>
   );
