@@ -123,9 +123,9 @@
     "title": "Have a system everyone is afraid to touch?",
     "description": "Start by making it run again. Then decide, with evidence, what should be preserved, repaired, or modernized.",
     "title_page": "Start with the artifacts you still have.",
-    "description_page": "A source folder, database dump, old server backup, or partial documentation can be enough to begin a recovery conversation.",
+    "description_page": "A source folder, database dump, old server backup, or partial documentation can be enough to begin a recovery conversation. No matter how old or tangled the code is, the original behavior and valuable data are strictly preserved, so please share with confidence.",
     "email_label": "Email",
-    "email_note": "Useful first notes include the original runtime, database type, last known working date, hosting environment, and what must not be lost."
+    "email_note": "Including key data and context that must not be lost, such as the original runtime, database type, and last working date, in your first message allows for a faster and more accurate restoration simulation."
   },
   "footer": {
     "copyright": "© 2026 Legacy Revival Studio.",
