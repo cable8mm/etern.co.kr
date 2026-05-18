@@ -190,21 +190,25 @@
     "return": "Return to projects"
   },
   "project_data": {
-    "nightdance": {
-      "title": "NightDance Homepage",
+    "aipro": {
+      "title": "Smart Logistics WMS System",
       "status": "Revived",
-      "summary": "Restored an early 2000s PHP/MySQL community board. Successfully containerized and isolated legacy dependencies while maintaining full original functionality.",
-      "figCaption": "[Fig 1. NightDance Original Board UI Snapshot, 2001]",
+      "summary": "Restored a large-scale smart warehouse management logistics system processing 12,000 products and integrating 17 external shopping malls.",
+      "figCaption": "[Fig 1. Smart Logistics WMS System Revived Dashboard Snapshot, 2026]",
       "facts": [
-        { "label": "Original Stack", "value": "PHP 4.0 / MySQL 3" },
         {
-          "label": "Revived Stack",
-          "value": "PHP 8.2 (via compatibility layer) / SQLite"
-        }
+          "label": "Original Stack",
+          "value": "PHP 7.3 / CakePHP 2 / MySQL 5.7"
+        },
+        { "label": "Revived Stack", "value": "PHP 8.3 / Laravel 12 / MySQL 8" }
       ],
       "notes": [
-        "Legacy mysql_* functions were safely wrapped using a PDO proxy.",
-        "Directory structures were preserved exactly as they were in 2001."
+        "Cleaned up redundant fields and tables from the legacy database, and successfully migrated high-volume product catalogs and logistics ledger data.",
+        "Replaced the legacy CakePHP 2 and rigid scaffolding back-office with a fully modern admin panel powered by Laravel Nova, enhancing system maintainability and UI usability.",
+        "Upgraded core runtimes and engines from PHP 7.3 to PHP 8.3, CakePHP 2 to Laravel 12, and MySQL 5.7 to MySQL 8.0.",
+        "Structured robust initial database seeds and wrote comprehensive, automated end-to-end and unit tests to guarantee server integrity during launch and automated deployment.",
+        "Configured seamless continuous delivery integration using Laravel Cloud's auto-deployment system, building a scalable architecture ready for high-traffic spikes.",
+        "Leveraged xeed (https://github.com/cable8mm/xeed), an open-source database utility developed by the lead studio architect, to auto-generate models, seeders, factories, and migrations, vastly boosting development throughput."
       ]
     },
     "holapet": {

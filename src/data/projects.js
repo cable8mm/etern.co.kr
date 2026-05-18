@@ -1,12 +1,12 @@
 export const projects = [
   {
-    key: 'nightdance',
-    slug: 'nightdance',
-    originalYear: 2001,
+    key: 'aipro',
+    slug: 'aipro',
+    originalYear: 2022,
     revivalYear: 2026,
-    stack: 'PHP 4.0 / MySQL',
-    status: 'Running',
-    thumbnail: '/images/nightdance-thumb.png',
+    stack: 'PHP 7.3 / CakePHP 2 / MySQL 5.7',
+    status: 'Completed',
+    thumbnail: '/images/aipro-thumb.png',
   },
   {
     key: 'holapet',
