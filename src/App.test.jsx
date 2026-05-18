@@ -2,29 +2,42 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import App from './App';
 
-describe('FastCodeHomepage App Component', () => {
+describe('Legacy Revival Studio homepage', () => {
   beforeEach(() => {
-    // Mock window.scrollTo since it's used in App.jsx but not available in jsdom by default
     window.scrollTo = vi.fn();
   });
 
-  it('renders the FastCode logo text', () => {
+  it('renders the studio identity', () => {
     render(<App />);
-    const logoElements = screen.getAllByText(/FastCode/i);
-    expect(logoElements.length).toBeGreaterThan(0);
+
+    expect(
+      screen.getAllByText(/Legacy Revival Studio/i).length,
+    ).toBeGreaterThan(0);
+    expect(
+      screen.getByText(/Old software can live again/i),
+    ).toBeInTheDocument();
   });
 
-  it('renders the main slogan', () => {
+  it('renders the core principle', () => {
     render(<App />);
-    const sloganElement =
-      screen.getByText(/기술로 비즈니스의 문제를 해결하는/i);
-    expect(sloganElement).toBeInTheDocument();
+
+    expect(
+      screen.getByText(/Revive first\. Rewrite only when necessary\./i),
+    ).toBeInTheDocument();
   });
 
-  it('renders navigation links', () => {
+  it('renders the primary navigation links', () => {
     render(<App />);
-    expect(screen.getByText('Projects')).toBeInTheDocument();
-    expect(screen.getByText('Footprint')).toBeInTheDocument();
-    expect(screen.getByText('Infrastructure')).toBeInTheDocument();
+
+    expect(
+      screen.getByRole('button', { name: 'Philosophy' }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Workflow' }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Services' }),
+    ).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Contact' })).toBeInTheDocument();
   });
 });

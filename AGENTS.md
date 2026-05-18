@@ -94,3 +94,15 @@ Before editing:
 3. wait for confirmation if major structural changes are required
 
 When uncertain, ask rather than assume.
+
+---
+
+## Ignore build artifacts
+
+The `dist/` directory is a generated build output.
+
+It is not source code.
+
+Do not inspect, modify, or use `dist/` as project context unless explicitly asked.
+
+Always work from source files only.
