@@ -27,6 +27,15 @@ export const projects = [
     thumbnail: '/images/aki-in-thumb.png',
   },
   {
+    key: 'tanz-station',
+    slug: 'tanz-station',
+    originalYear: 2016,
+    revivalYear: 2022,
+    stack: 'PHP 5.6 / Gnuboard5 / MySQL 3',
+    status: 'Completed',
+    thumbnail: '/images/tanz-station-thumb.png',
+  },
+  {
     key: 'template',
     slug: 'archive-record-template',
     originalYear: 2024,
