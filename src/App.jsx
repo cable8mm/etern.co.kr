@@ -20,11 +20,11 @@ import { projects } from './data/projects';
 
 const navLinks = [
   { key: 'projects', href: '/projects' },
-  { key: 'philosophy', href: '/philosophy' },
+  { key: 'philosophy', href: '/#philosophy' },
   { key: 'workflow', href: '/#workflow' },
   { key: 'services', href: '/#services' },
-  { key: 'about', href: '/about' },
-  { key: 'contact', href: '/contact' },
+  { key: 'about', href: '/#about' },
+  { key: 'contact', href: '/#contact' },
 ];
 
 const principles = [
@@ -351,8 +351,8 @@ function PhilosophySummary() {
   const { t } = useTranslation();
   return (
     <section
-      id="philosophy-preview"
-      className="border-y border-zinc-200 bg-white px-5 py-24 md:px-8 md:py-32"
+      id="philosophy"
+      className="scroll-mt-24 border-y border-zinc-200 bg-white px-5 py-24 md:px-8 md:py-32"
     >
       <div className="mx-auto max-w-6xl">
         <SectionHeading
@@ -502,7 +502,7 @@ function ServicesSection() {
 function TechnicalGroundSection() {
   const { t } = useTranslation();
   return (
-    <section className="px-5 py-24 md:px-8 md:py-32">
+    <section id="about" className="scroll-mt-24 px-5 py-24 md:px-8 md:py-32">
       <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-[1fr_1fr] md:gap-20">
         <div>
           <SectionHeading
@@ -550,7 +550,7 @@ function ContactBand() {
   return (
     <section
       id="contact"
-      className="border-t border-zinc-300 bg-zinc-950 px-5 py-20 text-zinc-50 md:px-8 md:py-28"
+      className="scroll-mt-24 border-t border-zinc-300 bg-zinc-950 px-5 py-20 text-zinc-50 md:px-8 md:py-28"
     >
       <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[1fr_auto] md:items-end">
         <div>
