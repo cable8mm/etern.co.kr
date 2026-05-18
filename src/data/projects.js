@@ -18,6 +18,15 @@ export const projects = [
     thumbnail: '/images/holapet-thumb.png',
   },
   {
+    key: 'aki-in',
+    slug: 'aki-in',
+    originalYear: 2016,
+    revivalYear: 2024,
+    stack: 'PHP 5.6 / Zeroboard 4.x / MySQL 5.7',
+    status: 'Completed',
+    thumbnail: '/images/aki-in-thumb.png',
+  },
+  {
     key: 'template',
     slug: 'archive-record-template',
     originalYear: 2024,
