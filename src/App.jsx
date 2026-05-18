@@ -171,7 +171,7 @@ function Header({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
   const { t, i18n } = useTranslation();
 
   const toggleLanguage = () => {
-    const nextLang = (i18n.language || 'en').startsWith('ko') ? 'en' : 'ko';
+    const nextLang = (i18n.language || 'ko').startsWith('ko') ? 'en' : 'ko';
     i18n.changeLanguage(nextLang);
   };
 
@@ -218,7 +218,7 @@ function Header({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
             className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-zinc-500 hover:text-zinc-950"
           >
             <Globe size={14} />
-            {(i18n.language || 'en').startsWith('ko') ? 'EN' : 'KO'}
+            {(i18n.language || 'ko').startsWith('ko') ? 'EN' : 'KO'}
           </button>
         </div>
 
@@ -228,7 +228,7 @@ function Header({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
             className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-zinc-500"
           >
             <Globe size={14} />
-            {(i18n.language || 'en').startsWith('ko') ? 'EN' : 'KO'}
+            {(i18n.language || 'ko').startsWith('ko') ? 'EN' : 'KO'}
           </button>
           <button
             type="button"
