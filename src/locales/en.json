@@ -194,6 +194,7 @@
       "title": "NightDance Homepage",
       "status": "Revived",
       "summary": "Restored an early 2000s PHP/MySQL community board. Successfully containerized and isolated legacy dependencies while maintaining full original functionality.",
+      "figCaption": "[Fig 1. NightDance Original Board UI Snapshot, 2001]",
       "facts": [
         { "label": "Original Stack", "value": "PHP 4.0 / MySQL 3" },
         {
@@ -206,23 +207,30 @@
         "Directory structures were preserved exactly as they were in 2001."
       ]
     },
-    "etern": {
-      "title": "etern.co.kr Archive",
-      "status": "Archived",
-      "summary": "Recovered a static HTML/CGI personal homepage from 1999. Removed broken external trackers and restored original layout on modern browsers.",
+    "holapet": {
+      "title": "Hola Pet Abandoned Animals Platform",
+      "status": "Revived",
+      "summary": "Migrated the abandoned animal adoption service of Hola Pet to a cloud-based delivery environment integrated with GitHub Actions to bring it back to a fully runnable state.",
+      "figCaption": "[Fig 2. Hola Pet Abandoned Animals Platform Revived Mobile Screenshot, 2025]",
       "facts": [
-        { "label": "Original Stack", "value": "HTML 4 / CGI Scripts" },
-        { "label": "Revived Stack", "value": "Static Build / Nginx" }
+        {
+          "label": "Original Stack",
+          "value": "PHP 7.3 / Laravel 8 / MySQL 5.7"
+        },
+        { "label": "Revived Stack", "value": "PHP 8.3 / Laravel 12 / MySQL 8" }
       ],
       "notes": [
-        "Preserved original non-standard HTML where it didn't break layout.",
-        "Replaced dead external hit counters with static placeholders."
+        "Cleaned up redundant fields and tables from the legacy database, and successfully migrated shelter information and adoption posts data.",
+        "Completely revamped the UI framework from obsolete Bootstrap 3 to modern Tailwind CSS 3 for an updated, streamlined user interface.",
+        "Upgraded core runtimes from PHP 7.3 to 8.3, Laravel 8 to 12, and MySQL 5.7 to 8.0 while writing complete functional tests to guarantee code integrity.",
+        "Implemented automated Continuous Integration/Continuous Delivery (CI/CD) pipelines using GitHub Actions, eliminating the need for any manual deployments."
       ]
     },
     "template": {
       "title": "Archive Record Template",
       "status": "Reference structure",
       "summary": "A lightweight example record showing how future restoration projects can preserve context, runtime notes, and modernization boundaries.",
+      "figCaption": "[Fig 3. Archive Record Directory Schema Template Snapshot, 2024]",
       "facts": [
         { "label": "Artifact type", "value": "Project record scaffold" },
         { "label": "Runtime", "value": "To be documented per project" },

@@ -6,14 +6,16 @@ export const projects = [
     revivalYear: 2026,
     stack: 'PHP 4.0 / MySQL',
     status: 'Running',
+    thumbnail: '/images/nightdance-thumb.png',
   },
   {
-    key: 'etern',
-    slug: 'etern-co-kr',
-    originalYear: 1999,
+    key: 'holapet',
+    slug: 'holapet',
+    originalYear: 2022,
     revivalYear: 2025,
-    stack: 'Static HTML / CGI',
-    status: 'Archived',
+    stack: 'PHP 7.3 / Laravel 8 / MySQL 5.7',
+    status: 'Completed',
+    thumbnail: '/images/holapet-thumb.png',
   },
   {
     key: 'template',
@@ -22,5 +24,6 @@ export const projects = [
     revivalYear: 2024,
     stack: 'Markdown / Git',
     status: 'Draft',
+    thumbnail: '/images/template-thumb.png',
   },
 ];
