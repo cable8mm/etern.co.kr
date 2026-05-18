@@ -758,6 +758,22 @@ function ProjectGrid({ projects: projectList, emptyLimit }) {
           href={`/projects/${project.slug}`}
           className="group bg-white p-7 transition-colors hover:bg-[#f5f7f4] flex flex-col h-full"
         >
+          {project.thumbnail && (
+            <div className="mb-6">
+              <div className="overflow-hidden border border-zinc-300 bg-zinc-100 aspect-[16/10]">
+                <img
+                  src={project.thumbnail}
+                  alt={t(`project_data.${project.key}.title`)}
+                  className="h-full w-full object-cover grayscale opacity-80 filter transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.01]"
+                  loading="lazy"
+                />
+              </div>
+              <p className="mt-2 font-mono text-[10px] tracking-tight text-zinc-500 uppercase">
+                {t(`project_data.${project.key}.figCaption`)}
+              </p>
+            </div>
+          )}
+
           <div className="flex items-center justify-between">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
               {project.stack}
@@ -848,6 +864,22 @@ function ProjectDetailPage({ slug }) {
           <p className="mt-8 text-lg leading-8 text-zinc-600">
             {t(`project_data.${project.key}.summary`)}
           </p>
+
+          {project.thumbnail && (
+            <figure className="mt-12 border border-zinc-300 bg-zinc-100 p-3 md:p-4">
+              <div className="overflow-hidden border border-zinc-200 bg-white aspect-[16/10] md:aspect-[16/9]">
+                <img
+                  src={project.thumbnail}
+                  alt={t(`project_data.${project.key}.title`)}
+                  className="h-full w-full object-cover grayscale opacity-90 transition-all duration-700 hover:grayscale-0 hover:opacity-100"
+                  loading="eager"
+                />
+              </div>
+              <figcaption className="mt-3 font-mono text-[10px] tracking-tight text-zinc-500 uppercase text-center">
+                {t(`project_data.${project.key}.figCaption`)}
+              </figcaption>
+            </figure>
+          )}
 
           <div className="mt-12 grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-2">
             {facts.map((fact) => (

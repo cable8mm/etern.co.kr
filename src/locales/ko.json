@@ -193,6 +193,7 @@
       "title": "NightDance 홈페이지",
       "status": "복원 완료",
       "summary": "2000년대 초반의 PHP/MySQL 기반 커뮤니티 보드를 복원했습니다. 기존 기능을 온전히 유지하면서 레거시 의존성을 컨테이너 환경으로 안전하게 분리했습니다.",
+      "figCaption": "[Fig 1. NightDance 오리지널 게시판 UI 스냅샷, 2001]",
       "facts": [
         { "label": "과거 스택", "value": "PHP 4.0 / MySQL 3" },
         { "label": "복원 스택", "value": "PHP 8.2 (호환성 레이어) / SQLite" }
@@ -202,23 +203,27 @@
         "2001년 당시의 디렉토리 구조를 변경 없이 그대로 보존했습니다."
       ]
     },
-    "etern": {
-      "title": "etern.co.kr 아카이브",
-      "status": "아카이브",
-      "summary": "1999년에 제작된 Static HTML/CGI 기반의 개인 홈페이지를 복원했습니다. 깨진 외부 트래커를 제거하고 현대 브라우저에서도 당시 레이아웃이 유지되도록 수정했습니다.",
+    "holapet": {
+      "title": "올라펫 유기동물 플랫폼",
+      "status": "복원 완료",
+      "summary": "올라펫의 버려진 유기동물 입양 서비스를 Github Actions를 이용한 클라우드 배포 환경으로 이전하여 다시 구동 가능하게 만들었습니다.",
+      "figCaption": "[Fig 2. 올라펫 유기동물 플랫폼 복원 모바일 스크린샷, 2025]",
       "facts": [
-        { "label": "과거 스택", "value": "HTML 4 / CGI Scripts" },
-        { "label": "복원 스택", "value": "Static Build / Nginx" }
+        { "label": "과거 스택", "value": "PHP 7.3 / Laravel 8 / MySQL 5.7" },
+        { "label": "복원 스택", "value": "PHP 8.3 / Laravel 12 / MySQL 8" }
       ],
       "notes": [
-        "레이아웃을 깨뜨리지 않는 선에서 당시의 비표준 HTML 구조를 보존했습니다.",
-        "연결이 끊긴 외부 방문자 카운터 이미지를 정적 플레이스홀더로 교체했습니다."
+        "과거 사이트에서 사용하지 않는 필드와 테이블을 제거하고 보호소 및 입양 공고글 데이터를 성공적으로 마이그레이션했습니다.",
+        "UI 프레임워크를 구형 Bootstrap 3에서 현대적인 Tailwind CSS 3로 완전히 변경하여 현대화했습니다.",
+        "PHP 7.3에서 PHP 8.3, Laravel 8에서 Laravel 12, MySQL 5.7에서 MySQL 8.0으로 코어 런타임을 업그레이드하고 전체 기능 테스트 코드를 작성해 무결성을 확보했습니다.",
+        "Github Actions를 활용한 지속적 통합/지속적 배포(CI/CD) 자동화 파이프라인을 구축하여 수동 배포 과정을 완전히 제거했습니다."
       ]
     },
     "template": {
       "title": "아카이브 기록 템플릿",
       "status": "참고 구조",
       "summary": "향후 복원 프로젝트가 컨텍스트, 런타임 노트, 현대화의 범위를 어떻게 보존할 수 있는지 보여주는 가벼운 예시 기록입니다.",
+      "figCaption": "[Fig 3. 아카이브 기록 디렉토리 스키마 템플릿 스냅샷, 2024]",
       "facts": [
         { "label": "아티팩트 유형", "value": "프로젝트 기록 스캐폴드" },
         { "label": "런타임", "value": "프로젝트별 문서화 예정" },
