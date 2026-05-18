@@ -54,16 +54,34 @@
     }
   },
   "workflow": {
-    "eyebrow": "Recovery workflow",
-    "title": "Start by making the old system run.",
-    "description": "The first milestone is not a redesign. It is a reproducible runtime, documented behavior, and a clear map of what must be preserved.",
-    "steps": [
-      "Collect original artifacts",
-      "Make the system run locally",
-      "Document current behavior",
-      "Apply minimal compatibility fixes",
-      "Modernize only where needed"
-    ]
+    "eyebrow": "Restoration workflow",
+    "title": "Human-guided. AI-assisted. Git-preserved.",
+    "description": "The studio manages the entire restoration process systematically using modern workflows.",
+    "git_phil_1": "Every revival is tracked in Git.",
+    "git_phil_2": "Every decision can be revisited.",
+    "git_phil_3": "Nothing is silently lost.",
+    "steps": {
+      "recover": {
+        "title": "Recover",
+        "body": "Collect source code, assets, and historical context securely without any alterations."
+      },
+      "analyze": {
+        "title": "Analyze",
+        "body": "Human-guided and AI-assisted precision analysis of legacy dependencies and system behavior."
+      },
+      "restore": {
+        "title": "Restore",
+        "body": "Minimal and careful modernization that preserves original behavior instead of full rewrites."
+      },
+      "archive": {
+        "title": "Archive",
+        "body": "Every meaningful change and decision is recorded in Git so nothing is silently lost."
+      },
+      "relaunch": {
+        "title": "Relaunch",
+        "body": "Software runs stably again on modern infrastructure, ready for future maintenance."
+      }
+    }
   },
   "services": {
     "eyebrow": "Services",

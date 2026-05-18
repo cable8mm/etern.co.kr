@@ -54,15 +54,33 @@
   },
   "workflow": {
     "eyebrow": "작업 흐름",
-    "title": "우선 오래된 시스템이 돌아가게 만듭니다.",
-    "description": "우리의 첫 번째 목표는 새로운 디자인이 아닙니다. 재현 가능한 실행 환경을 구축하고, 동작을 문서화하며, 무엇을 보존해야 할지 명확한 지도를 그리는 것입니다.",
-    "steps": [
-      "원본 아티팩트 수집",
-      "시스템을 로컬 환경에서 실행",
-      "현재의 동작 방식 문서화",
-      "최소한의 호환성 픽스 적용",
-      "반드시 필요한 부분만 현대화"
-    ]
+    "title": "사람이 주도하고, AI가 보조하며, Git이 보존합니다.",
+    "description": "모든 복구 과정은 체계적으로 추적되며, 언제든 과거의 결정으로 되돌아갈 수 있습니다.",
+    "git_phil_1": "Every revival is tracked in Git.",
+    "git_phil_2": "Every decision can be revisited.",
+    "git_phil_3": "Nothing is silently lost.",
+    "steps": {
+      "recover": {
+        "title": "데이터 수집 (Recover)",
+        "body": "소스 코드, 에셋, 역사적 맥락(Historical Context)을 원형 그대로 안전하게 수집합니다."
+      },
+      "analyze": {
+        "title": "AI 협업 분석 (Analyze)",
+        "body": "사람이 주도하고 AI가 보조하여 레거시 의존성과 시스템 동작 방식을 정밀하게 분석합니다."
+      },
+      "restore": {
+        "title": "최소 점진 복원 (Restore)",
+        "body": "전면 재작성 대신 기존 동작을 보존하는 최소한의 조심스러운 현대화 작업을 수행합니다."
+      },
+      "archive": {
+        "title": "Git 기반 기록 (Archive)",
+        "body": "의미 있는 모든 변경 사항과 결정 과정을 Git에 기록하여 단 하나의 데이터도 소리 없이 사라지지 않도록 합니다."
+      },
+      "relaunch": {
+        "title": "지속 가능한 재실행 (Relaunch)",
+        "body": "소프트웨어가 현대 인프라 위에서 다시 안정적으로 구동되며, 향후 유지보수가 가능한 상태로 인도됩니다."
+      }
+    }
   },
   "services": {
     "eyebrow": "서비스 안내",
