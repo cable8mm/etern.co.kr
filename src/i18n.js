@@ -1,0 +1,27 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+
+import en from './locales/en.json';
+import ko from './locales/ko.json';
+
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    detection: {
+      order: ['path', 'localStorage', 'navigator'],
+      lookupFromPathIndex: 0,
+    },
+    supportedLngs: ['ko', 'en'],
+    resources: {
+      en: { translation: en },
+      ko: { translation: ko },
+    },
+    fallbackLng: 'ko',
+    interpolation: {
+      escapeValue: false, // React already safes from xss
+    },
+  });
+
+export default i18n;

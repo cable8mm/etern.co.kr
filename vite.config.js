@@ -11,7 +11,7 @@ export default defineConfig(({ command }) => {
 
     // 1. 배포(빌드)할 때만 GitHub Pages 용 베이스 경로('/`레포이름`/')를 적용하고,
     //    개발(serve) 때는 루트('/')를 바라보게 합니다.
-    // base: isBuild ? '/etern.co.kr/' : '/',
+    // base: isBuild ? '/legacy-revival-studio/' : '/',
     // 2. custom domain을 사용한다면 빌드할 때도 루트('/')를 바라보게 합니다.
     base: '/',
 

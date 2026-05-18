@@ -1,0 +1,180 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "philosophy": "Philosophy",
+    "workflow": "Workflow",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "subtitle": "Archive-first software recovery",
+    "title": "Old software can live again.",
+    "description": "Legacy Revival Studio restores aging web services, internal tools, and forgotten systems so their code, data, and behavior can run again on modern infrastructure.",
+    "browse_archive": "Browse the project archive",
+    "see_workflow": "See the recovery workflow"
+  },
+  "core_principle": {
+    "title": "Core principle",
+    "version": "v0.1 recovery doctrine",
+    "quote": "Revive first. Rewrite only when necessary.",
+    "preserve_title": "Preserve originals",
+    "preserve_desc": "Source snapshots, database dumps, configuration, and file structure remain intact.",
+    "runnable_title": "Make it runnable",
+    "runnable_desc": "A revived system starts, performs core functions, and has its behavior documented."
+  },
+  "philosophy": {
+    "eyebrow": "Philosophy",
+    "title": "Preservation is an engineering practice.",
+    "description": "Legacy Revival Studio treats old systems as working artifacts: imperfect, specific, historically useful, and worth understanding before they are changed.",
+    "items": {
+      "disappears": {
+        "title": "Software disappears too easily",
+        "body": "Code rots, hosting ends, dependencies break, and valuable systems become unreachable long before their usefulness is gone."
+      },
+      "data": {
+        "title": "Data outlives products",
+        "body": "A service may vanish, but its records, workflows, and historical decisions can remain meaningful for decades."
+      },
+      "behavior": {
+        "title": "Original behavior matters",
+        "body": "Revival starts by understanding how the old system actually worked before deciding what should change."
+      }
+    }
+  },
+  "workflow": {
+    "eyebrow": "Recovery workflow",
+    "title": "Start by making the old system run.",
+    "description": "The first milestone is not a redesign. It is a reproducible runtime, documented behavior, and a clear map of what must be preserved.",
+    "steps": [
+      "Collect original artifacts",
+      "Make the system run locally",
+      "Document current behavior",
+      "Apply minimal compatibility fixes",
+      "Modernize only where needed"
+    ]
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Careful recovery for systems people are afraid to touch.",
+    "description": "The work can begin with a dead website, an old database dump, a forgotten internal tool, or a source archive with no working environment.",
+    "items": {
+      "recovery": {
+        "title": "Legacy Recovery",
+        "body": "Restore outdated PHP applications, abandoned admin panels, broken dependencies, and old database-backed services."
+      },
+      "resurrection": {
+        "title": "Local Resurrection",
+        "body": "Create reproducible local environments with Docker, one-command startup, and clear recovery notes."
+      },
+      "modernization": {
+        "title": "Selective Modernization",
+        "body": "Upgrade runtimes, replace unsafe dependencies, and patch security issues without erasing the original structure."
+      },
+      "preservation": {
+        "title": "Historical Preservation",
+        "body": "Keep source snapshots, database dumps, configuration, and file structure intact before any modernization begins."
+      }
+    }
+  },
+  "technical": {
+    "preservation_rules_eyebrow": "Preservation rules",
+    "preservation_rules_title": "Originals are never overwritten.",
+    "rules": [
+      "Preserve source code, database dumps, configuration, and file structure.",
+      "Separate raw artifacts from runtime, analysis, migration, and documentation work.",
+      "Document behavior before compatibility fixes or modernization patches.",
+      "Prefer small, reversible changes that reduce migration risk."
+    ],
+    "ground_eyebrow": "Technical ground",
+    "ground_title": "Durable tools over novelty.",
+    "tools": [
+      "Git",
+      "Docker",
+      "Docker Compose",
+      "Linux containers",
+      "PHP",
+      "Node.js",
+      "Python",
+      "MySQL",
+      "PostgreSQL",
+      "SQLite",
+      "Static analysis",
+      "Migration scripts"
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Have a system everyone is afraid to touch?",
+    "description": "Start by making it run again. Then decide, with evidence, what should be preserved, repaired, or modernized.",
+    "title_page": "Start with the artifacts you still have.",
+    "description_page": "A source folder, database dump, old server backup, or partial documentation can be enough to begin a recovery conversation.",
+    "email_label": "Email",
+    "email_note": "Useful first notes include the original runtime, database type, last known working date, hosting environment, and what must not be lost."
+  },
+  "footer": {
+    "copyright": "© 2026 Legacy Revival Studio.",
+    "slogan": "Bring old software back to life."
+  },
+  "project_preview": {
+    "eyebrow": "Project archive",
+    "title": "Restored systems should be visible, not forgotten.",
+    "description": "The archive will collect recovery notes, original context, runtime decisions, and modernization boundaries for each revived project.",
+    "view_all": "View all projects"
+  },
+  "project_grid": {
+    "pending": "Archive pending",
+    "no_public": "No public restoration records yet.",
+    "ready": "The project archive is ready for future entries. Each record can link to a dedicated detail page with context, artifacts, runtime notes, and preservation decisions.",
+    "read_record": "Read recovery record"
+  },
+  "projects_page": {
+    "eyebrow": "Projects",
+    "title": "A growing archive of revived software.",
+    "description": "Each project record is designed to preserve context: what was found, how it was made runnable, which behaviors were documented, and what changed."
+  },
+  "project_detail": {
+    "back": "Back to projects",
+    "recovery_notes": "Recovery notes"
+  },
+  "philosophy_page": {
+    "eyebrow": "Philosophy",
+    "title": "Bring old software back to life, functionally.",
+    "description": "Legacy Revival Studio is not about redesigning history. It is about preserving digital artifacts well enough that they can run, be studied, and remain useful."
+  },
+  "about_page": {
+    "eyebrow": "About",
+    "title": "A small studio for systems that still matter.",
+    "description": "Legacy Revival Studio grows from the habit of revisiting old projects, making them run again, and refusing to let useful digital work disappear quietly.",
+    "p1": "The studio focuses on aging web services, internal tools, undocumented databases, and codebases that organizations still depend on but hesitate to touch.",
+    "p2": "The work is deliberately modest: recover artifacts, recreate a runtime, document behavior, and only then decide which parts should be modernized.",
+    "p3": "Over time, the public site will also serve as an archive of revived projects and the technical decisions that helped preserve them."
+  },
+  "not_found": {
+    "eyebrow": "Not found",
+    "title": "This archive record does not exist yet.",
+    "description": "The site is structured for future project detail pages, but this route does not currently match a published record.",
+    "return": "Return to projects"
+  },
+  "project_data": {
+    "archive_record_template": {
+      "title": "Archive Record Template",
+      "status": "Reference structure",
+      "summary": "A lightweight example record showing how future restoration projects can preserve context, runtime notes, and modernization boundaries.",
+      "facts": [
+        { "label": "Artifact type", "value": "Project record scaffold" },
+        { "label": "Runtime", "value": "To be documented per project" },
+        {
+          "label": "Data policy",
+          "value": "Original artifacts are never overwritten"
+        },
+        { "label": "Modernization", "value": "Selective and reversible" }
+      ],
+      "notes": [
+        "Future project records should begin with what was found: source snapshots, database dumps, configuration, screenshots, server notes, and any surviving operational context.",
+        "Each record should separate recovery work from modernization work so readers can understand which behavior is original and which change was introduced for compatibility.",
+        "When a real restoration is published, this template can be replaced by the first project archive entry."
+      ]
+    }
+  }
+}

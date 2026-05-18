@@ -1,30 +1,58 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import App from './App';
 
-describe('FastCodeHomepage App Component', () => {
+describe('Legacy Revival Studio site', () => {
   beforeEach(() => {
-    // Mock window.scrollTo since it's used in App.jsx but not available in jsdom by default
+    window.history.pushState({}, '', '/en');
     window.scrollTo = vi.fn();
   });
 
-  it('renders the FastCode logo text', () => {
+  it('renders the landing page identity', () => {
     render(<App />);
-    const logoElements = screen.getAllByText(/FastCode/i);
-    expect(logoElements.length).toBeGreaterThan(0);
+
+    expect(
+      screen.getAllByText(/Legacy Revival Studio/i).length,
+    ).toBeGreaterThan(0);
+    expect(
+      screen.getByText(/Old software can live again/i),
+    ).toBeInTheDocument();
   });
 
-  it('renders the main slogan', () => {
+  it('renders the multi-page navigation', () => {
     render(<App />);
-    const sloganElement =
-      screen.getByText(/기술로 비즈니스의 문제를 해결하는/i);
-    expect(sloganElement).toBeInTheDocument();
+
+    expect(screen.getByRole('link', { name: 'Projects' })).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: 'Philosophy' }),
+    ).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Workflow' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Services' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'About' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Contact' })).toBeInTheDocument();
   });
 
-  it('renders navigation links', () => {
+  it('navigates to the projects page without a router dependency', () => {
     render(<App />);
-    expect(screen.getByText('Projects')).toBeInTheDocument();
-    expect(screen.getByText('Footprint')).toBeInTheDocument();
-    expect(screen.getByText('Infrastructure')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('link', { name: 'Projects' }));
+
+    expect(window.location.pathname).toBe('/en/projects');
+    expect(
+      screen.getByRole('heading', {
+        name: /A growing archive of revived software/i,
+      }),
+    ).toBeInTheDocument();
+  });
+
+  it('renders a future-ready project detail route', () => {
+    window.history.pushState({}, '', '/en/projects/archive-record-template');
+
+    render(<App />);
+
+    expect(
+      screen.getByRole('heading', { name: 'Archive Record Template' }),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/Recovery notes/i)).toBeInTheDocument();
   });
 });
