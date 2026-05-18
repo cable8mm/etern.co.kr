@@ -71,6 +71,19 @@ Prefer simplicity over novelty.
 
 ---
 
+### Project Media & Thumbnail Guidelines
+
+When a user adds a new project with a raw screenshot image in the workspace (e.g., under `docs/projects/assets/`), the AI agent must automatically process it into a concept-matching, premium museum-style archival thumbnail and save it inside `public/images/[key]-thumb.png`.
+
+**Archival Design Concept:**
+
+- **Landscape Aspect Ratio**: Standardize on a strict `16:10` aspect ratio.
+- **Museum Presentation**: Center the screenshot inside a realistic retro-modern device chassis (e.g., metallic/glass smartphone chassis for mobile screenshots, industrial minimalist monitor/screen chassis for web/desktop screenshots) set against a clean, soft, light-greenish gray (`#f5f7f4` or `#e9efe8`) background.
+- **Archival Metadata**: Add clean, minimalist technical metadata labels at the bottom (e.g., "DIGITAL ARTIFACT: [Title] / VER X.Y.Z") or a realistic registry plate.
+- **Clean Workspace**: Always delete raw, unprocessed vertical screenshots from the `/public/` directory after saving the finished `[key]-thumb.png` file to maintain a tidy codebase.
+
+---
+
 ## Current task
 
 Transform the existing `etern.co.kr` homepage into the **Legacy Revival Studio** homepage.
