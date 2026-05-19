@@ -349,9 +349,18 @@
       "summary": "Successfully modernized and ported a 7-year-old YouTube curation web service onto PHP 8.3 and Laravel 10 frameworks, integrating Laravel Nova admin portal and automated CI/CD pipelines.",
       "figCaption": "[Fig 8. Livesquare Revived Platform Original Web Dashboard Screenshot, 2023]",
       "facts": [
-        { "label": "Original Stack", "value": "PHP 7.1 / Laravel 5.3 / Bootstrap 3" },
-        { "label": "Revived Stack", "value": "PHP 8.3 / Laravel 10 / Tailwindcss 3" },
-        { "label": "Infrastructure & Deploy", "value": "Laravel Forge + Envoyer / GitHub Actions" },
+        {
+          "label": "Original Stack",
+          "value": "PHP 7.1 / Laravel 5.3 / Bootstrap 3"
+        },
+        {
+          "label": "Revived Stack",
+          "value": "PHP 8.3 / Laravel 10 / Tailwindcss 3"
+        },
+        {
+          "label": "Infrastructure & Deploy",
+          "value": "Laravel Forge + Envoyer / GitHub Actions"
+        },
         { "label": "Admin Panel", "value": "Laravel Nova integrated" }
       ],
       "notes": [

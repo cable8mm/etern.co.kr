@@ -345,9 +345,18 @@
       "summary": "7년 전 서비스되던 유튜브 채널 영상 큐레이션 플랫폼을 최신 PHP 8.3 및 Laravel 10 사양으로 코드 포팅하고, Laravel Nova 관리 포털과 자동 배포 자동화를 완벽 구현하여 복원했습니다.",
       "figCaption": "[Fig 8. 라이브스퀘어 복원 플랫폼 오리지널 스냅샷, 2023]",
       "facts": [
-        { "label": "과거 스택", "value": "PHP 7.1 / Laravel 5.3 / Bootstrap 3" },
-        { "label": "복원 스택", "value": "PHP 8.3 / Laravel 10 / Tailwindcss 3" },
-        { "label": "인프라 및 배포", "value": "Laravel Forge + Envoyer / GitHub Actions" },
+        {
+          "label": "과거 스택",
+          "value": "PHP 7.1 / Laravel 5.3 / Bootstrap 3"
+        },
+        {
+          "label": "복원 스택",
+          "value": "PHP 8.3 / Laravel 10 / Tailwindcss 3"
+        },
+        {
+          "label": "인프라 및 배포",
+          "value": "Laravel Forge + Envoyer / GitHub Actions"
+        },
         { "label": "관리 포털", "value": "Laravel Nova 도입" }
       ],
       "notes": [
