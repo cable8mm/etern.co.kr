@@ -294,8 +294,7 @@
         "Transformed legacy static pages (which were previously managed via manual code files) into relational database structures, enabling real-time content changes through a custom admin panel.",
         "Engineered a database-driven scheduling engine to replace manual HTML uploads for monthly timetables, providing dance instructors and coordinators with an easy-to-use scheduling manager."
       ]
-    },
-    "palgle": {
+    },    "palgle": {
       "title": "Workpress Data to Markdown Conversion",
       "status": "Converted",
       "summary": "Converted WordPress data to Markdown and restored it as a static site using Jekyll.",
@@ -316,11 +315,29 @@
         "Programmatically audited and resolved broken internal/external absolute link structures, migrated legacy images to a CDN hosted on the GitHub repository, and gracefully handled missing media using text fallbacks."
       ]
     },
+    "nightdance-i": {
+      "title": "Nightdance iPhone App",
+      "status": "Revived",
+      "summary": "Successfully compiled, modernized and optimized a 10-year-old Xcode 5-based native iOS project on modern Xcode 15 and iOS 15.3 runtimes.",
+      "figCaption": "[Fig 7. Nightdance Revived Platform Original Mobile Screenshot, 2024]",
+      "facts": [
+        { "label": "Original Stack", "value": "iOS 7.x / Xcode 5.x / Objective-C" },
+        { "label": "Revived Stack", "value": "iOS 15.3 / Xcode 15.x" },
+        { "label": "Assets Cleanup", "value": "200+ unused images purged & optimized" },
+        { "label": "Key Tasks", "value": "Legacy API replacement & source code modernization" }
+      ],
+      "notes": [
+        "Successfully resolved building blocks and compilation warnings of an ancient Objective-C project locked to Xcode 5.x and iOS 7.x runtimes, enabling solid builds on modern Xcode 15.x compilers.",
+        "Mapped out and replaced deprecated legacy UI and system APIs that had been completely removed from recent SDK versions with modern supported counterparts.",
+        "Audited and removed over 200 unused/redundant image files accumulated over a decade, keeping the repository tidy while compressing and optimizing remaining visual assets.",
+        "Refactored layout attributes to fix graphic rendering glitches on recent high-resolution simulators and established a clean, lightweight codebase for easier long-term maintenance."
+      ]
+    },
     "quote-man": {
       "title": "Quote Man",
       "status": "Revived",
       "summary": "Successfully compiled and restored a legacy Xcode 6-based iOS native project on modern Xcode 13 and iOS 15 runtimes, making it compatible with recent Apple devices.",
-      "figCaption": "[Fig 7. Quote Man Revived Platform Original Mobile Screenshot, 2023]",
+      "figCaption": "[Fig 8. Quote Man Revived Platform Original Mobile Screenshot, 2023]",
       "facts": [
         {
           "label": "Original Stack",
@@ -344,7 +361,7 @@
       "title": "Archive Record Template",
       "status": "Reference structure",
       "summary": "A lightweight example record showing how future restoration projects can preserve context, runtime notes, and modernization boundaries.",
-      "figCaption": "[Fig 8. Archive Record Directory Schema Template Snapshot, 2024]",
+      "figCaption": "[Fig 9. Archive Record Directory Schema Template Snapshot, 2024]",
       "facts": [
         { "label": "Artifact type", "value": "Project record scaffold" },
         { "label": "Runtime", "value": "To be documented per project" },
