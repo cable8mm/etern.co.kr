@@ -15,6 +15,9 @@ import {
   ClipboardCheck,
   ArchiveRestore,
   Menu,
+  Sun,
+  Moon,
+  Monitor,
 } from 'lucide-react';
 import { projects } from './data/projects';
 
@@ -201,7 +204,93 @@ function PageShell({ children }) {
   return <main className="pt-24 md:pt-28">{children}</main>;
 }
 
-function Header({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
+function ThemeSelector({ theme, setTheme }) {
+  const { t } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleOutsideClick = () => setIsOpen(false);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('click', handleOutsideClick);
+    }
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('click', handleOutsideClick);
+      }
+    };
+  }, [isOpen]);
+
+  const activeIcon = useMemo(() => {
+    if (theme === 'light') return <Sun size={14} />;
+    if (theme === 'dark') return <Moon size={14} />;
+    return <Monitor size={14} />;
+  }, [theme]);
+
+  const handleSelect = (mode, e) => {
+    e.stopPropagation();
+    setTheme(mode);
+    setIsOpen(false);
+  };
+
+  return (
+    <div className="relative inline-block text-left">
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsOpen(!isOpen);
+        }}
+        className="flex h-8 w-8 items-center justify-center border border-zinc-300 bg-transparent text-zinc-500 hover:border-zinc-950 hover:text-zinc-950 dark:border-zinc-700 dark:text-zinc-400 dark:hover:border-zinc-200 dark:hover:text-zinc-200 transition-colors"
+        aria-label="Select theme"
+        aria-expanded={isOpen}
+      >
+        {activeIcon}
+      </button>
+
+      {isOpen && (
+        <div className="absolute right-0 mt-2 w-32 border border-zinc-300 bg-[#f5f7f4]/95 backdrop-blur shadow-lg dark:border-zinc-800 dark:bg-zinc-900/95 z-50 transition-all">
+          <div className="py-1">
+            <button
+              onClick={(e) => handleSelect('light', e)}
+              className={`flex w-full items-center gap-2 px-3 py-2 text-left text-xs font-semibold hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors ${
+                theme === 'light'
+                  ? 'text-zinc-950 dark:text-zinc-50 bg-zinc-200/50 dark:bg-zinc-800/50'
+                  : 'text-zinc-500 dark:text-zinc-400'
+              }`}
+            >
+              <Sun size={12} />
+              <span>{t('theme.light')}</span>
+            </button>
+            <button
+              onClick={(e) => handleSelect('dark', e)}
+              className={`flex w-full items-center gap-2 px-3 py-2 text-left text-xs font-semibold hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors ${
+                theme === 'dark'
+                  ? 'text-zinc-950 dark:text-zinc-50 bg-zinc-200/50 dark:bg-zinc-800/50'
+                  : 'text-zinc-500 dark:text-zinc-400'
+              }`}
+            >
+              <Moon size={12} />
+              <span>{t('theme.dark')}</span>
+            </button>
+            <button
+              onClick={(e) => handleSelect('system', e)}
+              className={`flex w-full items-center gap-2 px-3 py-2 text-left text-xs font-semibold hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors ${
+                theme === 'system'
+                  ? 'text-zinc-950 dark:text-zinc-50 bg-zinc-200/50 dark:bg-zinc-800/50'
+                  : 'text-zinc-500 dark:text-zinc-400'
+              }`}
+            >
+              <Monitor size={12} />
+              <span>{t('theme.system')}</span>
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Header({ isScrolled, mobileMenuOpen, setMobileMenuOpen, theme, setTheme }) {
   const { t, i18n } = useTranslation();
 
   const toggleLanguage = () => {
@@ -224,7 +313,7 @@ function Header({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
     <header
       className={`fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300 ${
         isScrolled
-          ? 'border-zinc-200 bg-[#f5f7f4]/92 backdrop-blur'
+          ? 'border-zinc-200 bg-[#f5f7f4]/92 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/92'
           : 'border-transparent bg-transparent'
       }`}
     >
@@ -235,14 +324,14 @@ function Header({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
           className="flex items-center gap-3 text-left"
           aria-label="Legacy Revival Studio home"
         >
-          <span className="flex h-9 w-9 items-center justify-center border border-zinc-300 bg-zinc-950 text-sm font-semibold text-zinc-50">
+          <span className="flex h-9 w-9 items-center justify-center border border-zinc-300 bg-zinc-950 text-sm font-semibold text-zinc-50 dark:border-zinc-700 dark:bg-zinc-50 dark:text-zinc-950">
             LR
           </span>
           <span>
-            <span className="block text-sm font-semibold tracking-normal text-zinc-950">
+            <span className="block text-sm font-semibold tracking-normal text-zinc-950 dark:text-zinc-50">
               Legacy Revival Studio
             </span>
-            <span className="block text-xs text-zinc-500">
+            <span className="block text-xs text-zinc-500 dark:text-zinc-400">
               Software restoration
             </span>
           </span>
@@ -253,31 +342,33 @@ function Header({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-zinc-600 transition-colors hover:text-zinc-950"
+              className="text-sm text-zinc-600 transition-colors hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-200"
             >
               {t(`nav.${link.key}`)}
             </Link>
           ))}
           <button
             onClick={toggleLanguage}
-            className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-zinc-500 hover:text-zinc-950"
+            className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-zinc-500 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-200"
           >
             <Globe size={14} />
             {(i18n.language || 'ko').startsWith('ko') ? 'EN' : 'KO'}
           </button>
+          <ThemeSelector theme={theme} setTheme={setTheme} />
         </div>
 
         <div className="flex items-center gap-4 md:hidden">
           <button
             onClick={toggleLanguage}
-            className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-zinc-500"
+            className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400"
           >
             <Globe size={14} />
             {(i18n.language || 'ko').startsWith('ko') ? 'EN' : 'KO'}
           </button>
+          <ThemeSelector theme={theme} setTheme={setTheme} />
           <button
             type="button"
-            className="flex h-10 w-10 items-center justify-center border border-zinc-300 bg-[#f5f7f4] text-zinc-900"
+            className="flex h-10 w-10 items-center justify-center border border-zinc-300 bg-[#f5f7f4] text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50"
             onClick={() => setMobileMenuOpen((open) => !open)}
             aria-label="Toggle navigation"
             aria-expanded={mobileMenuOpen}
@@ -288,14 +379,14 @@ function Header({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
       </nav>
 
       {mobileMenuOpen && (
-        <div className="border-t border-zinc-200 bg-[#f5f7f4] px-5 py-4 md:hidden">
+        <div className="border-t border-zinc-200 bg-[#f5f7f4] px-5 py-4 md:hidden dark:border-zinc-800 dark:bg-zinc-900">
           <div className="mx-auto flex max-w-6xl flex-col gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onNavigate={() => setMobileMenuOpen(false)}
-                className="py-3 text-left text-base text-zinc-700"
+                className="py-3 text-left text-base text-zinc-700 dark:text-zinc-300"
               >
                 {t(`nav.${link.key}`)}
               </Link>
@@ -1066,6 +1157,45 @@ export default function App({ ssrPath } = {}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { i18n } = useTranslation();
 
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('theme') || 'system';
+    }
+    return 'system';
+  });
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const root = document.documentElement;
+
+    const applyTheme = (currentTheme) => {
+      const isDark =
+        currentTheme === 'dark' ||
+        (currentTheme === 'system' &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+      if (isDark) {
+        root.classList.add('dark');
+      } else {
+        root.classList.remove('dark');
+      }
+    };
+
+    applyTheme(theme);
+    localStorage.setItem('theme', theme);
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleSystemChange = () => {
+      if (theme === 'system') {
+        applyTheme('system');
+      }
+    };
+
+    mediaQuery.addEventListener('change', handleSystemChange);
+    return () => mediaQuery.removeEventListener('change', handleSystemChange);
+  }, [theme]);
+
   useEffect(() => {
     if (i18n.language !== lang) {
       i18n.changeLanguage(lang);
@@ -1185,11 +1315,13 @@ export default function App({ ssrPath } = {}) {
   }, [rawPath]);
 
   return (
-    <div className="min-h-screen bg-[#f5f7f4] text-zinc-900 selection:bg-zinc-900 selection:text-zinc-50">
+    <div className="min-h-screen bg-[#f5f7f4] dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 selection:bg-zinc-900 selection:text-zinc-50 dark:selection:bg-zinc-50 dark:selection:text-zinc-950 transition-colors duration-300">
       <Header
         isScrolled={isScrolled}
         mobileMenuOpen={mobileMenuOpen}
         setMobileMenuOpen={setMobileMenuOpen}
+        theme={theme}
+        setTheme={setTheme}
       />
       {page}
       <Footer />

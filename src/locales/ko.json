@@ -7,6 +7,11 @@
     "about": "소개",
     "contact": "문의"
   },
+  "theme": {
+    "light": "라이트",
+    "dark": "다크",
+    "system": "시스템"
+  },
   "studio_metrics": {
     "metric_1": "3개의 시스템 복원 완료",
     "metric_2": "20+년의 소프트웨어 역사 추적",

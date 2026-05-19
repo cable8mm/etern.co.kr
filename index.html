@@ -43,6 +43,21 @@
         y.parentNode.insertBefore(t, y);
       })(window, document, 'clarity', 'script', 'wtbz96g5b9');
     </script>
+    <!-- Blocking Script to prevent Theme Flickering -->
+    <script>
+      (function () {
+        const theme = localStorage.getItem('theme') || 'system';
+        const isDark =
+          theme === 'dark' ||
+          (theme === 'system' &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
