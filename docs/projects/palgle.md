@@ -1,12 +1,14 @@
 - 프로젝트 영문: key palgle
-- 프로젝트 제목: Workpress 데이터 Markdown으로 복원
+- 프로젝트 제목: Workpress 데이터 Markdown으로 변환
 - 과거 제작 연도: 2016
 - 복원 완료 연도: 2024
-- 과거 기술 스택: Workpress (PHP + MySQL)
-- 복원 기술 스택: Markdown + jekyll
-- 현재 상태: 복원 완료
+- 아티팩트 유형: Database(Workpress)
+- 데이터 정책: 원본 아티팩트는 절대 덮어쓰지 않음
+- 배포: Github Pages + Jekyll + Markdown
+- 요구사항: 이미지와 링크 에러 제거
+- 현재 상태: 변환 완료
 - 이미지 파일명: assets/palgle-screenshot.png
-- 한 줄 요약: Workpress 데이터를 Markdown로 변환하여 jekyll을 이용한 정적 사이트로 복원했습니다.
+- 한 줄 요약: Workpress 데이터를 Markdown로 변환하며, jekyll을 이용한 정적 사이트로 복원했습니다.
 - 복구 노트 내용:
   1. DB와 워드프레스에서 데이터 추출
   - 워드프레스에 엑스트라 플러그인을 이용하여 데이터를 json으로 추출했습니다.

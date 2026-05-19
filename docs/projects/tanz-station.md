@@ -4,6 +4,8 @@
 - 복원 완료 연도: 2022
 - 과거 기술 스택: PHP 5.6 / Gnuboard5 / MySQL 3
 - 복원 기술 스택: PHP 7.2 / CakePHP 2 / MySQL 7
+- 디자인 정책: 변환하지 않음
+- 콘텐츠 정책: 관리자가 변경해야 되는 콘텐츠는 Admin으로 관리
 - 현재 상태: 복원 완료
 - 이미지 파일명: assets/tanz-station-screenshot.png
 - 한 줄 요약: 그누보드 기반 웹사이트에 CakePHP 2 기반 Admin을 통합하였습니다.
