@@ -267,11 +267,27 @@
         "Engineered a database-driven scheduling engine to replace manual HTML uploads for monthly timetables, providing dance instructors and coordinators with an easy-to-use scheduling manager."
       ]
     },
+    "palgle": {
+      "title": "WordPress Markdown Revival",
+      "status": "Revived",
+      "summary": "Extracted historical blog database records from a WordPress (PHP + MySQL) setup, formatted the posts into normalized Markdown documents with YAML Front Matter, and established a modern, zero-maintenance static site architecture using Jekyll and GitHub Pages.",
+      "figCaption": "[Fig 5. WordPress to Markdown Restoration Original Dashboard Screenshot, 2024]",
+      "facts": [
+        { "label": "Original Stack", "value": "WordPress (PHP + MySQL)" },
+        { "label": "Revived Stack", "value": "Markdown / Jekyll" }
+      ],
+      "notes": [
+        "Extracted over 1,000 blog posts and rich metadata directly from the MySQL database using a custom Node.js script to ensure absolute integrity without relying on unstable third-party plugins.",
+        "Parsed and formatted the unstructured post content into standardized Markdown files complete with consistent YAML Front Matter headers.",
+        "Set up a lightweight Jekyll static site generator environment and configured a robust continuous deployment pipeline using GitHub Actions to deploy automatically to GitHub Pages.",
+        "Programmatically audited and resolved broken internal/external absolute link structures, migrated legacy images to a CDN hosted on the GitHub repository, and gracefully handled missing media using text fallbacks."
+      ]
+    },
     "template": {
       "title": "Archive Record Template",
       "status": "Reference structure",
       "summary": "A lightweight example record showing how future restoration projects can preserve context, runtime notes, and modernization boundaries.",
-      "figCaption": "[Fig 5. Archive Record Directory Schema Template Snapshot, 2024]",
+      "figCaption": "[Fig 6. Archive Record Directory Schema Template Snapshot, 2024]",
       "facts": [
         { "label": "Artifact type", "value": "Project record scaffold" },
         { "label": "Runtime", "value": "To be documented per project" },

@@ -65,6 +65,19 @@ const projectMeta = {
     },
     thumbnail: '/images/tanz-station-thumb.png',
   },
+  palgle: {
+    ko: {
+      title: 'WordPress 데이터 Markdown 복원 기록',
+      description:
+        'WordPress(PHP + MySQL) 블로그 데이터를 정밀 가공하여 Markdown으로 안전하게 마이그레이션하고, Jekyll과 GitHub Pages 연동을 통해 무비용 정적 사이트로 성공적으로 되살렸습니다.',
+    },
+    en: {
+      title: 'WordPress to Markdown Blog Restoration',
+      description:
+        'Successfully migrated 1,000+ WordPress posts to standardized Markdown format with YAML Front Matter, relaunching the blog on a zero-maintenance Jekyll static architecture.',
+    },
+    thumbnail: '/images/palgle-thumb.png',
+  },
   template: {
     ko: {
       title: '아카이브 복원 스키마 템플릿',

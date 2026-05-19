@@ -260,11 +260,27 @@
         "매월 수작업 파일 업로드로 관리되던 무용 시간표(Timetable) 스케줄 관리 기능을 데이터베이스 기반으로 신규 설계하고 요일/시간/강사별 원클릭 스케줄러 관리 도구를 제공하여 운영 효율을 향상했습니다."
       ]
     },
+    "palgle": {
+      "title": "WordPress Markdown 복원",
+      "status": "복원 완료",
+      "summary": "기존 WordPress(PHP + MySQL) 블로그 데이터를 안전하게 추출하여 Markdown 형식으로 변환하고, Jekyll 및 GitHub Pages 자동 배포 환경을 도입하여 반영구적이고 경제적인 정적 웹사이트로 성공적으로 복원했습니다.",
+      "figCaption": "[Fig 5. WordPress 데이터 Markdown 복원 플랫폼 오리지널 스냅샷, 2024]",
+      "facts": [
+        { "label": "과거 스택", "value": "WordPress (PHP + MySQL)" },
+        { "label": "복원 스택", "value": "Markdown / Jekyll" }
+      ],
+      "notes": [
+        "워드프레스 플러그인을 거치지 않고 자체 제작한 Node.js 프로그램을 활용해 1,000여 개의 포스트와 메타데이터의 100% 무결성을 유지하며 추출했습니다.",
+        "추출된 DB 텍스트 데이터를 YAML Front Matter가 완벽히 규격화된 마크다운(Markdown) 포맷으로 깨끗하게 변환 및 포매팅했습니다.",
+        "Jekyll 정적 사이트 빌더를 도입하고 GitHub Actions를 결합하여 GitHub Pages에 정적 HTML 파일이 무료로 고속 자동 배포되는 완전 무비용 웹 인프라를 구축했습니다.",
+        "기존 포스트 내 깨진 절대 경로와 상대 링크를 전수 전처리하여 복원했으며, 유실되거나 깨진 이미지는 저장소 CDN에 호스팅하고 미존재 이미지는 텍스트로 보완 조치했습니다."
+      ]
+    },
     "template": {
       "title": "아카이브 기록 템플릿",
       "status": "참고 구조",
       "summary": "향후 복원 프로젝트가 컨텍스트, 런타임 노트, 현대화의 범위를 어떻게 보존할 수 있는지 보여주는 가벼운 예시 기록입니다.",
-      "figCaption": "[Fig 5. 아카이브 기록 디렉토리 스키마 템플릿 스냅샷, 2024]",
+      "figCaption": "[Fig 6. 아카이브 기록 디렉토리 스키마 템플릿 스냅샷, 2024]",
       "facts": [
         { "label": "아티팩트 유형", "value": "프로젝트 기록 스캐폴드" },
         { "label": "런타임", "value": "프로젝트별 문서화 예정" },

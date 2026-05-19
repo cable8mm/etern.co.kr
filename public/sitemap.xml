@@ -86,6 +86,11 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://etern.co.kr/projects/palgle</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://etern.co.kr/projects/archive-record-template</loc>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
@@ -109,6 +114,11 @@
   </url>
   <url>
     <loc>https://etern.co.kr/en/projects/tanz-station</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://etern.co.kr/en/projects/palgle</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
