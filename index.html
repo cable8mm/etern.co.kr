@@ -10,6 +10,7 @@
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f7f4" id="theme-color-meta" />
     <meta
       name="naver-site-verification"
       content="1eadb698cf0c59f1239776679d6bbe1fce3c2ca0"
@@ -42,6 +43,26 @@
         y = l.getElementsByTagName(r)[0];
         y.parentNode.insertBefore(t, y);
       })(window, document, 'clarity', 'script', 'wtbz96g5b9');
+    </script>
+    <!-- Blocking Script to prevent Theme Flickering -->
+    <script>
+      (function () {
+        const theme = localStorage.getItem('theme') || 'system';
+        const isDark =
+          theme === 'dark' ||
+          (theme === 'system' &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches);
+        const metaThemeColor = document.getElementById('theme-color-meta');
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.classList.add('dark-mode');
+          if (metaThemeColor) metaThemeColor.setAttribute('content', '#0e110d');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.remove('dark-mode');
+          if (metaThemeColor) metaThemeColor.setAttribute('content', '#f5f7f4');
+        }
+      })();
     </script>
   </head>
   <body>

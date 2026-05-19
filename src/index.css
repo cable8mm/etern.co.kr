@@ -1,1 +1,23 @@
 @import 'tailwindcss';
+
+/* Custom class-based dark mode variant for Tailwind v4 */
+@custom-variant dark (&:is(.dark *, .dark-mode *));
+
+/* Smooth transition for theme switching */
+html,
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  background-color: #f5f7f4;
+}
+
+html.dark-mode,
+html.dark {
+  background-color: #0e110d;
+}
