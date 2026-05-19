@@ -220,8 +220,14 @@
       "summary": "올라펫의 버려진 유기동물 입양 서비스를 Github Actions를 이용한 클라우드 배포 환경으로 이전하여 다시 구동 가능하게 만들었습니다.",
       "figCaption": "[Fig 2. 올라펫 유기동물 플랫폼 복원 모바일 스크린샷, 2025]",
       "facts": [
-        { "label": "과거 스택", "value": "PHP 7.3 / Laravel 8 / Bootstrap 3 / MySQL 5.7" },
-        { "label": "복원 스택", "value": "PHP 8.3 / Laravel 12 / TailwindCSS 3 / MySQL 8.0" }
+        {
+          "label": "과거 스택",
+          "value": "PHP 7.3 / Laravel 8 / Bootstrap 3 / MySQL 5.7"
+        },
+        {
+          "label": "복원 스택",
+          "value": "PHP 8.3 / Laravel 12 / TailwindCSS 3 / MySQL 8.0"
+        }
       ],
       "notes": [
         "과거 사이트에서 사용하지 않는 필드와 테이블을 제거하고 보호소 및 입양 공고글 데이터를 성공적으로 마이그레이션했습니다.",
@@ -276,7 +282,10 @@
         { "label": "과거 스택", "value": "PHP 5.6 / Gnuboard5 / MySQL 3" },
         { "label": "복원 스택", "value": "PHP 7.2 / CakePHP 2 / MySQL 7" },
         { "label": "디자인 정책", "value": "변환하지 않음" },
-        { "label": "콘텐츠 정책", "value": "관리자가 변경해야 되는 콘텐츠는 Admin으로 관리" }
+        {
+          "label": "콘텐츠 정책",
+          "value": "관리자가 변경해야 되는 콘텐츠는 Admin으로 관리"
+        }
       ],
       "notes": [
         "그누보드 5의 기본 코어를 유지하면서 비즈니스 로직 처리를 위해 CakePHP 2 프레임워크를 병렬 조화시킨 하이브리드 어드민 설계를 구현했습니다.",
@@ -292,7 +301,10 @@
       "figCaption": "[Fig 6. WordPress 데이터 Markdown 복원 플랫폼 오리지널 스냅샷, 2024]",
       "facts": [
         { "label": "아티팩트 유형", "value": "Database(Workpress)" },
-        { "label": "데이터 정책", "value": "원본 아티팩트는 절대 덮어쓰지 않음" },
+        {
+          "label": "데이터 정책",
+          "value": "원본 아티팩트는 절대 덮어쓰지 않음"
+        },
         { "label": "배포", "value": "Github Pages + Jekyll + Markdown" },
         { "label": "요구사항", "value": "이미지와 링크 에러 제거" }
       ],
@@ -325,4 +337,3 @@
     }
   }
 }
-

@@ -228,7 +228,10 @@
           "label": "Original Stack",
           "value": "PHP 7.3 / Laravel 8 / Bootstrap 3 / MySQL 5.7"
         },
-        { "label": "Revived Stack", "value": "PHP 8.3 / Laravel 12 / TailwindCSS 3 / MySQL 8.0" }
+        {
+          "label": "Revived Stack",
+          "value": "PHP 8.3 / Laravel 12 / TailwindCSS 3 / MySQL 8.0"
+        }
       ],
       "notes": [
         "Cleaned up redundant fields and tables from the legacy database, and successfully migrated shelter information and adoption posts data.",
@@ -299,7 +302,10 @@
       "figCaption": "[Fig 6. WordPress to Markdown Restoration Original Dashboard Screenshot, 2024]",
       "facts": [
         { "label": "Artifact Type", "value": "Database(Workpress)" },
-        { "label": "Data Policy", "value": "Original artifacts are never overwritten" },
+        {
+          "label": "Data Policy",
+          "value": "Original artifacts are never overwritten"
+        },
         { "label": "Deployment", "value": "Github Pages + Jekyll + Markdown" },
         { "label": "Requirements", "value": "Remove image and link errors" }
       ],
@@ -332,4 +338,3 @@
     }
   }
 }
-
