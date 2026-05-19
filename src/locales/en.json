@@ -343,11 +343,30 @@
         "Refactored layout attributes to fix graphic rendering glitches on recent high-resolution simulators and established a clean, lightweight codebase for easier long-term maintenance."
       ]
     },
+    "livesquare": {
+      "title": "Livesquare",
+      "status": "Revived",
+      "summary": "Successfully modernized and ported a 7-year-old YouTube curation web service onto PHP 8.3 and Laravel 10 frameworks, integrating Laravel Nova admin portal and automated CI/CD pipelines.",
+      "figCaption": "[Fig 8. Livesquare Revived Platform Original Web Dashboard Screenshot, 2023]",
+      "facts": [
+        { "label": "Original Stack", "value": "PHP 7.1 / Laravel 5.3 / Bootstrap 3" },
+        { "label": "Revived Stack", "value": "PHP 8.3 / Laravel 10 / Tailwindcss 3" },
+        { "label": "Infrastructure & Deploy", "value": "Laravel Forge + Envoyer / GitHub Actions" },
+        { "label": "Admin Panel", "value": "Laravel Nova integrated" }
+      ],
+      "notes": [
+        "Orchestrated the architectural migration of a legacy Laravel 5.3 application to the modern Laravel 10 framework, rewriting outdated core service providers and ensuring strict PHP 8.3 compiler compatibility.",
+        "Replaced a complex, custom-built CakePHP 2 admin panel with a robust, enterprise-grade Laravel Nova administration portal to simplify curated video and channel management.",
+        "Eliminated highly fragile manual FTP deployment setups by implementing a high-reliability automated CI/CD pipeline powered by GitHub Actions, Forge, and Envoyer.",
+        "Redesigned the old static Bootstrap 3 frontend using responsive, mobile-optimized Tailwind CSS 3 layouts to match modern visual standards and cross-device display requirements.",
+        "Established a clean, transparent software development workflow using GitHub Issues and Pull Requests to maintain complete code traceability and reversible history."
+      ]
+    },
     "quote-man": {
       "title": "Quote Man",
       "status": "Revived",
       "summary": "Successfully compiled and restored a legacy Xcode 6-based iOS native project on modern Xcode 13 and iOS 15 runtimes, making it compatible with recent Apple devices.",
-      "figCaption": "[Fig 8. Quote Man Revived Platform Original Mobile Screenshot, 2023]",
+      "figCaption": "[Fig 9. Quote Man Revived Platform Original Mobile Screenshot, 2023]",
       "facts": [
         {
           "label": "Original Stack",
@@ -371,7 +390,7 @@
       "title": "Archive Record Template",
       "status": "Reference structure",
       "summary": "A lightweight example record showing how future restoration projects can preserve context, runtime notes, and modernization boundaries.",
-      "figCaption": "[Fig 9. Archive Record Directory Schema Template Snapshot, 2024]",
+      "figCaption": "[Fig 10. Archive Record Directory Schema Template Snapshot, 2024]",
       "facts": [
         { "label": "Artifact type", "value": "Project record scaffold" },
         { "label": "Runtime", "value": "To be documented per project" },

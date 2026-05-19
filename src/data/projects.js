@@ -54,6 +54,15 @@ export const projects = [
     thumbnail: '/images/nightdance-i-thumb.png',
   },
   {
+    key: 'livesquare',
+    slug: 'livesquare',
+    originalYear: 2018,
+    revivalYear: 2023,
+    stack: 'PHP 8.3 / Laravel 10 / Tailwindcss 3',
+    status: 'Completed',
+    thumbnail: '/images/livesquare-thumb.png',
+  },
+  {
     key: 'quote-man',
     slug: 'quote-man',
     originalYear: 2015,
