@@ -322,10 +322,16 @@
       "summary": "Successfully compiled and restored a legacy Xcode 6-based iOS native project on modern Xcode 13 and iOS 15 runtimes, making it compatible with recent Apple devices.",
       "figCaption": "[Fig 7. Quote Man Revived Platform Original Mobile Screenshot, 2023]",
       "facts": [
-        { "label": "Original Stack", "value": "iOS 8.x / Xcode 6.x / Objective-C" },
+        {
+          "label": "Original Stack",
+          "value": "iOS 8.x / Xcode 6.x / Objective-C"
+        },
         { "label": "Revived Stack", "value": "iOS 15.3 / Xcode 13.x" },
         { "label": "Package Manager", "value": "CocoaPods (SSZipArchive)" },
-        { "label": "Key Focus", "value": "Modernized navigation APIs & App Store HIG compliance" }
+        {
+          "label": "Key Focus",
+          "value": "Modernized navigation APIs & App Store HIG compliance"
+        }
       ],
       "notes": [
         "Resolved compiler dependencies and modernized obsolete Objective-C structures locked to Xcode 6.x and iOS 8.x, ensuring successful builds and smooth execution on modern Xcode 13.x and iOS 15.3 runtimes.",
