@@ -1196,12 +1196,15 @@ export default function App({ ssrPath } = {}) {
           typeof window.matchMedia === 'function' &&
           window.matchMedia('(prefers-color-scheme: dark)').matches);
 
+      const metaThemeColor = document.getElementById('theme-color-meta');
       if (isDark) {
         root.classList.add('dark');
         root.classList.add('dark-mode');
+        if (metaThemeColor) metaThemeColor.setAttribute('content', '#0e110d');
       } else {
         root.classList.remove('dark');
         root.classList.remove('dark-mode');
+        if (metaThemeColor) metaThemeColor.setAttribute('content', '#f5f7f4');
       }
     };
 
