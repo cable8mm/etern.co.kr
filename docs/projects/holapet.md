@@ -2,8 +2,8 @@
 - 프로젝트 제목: 올라펫 유기동물 플랫폼 복원
 - 과거 제작 연도: 2022
 - 복원 완료 연도: 2025
-- 과거 기술 스택: PHP 7.3 / Laravel 8 / MySQL 5.7
-- 복원 기술 스택: PHP 8.3 / Laravel 12 / MySQL 8
+- 과거 기술 스택: PHP 7.3 / Laravel 8 / Bootstrap 3 / MySQL 5.7
+- 복원 기술 스택: PHP 8.3 / Laravel 12 / TailwindCSS 3 / MySQL 8.0
 - 현재 상태: 복원 완료
 - 이미지 파일명: assets/holapet-screenshot.png
 - 한 줄 요약: 올라펫의 버려진 유기동물 입양 서비스를 Github Action을 이용한 클라우드 배포 환경으로 이전하여 다시 구동 가능하게 만들었습니다.

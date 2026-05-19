@@ -4,6 +4,8 @@
 - 복원 완료 연도: 2026
 - 과거 기술 스택: PHP 7.3 / CakePHP 2 / MySQL 5.7
 - 복원 기술 스택: PHP 8.3 / Laravel 12 / MySQL 8
+- 배포: Laravel Cloud
+- 관리자: Laravel Nova
 - 현재 상태: 복원 완료
 - 이미지 파일명: assets/aipro-screenshot.png
 - 한 줄 요약: 상품 12,000개, 연결 쇼핑몰 17개를 처리하는 물류 시스템을 복원했습니다.

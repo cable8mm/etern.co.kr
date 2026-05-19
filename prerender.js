@@ -78,6 +78,19 @@ const projectMeta = {
     },
     thumbnail: '/images/palgle-thumb.png',
   },
+  gsc2017: {
+    ko: {
+      title: 'GSC 2017 바닐라 정적 웹사이트 변환 기록',
+      description:
+        '유지보수 및 서버 비용 문제 해결을 위해 기존 워드프레스(WordPress) 사이트를 크롤링하고 검증하여 완전한 바닐라 HTML/CSS/JS 및 GitHub Pages 무비용 환경으로 변환 복원했습니다.',
+    },
+    en: {
+      title: 'GSC 2017 WordPress to Vanilla Static Conversion',
+      description:
+        'Successfully migrated and converted a legacy WordPress website to highly robust, zero-cost Vanilla HTML/CSS/JS hosted on GitHub Pages.',
+    },
+    thumbnail: '/images/gsc2017-thumb.png',
+  },
   template: {
     ko: {
       title: '아카이브 복원 스키마 템플릿',
