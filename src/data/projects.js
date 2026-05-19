@@ -45,6 +45,15 @@ export const projects = [
     thumbnail: '/images/palgle-thumb.png',
   },
   {
+    key: 'nightdance-i',
+    slug: 'nightdance-i',
+    originalYear: 2014,
+    revivalYear: 2024,
+    stack: 'iPhone native app',
+    status: 'Completed',
+    thumbnail: '/images/nightdance-i-thumb.png',
+  },
+  {
     key: 'quote-man',
     slug: 'quote-man',
     originalYear: 2015,
