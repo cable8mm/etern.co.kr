@@ -316,11 +316,35 @@
         "Programmatically audited and resolved broken internal/external absolute link structures, migrated legacy images to a CDN hosted on the GitHub repository, and gracefully handled missing media using text fallbacks."
       ]
     },
+    "quote-man": {
+      "title": "Quote Man",
+      "status": "Revived",
+      "summary": "Successfully compiled and restored a legacy Xcode 6-based iOS native project on modern Xcode 13 and iOS 15 runtimes, making it compatible with recent Apple devices.",
+      "figCaption": "[Fig 7. Quote Man Revived Platform Original Mobile Screenshot, 2023]",
+      "facts": [
+        {
+          "label": "Original Stack",
+          "value": "iOS 8.x / Xcode 6.x / Objective-C"
+        },
+        { "label": "Revived Stack", "value": "iOS 15.3 / Xcode 13.x" },
+        { "label": "Package Manager", "value": "CocoaPods (SSZipArchive)" },
+        {
+          "label": "Key Focus",
+          "value": "Modernized navigation APIs & App Store HIG compliance"
+        }
+      ],
+      "notes": [
+        "Resolved compiler dependencies and modernized obsolete Objective-C structures locked to Xcode 6.x and iOS 8.x, ensuring successful builds and smooth execution on modern Xcode 13.x and iOS 15.3 runtimes.",
+        "Refactored dependencies by moving away from raw, manually compiled static files of external libraries (SSZipArchive) to a standard automated CocoaPods package management workflow.",
+        "Replaced legacy, deprecated view navigation handlers with updated Navigation Controller APIs supported starting from iOS 9, eliminating view lifecycle clashes and screen transition lag on modern aspect-ratio screens.",
+        "Polished the visual design, restructured launch storyboard parameters to satisfy modern Apple HIG (Human Interface Guidelines), and removed dead legacy and debug files to ensure a successful App Store review and publication."
+      ]
+    },
     "template": {
       "title": "Archive Record Template",
       "status": "Reference structure",
       "summary": "A lightweight example record showing how future restoration projects can preserve context, runtime notes, and modernization boundaries.",
-      "figCaption": "[Fig 7. Archive Record Directory Schema Template Snapshot, 2024]",
+      "figCaption": "[Fig 8. Archive Record Directory Schema Template Snapshot, 2024]",
       "facts": [
         { "label": "Artifact type", "value": "Project record scaffold" },
         { "label": "Runtime", "value": "To be documented per project" },
