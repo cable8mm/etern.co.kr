@@ -290,7 +290,13 @@ function ThemeSelector({ theme, setTheme }) {
   );
 }
 
-function Header({ isScrolled, mobileMenuOpen, setMobileMenuOpen, theme, setTheme }) {
+function Header({
+  isScrolled,
+  mobileMenuOpen,
+  setMobileMenuOpen,
+  theme,
+  setTheme,
+}) {
   const { t, i18n } = useTranslation();
 
   const toggleLanguage = () => {
@@ -1173,6 +1179,7 @@ export default function App({ ssrPath } = {}) {
       const isDark =
         currentTheme === 'dark' ||
         (currentTheme === 'system' &&
+          typeof window.matchMedia === 'function' &&
           window.matchMedia('(prefers-color-scheme: dark)').matches);
 
       if (isDark) {
@@ -1185,15 +1192,17 @@ export default function App({ ssrPath } = {}) {
     applyTheme(theme);
     localStorage.setItem('theme', theme);
 
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleSystemChange = () => {
-      if (theme === 'system') {
-        applyTheme('system');
-      }
-    };
+    if (typeof window.matchMedia === 'function') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const handleSystemChange = () => {
+        if (theme === 'system') {
+          applyTheme('system');
+        }
+      };
 
-    mediaQuery.addEventListener('change', handleSystemChange);
-    return () => mediaQuery.removeEventListener('change', handleSystemChange);
+      mediaQuery.addEventListener('change', handleSystemChange);
+      return () => mediaQuery.removeEventListener('change', handleSystemChange);
+    }
   }, [theme]);
 
   useEffect(() => {
