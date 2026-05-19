@@ -185,14 +185,14 @@ function Link({ href, className, children, onNavigate, ...props }) {
 function SectionHeading({ eyebrow, title, children }) {
   return (
     <div className="max-w-3xl">
-      <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
+      <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500 dark:text-zinc-400">
         {eyebrow}
       </p>
-      <h2 className="text-3xl font-semibold tracking-normal text-zinc-950 md:text-5xl">
+      <h2 className="text-3xl font-semibold tracking-normal text-zinc-950 dark:text-zinc-50 md:text-5xl">
         {title}
       </h2>
       {children && (
-        <p className="mt-6 text-base leading-8 text-zinc-600 md:text-lg">
+        <p className="mt-6 text-base leading-8 text-zinc-600 dark:text-zinc-400 md:text-lg">
           {children}
         </p>
       )}
@@ -408,37 +408,37 @@ function CorePrinciplePanel() {
   const { t } = useTranslation();
   return (
     <aside
-      className="border border-zinc-300 bg-[#e9efe8] p-6 md:p-8"
+      className="border border-zinc-300 dark:border-zinc-700 bg-[#e9efe8] dark:bg-[#1a1e19] p-6 md:p-8"
       aria-label={t('core_principle.title')}
     >
-      <div className="mb-8 flex items-center gap-3 border-b border-zinc-300 pb-5">
-        <GitBranch size={22} className="text-zinc-700" />
+      <div className="mb-8 flex items-center gap-3 border-b border-zinc-300 dark:border-zinc-700 pb-5">
+        <GitBranch size={22} className="text-zinc-700 dark:text-zinc-300" />
         <div>
-          <p className="text-sm font-semibold text-zinc-950">
+          <p className="text-sm font-semibold text-zinc-950 dark:text-zinc-50">
             {t('core_principle.title')}
           </p>
-          <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
+          <p className="text-xs uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
             {t('core_principle.version')}
           </p>
         </div>
       </div>
-      <blockquote className="text-3xl font-semibold leading-tight text-zinc-950 md:text-4xl">
+      <blockquote className="text-3xl font-semibold leading-tight text-zinc-950 dark:text-zinc-50 md:text-4xl">
         {t('core_principle.quote')}
       </blockquote>
       <dl className="mt-9 grid gap-5 text-sm">
-        <div className="border-t border-zinc-300 pt-5">
-          <dt className="font-semibold text-zinc-950">
+        <div className="border-t border-zinc-300 dark:border-zinc-700 pt-5">
+          <dt className="font-semibold text-zinc-950 dark:text-zinc-50">
             {t('core_principle.preserve_title')}
           </dt>
-          <dd className="mt-2 leading-6 text-zinc-600">
+          <dd className="mt-2 leading-6 text-zinc-600 dark:text-zinc-400">
             {t('core_principle.preserve_desc')}
           </dd>
         </div>
-        <div className="border-t border-zinc-300 pt-5">
-          <dt className="font-semibold text-zinc-950">
+        <div className="border-t border-zinc-300 dark:border-zinc-700 pt-5">
+          <dt className="font-semibold text-zinc-950 dark:text-zinc-50">
             {t('core_principle.runnable_title')}
           </dt>
-          <dd className="mt-2 leading-6 text-zinc-600">
+          <dd className="mt-2 leading-6 text-zinc-600 dark:text-zinc-400">
             {t('core_principle.runnable_desc')}
           </dd>
         </div>
@@ -452,7 +452,7 @@ function PhilosophySummary() {
   return (
     <section
       id="philosophy"
-      className="scroll-mt-24 border-y border-zinc-200 bg-white px-5 py-24 md:px-8 md:py-32"
+      className="scroll-mt-24 border-y border-zinc-200 bg-white dark:bg-[#0e110d] dark:border-zinc-800 px-5 py-24 md:px-8 md:py-32"
     >
       <div className="mx-auto max-w-6xl">
         <SectionHeading
@@ -466,13 +466,16 @@ function PhilosophySummary() {
           {principles.map((item) => (
             <article
               key={item.key}
-              className="border border-zinc-200 bg-[#f5f7f4] p-6"
+              className="border border-zinc-200 bg-[#f5f7f4] dark:bg-[#1a1e19] dark:border-zinc-800 p-6"
             >
-              <item.icon className="mb-8 text-zinc-700" size={24} />
-              <h3 className="text-xl font-semibold text-zinc-950">
+              <item.icon
+                className="mb-8 text-zinc-700 dark:text-zinc-300"
+                size={24}
+              />
+              <h3 className="text-xl font-semibold text-zinc-950 dark:text-zinc-50">
                 {t(`philosophy.items.${item.key}.title`)}
               </h3>
-              <p className="mt-4 text-sm leading-7 text-zinc-600">
+              <p className="mt-4 text-sm leading-7 text-zinc-600 dark:text-zinc-400">
                 {t(`philosophy.items.${item.key}.body`)}
               </p>
             </article>
@@ -488,7 +491,7 @@ function WorkflowSection() {
   return (
     <section
       id="workflow"
-      className="scroll-mt-24 bg-white px-5 py-24 md:px-8 md:py-32"
+      className="scroll-mt-24 bg-white dark:bg-[#0e110d] px-5 py-24 md:px-8 md:py-32"
     >
       <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-[0.85fr_1.15fr] md:gap-20">
         <div>
@@ -499,7 +502,7 @@ function WorkflowSection() {
             {t('workflow.description')}
           </SectionHeading>
 
-          <div className="mt-10 border-l-2 border-zinc-200 pl-6 text-sm text-zinc-600 font-mono space-y-4">
+          <div className="mt-10 border-l-2 border-zinc-200 pl-6 text-sm text-zinc-600 dark:text-zinc-400 font-mono space-y-4">
             <p className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-zinc-400 rounded-full"></span>
               {t('workflow.git_phil_1')}
@@ -516,34 +519,37 @@ function WorkflowSection() {
         </div>
 
         <div className="relative">
-          <div className="absolute left-4 top-4 bottom-4 w-px bg-zinc-200 hidden md:block"></div>
+          <div className="absolute left-4 top-4 bottom-4 w-px bg-zinc-200 dark:bg-zinc-800 hidden md:block"></div>
           <ol className="space-y-12 md:space-y-10">
             {workflow.map((step, index) => (
               <li key={step.key} className="relative pl-0 md:pl-12">
-                <div className="hidden md:flex absolute left-[11px] top-1.5 w-2.5 h-2.5 bg-zinc-950 rounded-full ring-4 ring-white"></div>
+                <div className="hidden md:flex absolute left-[11px] top-1.5 w-2.5 h-2.5 bg-zinc-950 dark:bg-zinc-500 rounded-full ring-4 ring-white"></div>
                 <div className="flex items-baseline gap-4 mb-2">
                   <span className="font-mono text-xs text-zinc-400">
                     commit {step.hash}
                   </span>
-                  <span className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
+                  <span className="text-xs font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
                     Step {String(index + 1).padStart(2, '0')}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold text-zinc-950 mb-2">
+                <h3 className="text-xl font-semibold text-zinc-950 dark:text-zinc-50 mb-2">
                   {t(`workflow.steps.${step.key}.title`)}
                 </h3>
-                <p className="text-sm leading-7 text-zinc-600">
+                <p className="text-sm leading-7 text-zinc-600 dark:text-zinc-400">
                   {t(`workflow.steps.${step.key}.body`)}
                 </p>
                 {step.key === 'analyze' && (
-                  <div className="mt-4 inline-flex items-center gap-2 border border-zinc-200 bg-[#f5f7f4] px-2.5 py-1.5 text-xs font-mono text-zinc-600">
+                  <div className="mt-4 inline-flex items-center gap-2 border border-zinc-200 bg-[#f5f7f4] dark:bg-[#1a1e19] dark:border-zinc-800 px-2.5 py-1.5 text-xs font-mono text-zinc-600 dark:text-zinc-400 text-xs font-mono text-zinc-600">
                     <span className="w-1.5 h-1.5 bg-[#a8e09f] rounded-full animate-pulse"></span>
                     AI-assisted process
                   </div>
                 )}
                 {step.key === 'archive' && (
-                  <div className="mt-4 inline-flex items-center gap-2 border border-zinc-200 bg-[#f5f7f4] px-2.5 py-1.5 text-xs font-mono text-zinc-600">
-                    <GitBranch size={12} className="text-zinc-500" />
+                  <div className="mt-4 inline-flex items-center gap-2 border border-zinc-200 bg-[#f5f7f4] dark:bg-[#1a1e19] dark:border-zinc-800 px-2.5 py-1.5 text-xs font-mono text-zinc-600 dark:text-zinc-400 text-xs font-mono text-zinc-600">
+                    <GitBranch
+                      size={12}
+                      className="text-zinc-500 dark:text-zinc-400"
+                    />
                     Git-preserved history
                   </div>
                 )}
@@ -561,7 +567,7 @@ function ServicesSection() {
   return (
     <section
       id="services"
-      className="scroll-mt-24 border-y border-zinc-200 bg-white px-5 py-24 md:px-8 md:py-32"
+      className="scroll-mt-24 border-y border-zinc-200 bg-white dark:bg-[#0e110d] dark:border-zinc-800 px-5 py-24 md:px-8 md:py-32"
     >
       <div className="mx-auto max-w-6xl">
         <SectionHeading
@@ -571,23 +577,26 @@ function ServicesSection() {
           {t('services.description')}
         </SectionHeading>
 
-        <div className="mt-14 grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-2">
+        <div className="mt-14 grid gap-px overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-200 dark:bg-zinc-800 md:grid-cols-2">
           {services.map((service) => (
             <article
               key={service.key}
-              className="bg-white p-7 flex flex-col h-full"
+              className="bg-white dark:bg-[#131712] p-7 flex flex-col h-full"
             >
               <div className="flex-1">
-                <service.icon className="mb-8 text-zinc-700" size={24} />
-                <h3 className="text-2xl font-semibold text-zinc-950">
+                <service.icon
+                  className="mb-8 text-zinc-700 dark:text-zinc-300"
+                  size={24}
+                />
+                <h3 className="text-2xl font-semibold text-zinc-950 dark:text-zinc-50">
                   {t(`services.items.${service.key}.title`)}
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-zinc-600">
+                <p className="mt-4 text-sm leading-7 text-zinc-600 dark:text-zinc-400">
                   {t(`services.items.${service.key}.body`)}
                 </p>
               </div>
-              <div className="mt-10 pt-6 border-t border-zinc-100">
-                <span className="text-xs font-medium uppercase tracking-[0.1em] text-zinc-500">
+              <div className="mt-10 pt-6 border-t border-zinc-100 dark:border-zinc-800">
+                <span className="text-xs font-medium uppercase tracking-[0.1em] text-zinc-500 dark:text-zinc-400">
                   {t(`services.items.${service.key}.pricing`)}
                 </span>
               </div>
@@ -611,9 +620,12 @@ function TechnicalGroundSection() {
           />
           <ul className="mt-10 space-y-5">
             {preservationRules.map((rule) => (
-              <li key={rule} className="flex gap-3 text-zinc-700">
+              <li
+                key={rule}
+                className="flex gap-3 text-zinc-700 dark:text-zinc-300"
+              >
                 <CheckCircle2
-                  className="mt-1 shrink-0 text-zinc-800"
+                  className="mt-1 shrink-0 text-zinc-800 dark:text-zinc-300"
                   size={18}
                 />
                 <span className="leading-7">
@@ -633,7 +645,7 @@ function TechnicalGroundSection() {
             {tools.map((tool) => (
               <span
                 key={tool}
-                className="border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-700"
+                className="border border-zinc-300 bg-white dark:bg-[#1a1e19] dark:border-zinc-700 px-3 py-2 text-sm text-zinc-700 dark:text-zinc-300"
               >
                 {t(`technical.tools.${tool}`)}
               </span>
@@ -650,7 +662,7 @@ function ContactBand() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 border-t border-zinc-300 bg-zinc-950 px-5 py-20 text-zinc-50 md:px-8 md:py-28"
+      className="scroll-mt-24 border-t border-zinc-300 dark:border-zinc-800 bg-zinc-950 px-5 py-20 text-zinc-50 md:px-8 md:py-28"
     >
       <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[1fr_auto] md:items-end">
         <div>
@@ -678,7 +690,7 @@ function ContactBand() {
 function Footer() {
   const { t } = useTranslation();
   return (
-    <footer className="bg-zinc-950 px-5 py-8 text-zinc-500 md:px-8">
+    <footer className="bg-zinc-950 px-5 py-8 text-zinc-500 dark:text-zinc-400 md:px-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 border-t border-zinc-800 pt-8 text-sm md:flex-row md:items-center md:justify-between">
         <p>{t('footer.copyright')}</p>
         <p>{t('footer.slogan')}</p>
@@ -693,13 +705,13 @@ function HomePage() {
     <main>
       <section className="mx-auto grid min-h-screen max-w-6xl items-center gap-12 px-5 pb-20 pt-28 md:grid-cols-[1.05fr_0.95fr] md:px-8 md:pt-36">
         <div>
-          <p className="mb-6 text-sm font-semibold uppercase tracking-[0.24em] text-zinc-500">
+          <p className="mb-6 text-sm font-semibold uppercase tracking-[0.24em] text-zinc-500 dark:text-zinc-400">
             {t('home.subtitle')}
           </p>
-          <h1 className="max-w-4xl text-5xl font-semibold leading-[1.05] tracking-normal text-zinc-950 md:text-7xl">
+          <h1 className="max-w-4xl text-5xl font-semibold leading-[1.05] tracking-normal text-zinc-950 dark:text-zinc-50 md:text-7xl">
             {t('home.title')}
           </h1>
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-600 md:text-xl">
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400 md:text-xl">
             {t('home.description')}
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -711,7 +723,7 @@ function HomePage() {
             </Link>
             <Link
               href="/#workflow"
-              className="inline-flex items-center justify-center gap-2 border border-zinc-300 px-5 py-3 text-sm font-semibold text-zinc-800 transition-colors hover:border-zinc-950 hover:text-zinc-950"
+              className="inline-flex items-center justify-center gap-2 border border-zinc-300 px-5 py-3 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:border-zinc-950 hover:text-zinc-950 dark:text-zinc-50"
             >
               {t('home.see_workflow')} <ArrowRight size={16} />
             </Link>
@@ -736,18 +748,18 @@ function HomePage() {
 function StudioMetrics() {
   const { t } = useTranslation();
   return (
-    <section className="border-y border-zinc-200 bg-[#e9efe8] px-5 py-8 md:px-8">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 md:flex-row md:items-center md:justify-between font-mono text-sm uppercase tracking-wider text-zinc-600">
+    <section className="border-y border-zinc-200 bg-[#e9efe8] dark:bg-[#1a1e19] dark:border-zinc-800 px-5 py-8 md:px-8">
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 md:flex-row md:items-center md:justify-between font-mono text-sm uppercase tracking-wider text-zinc-600 dark:text-zinc-400">
         <div className="flex items-center gap-3">
-          <span className="w-2 h-2 bg-zinc-950 rounded-full"></span>
+          <span className="w-2 h-2 bg-zinc-950 dark:bg-zinc-500 rounded-full"></span>
           {t('studio_metrics.metric_1')}
         </div>
         <div className="flex items-center gap-3">
-          <span className="w-2 h-2 bg-zinc-950 rounded-full"></span>
+          <span className="w-2 h-2 bg-zinc-950 dark:bg-zinc-500 rounded-full"></span>
           {t('studio_metrics.metric_2')}
         </div>
         <div className="flex items-center gap-3">
-          <span className="w-2 h-2 bg-zinc-950 rounded-full"></span>
+          <span className="w-2 h-2 bg-zinc-950 dark:bg-zinc-500 rounded-full"></span>
           {t('studio_metrics.metric_3')}
         </div>
       </div>
@@ -767,7 +779,7 @@ function BeforeAfterShowcase() {
         </div>
         <div className="grid gap-px bg-zinc-800 border border-zinc-800 md:grid-cols-2 font-mono text-sm">
           <div className="bg-zinc-900 p-6 md:p-10">
-            <div className="text-zinc-500 mb-6 uppercase tracking-widest text-xs flex items-center gap-2">
+            <div className="text-zinc-500 dark:text-zinc-400 mb-6 uppercase tracking-widest text-xs flex items-center gap-2">
               <span className="w-2 h-2 bg-red-500 rounded-full"></span>
               {t('before_after.legacy_state')}
             </div>
@@ -803,7 +815,7 @@ function ProjectPreview() {
   const featuredProjects = projects.slice(0, 2);
 
   return (
-    <section className="border-y border-zinc-200 bg-white px-5 py-24 md:px-8 md:py-32">
+    <section className="border-y border-zinc-200 bg-white dark:bg-[#0e110d] dark:border-zinc-800 px-5 py-24 md:px-8 md:py-32">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <SectionHeading
@@ -814,7 +826,7 @@ function ProjectPreview() {
           </SectionHeading>
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-950"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-950 dark:text-zinc-50"
           >
             {t('project_preview.view_all')} <ArrowRight size={16} />
           </Link>
@@ -831,14 +843,14 @@ function ProjectGrid({ projects: projectList, emptyLimit }) {
 
   if (projectList.length === 0) {
     return (
-      <div className="mt-14 border border-dashed border-zinc-300 bg-[#f5f7f4] p-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
+      <div className="mt-14 border border-dashed border-zinc-300 dark:border-zinc-700 bg-[#f5f7f4] dark:bg-[#1a1e19] p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
           {t('project_grid.pending')}
         </p>
-        <h3 className="mt-4 text-2xl font-semibold text-zinc-950">
+        <h3 className="mt-4 text-2xl font-semibold text-zinc-950 dark:text-zinc-50">
           {t('project_grid.no_public')}
         </h3>
-        <p className="mt-4 max-w-2xl leading-7 text-zinc-600">
+        <p className="mt-4 max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">
           {t('project_grid.ready')}
         </p>
       </div>
@@ -847,7 +859,7 @@ function ProjectGrid({ projects: projectList, emptyLimit }) {
 
   return (
     <div
-      className={`mt-14 grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 ${
+      className={`mt-14 grid gap-px overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-200 dark:bg-zinc-800 ${
         projectList.length > 1 ? 'md:grid-cols-2' : 'md:grid-cols-1'
       }`}
     >
@@ -855,11 +867,11 @@ function ProjectGrid({ projects: projectList, emptyLimit }) {
         <Link
           key={project.slug}
           href={`/projects/${project.slug}`}
-          className="group bg-white p-7 transition-colors hover:bg-[#f5f7f4] flex flex-col h-full"
+          className="group bg-white dark:bg-[#131712] p-7 transition-colors hover:bg-[#f5f7f4] dark:hover:bg-[#1a1e19] flex flex-col h-full"
         >
           {project.thumbnail && (
             <div className="mb-6">
-              <div className="overflow-hidden border border-zinc-300 bg-zinc-100 aspect-[16/10]">
+              <div className="overflow-hidden border border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-[#131712] aspect-[16/10]">
                 <img
                   src={project.thumbnail}
                   alt={t(`project_data.${project.key}.title`)}
@@ -867,37 +879,37 @@ function ProjectGrid({ projects: projectList, emptyLimit }) {
                   loading="lazy"
                 />
               </div>
-              <p className="mt-2 font-mono text-[10px] tracking-tight text-zinc-500 uppercase">
+              <p className="mt-2 font-mono text-[10px] tracking-tight text-zinc-500 dark:text-zinc-400 uppercase">
                 {t(`project_data.${project.key}.figCaption`)}
               </p>
             </div>
           )}
 
           <div className="flex items-center justify-between">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
               {project.stack}
             </p>
-            <span className="text-xs font-mono border border-zinc-200 bg-[#f5f7f4] text-zinc-600 px-2 py-1">
+            <span className="text-xs font-mono border border-zinc-200 dark:border-zinc-700 bg-[#f5f7f4] dark:bg-[#1a1e19] text-zinc-600 dark:text-zinc-400 px-2 py-1">
               {t(`project_data.${project.key}.status`)}
             </span>
           </div>
 
-          <h3 className="mt-6 text-2xl font-semibold text-zinc-950">
+          <h3 className="mt-6 text-2xl font-semibold text-zinc-950 dark:text-zinc-50">
             {t(`project_data.${project.key}.title`)}
           </h3>
 
-          <div className="mt-4 flex items-center gap-3 font-mono text-sm text-zinc-500">
+          <div className="mt-4 flex items-center gap-3 font-mono text-sm text-zinc-500 dark:text-zinc-400">
             <span>{project.originalYear}</span>
             <ArrowRight size={14} className="text-zinc-300" />
-            <span className="text-zinc-950 font-semibold">
+            <span className="text-zinc-950 dark:text-zinc-50 font-semibold">
               {project.revivalYear}
             </span>
           </div>
 
-          <p className="mt-6 flex-1 text-sm leading-7 text-zinc-600">
+          <p className="mt-6 flex-1 text-sm leading-7 text-zinc-600 dark:text-zinc-400">
             {t(`project_data.${project.key}.summary`)}
           </p>
-          <div className="mt-8 flex items-center gap-2 text-sm font-semibold text-zinc-950 pt-6 border-t border-zinc-100">
+          <div className="mt-8 flex items-center gap-2 text-sm font-semibold text-zinc-950 dark:text-zinc-50 pt-6 border-t border-zinc-100 dark:border-zinc-800">
             {t('project_grid.read_record')}
             <ArrowRight
               size={16}
@@ -950,23 +962,23 @@ function ProjectDetailPage({ slug }) {
         <div className="mx-auto max-w-4xl">
           <Link
             href="/projects"
-            className="mb-10 inline-flex items-center gap-2 text-sm font-semibold text-zinc-600 hover:text-zinc-950"
+            className="mb-10 inline-flex items-center gap-2 text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:text-zinc-50"
           >
             {t('project_detail.back')}
           </Link>
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500 dark:text-zinc-400">
             {t(`project_data.${project.key}.status`)}
           </p>
-          <h1 className="text-4xl font-semibold tracking-normal text-zinc-950 md:text-6xl">
+          <h1 className="text-4xl font-semibold tracking-normal text-zinc-950 dark:text-zinc-50 md:text-6xl">
             {t(`project_data.${project.key}.title`)}
           </h1>
-          <p className="mt-8 text-lg leading-8 text-zinc-600">
+          <p className="mt-8 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             {t(`project_data.${project.key}.summary`)}
           </p>
 
           {project.thumbnail && (
-            <figure className="mt-12 border border-zinc-300 bg-zinc-100 p-3 md:p-4">
-              <div className="overflow-hidden border border-zinc-200 bg-white aspect-[16/10] md:aspect-[16/9]">
+            <figure className="mt-12 border border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-[#131712] p-3 md:p-4">
+              <div className="overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#131712] aspect-[16/10] md:aspect-[16/9]">
                 <img
                   src={project.thumbnail}
                   alt={t(`project_data.${project.key}.title`)}
@@ -974,28 +986,30 @@ function ProjectDetailPage({ slug }) {
                   loading="eager"
                 />
               </div>
-              <figcaption className="mt-3 font-mono text-[10px] tracking-tight text-zinc-500 uppercase text-center">
+              <figcaption className="mt-3 font-mono text-[10px] tracking-tight text-zinc-500 dark:text-zinc-400 uppercase text-center">
                 {t(`project_data.${project.key}.figCaption`)}
               </figcaption>
             </figure>
           )}
 
-          <div className="mt-12 grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-2">
+          <div className="mt-12 grid gap-px overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-200 dark:bg-zinc-800 md:grid-cols-2">
             {facts.map((fact) => (
-              <div key={fact.label} className="bg-white p-6">
-                <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+              <div key={fact.label} className="bg-white dark:bg-[#131712] p-6">
+                <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                   {fact.label}
                 </dt>
-                <dd className="mt-3 text-zinc-950">{fact.value}</dd>
+                <dd className="mt-3 text-zinc-950 dark:text-zinc-50">
+                  {fact.value}
+                </dd>
               </div>
             ))}
           </div>
 
-          <section className="mt-14 border-t border-zinc-300 pt-10">
-            <h2 className="text-2xl font-semibold text-zinc-950">
+          <section className="mt-14 border-t border-zinc-300 dark:border-zinc-700 pt-10">
+            <h2 className="text-2xl font-semibold text-zinc-950 dark:text-zinc-50">
               {t('project_detail.recovery_notes')}
             </h2>
-            <div className="mt-6 space-y-5 text-base leading-8 text-zinc-600">
+            <div className="mt-6 space-y-5 text-base leading-8 text-zinc-600 dark:text-zinc-400">
               {notes.map((note) => (
                 <p key={note}>{note}</p>
               ))}
@@ -1049,7 +1063,7 @@ function AboutPage() {
           >
             {t('about_page.description')}
           </SectionHeading>
-          <div className="space-y-6 text-base leading-8 text-zinc-600">
+          <div className="space-y-6 text-base leading-8 text-zinc-600 dark:text-zinc-400">
             <p>{t('about_page.p1')}</p>
             <p>{t('about_page.p2')}</p>
             <p>{t('about_page.p3')}</p>
@@ -1074,17 +1088,17 @@ function ContactPage() {
             {t('contact.description_page')}
           </SectionHeading>
 
-          <div className="mt-12 border border-zinc-300 bg-white p-7">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
+          <div className="mt-12 border border-zinc-300 dark:border-zinc-800 bg-white dark:bg-[#131712] p-7">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
               {t('contact.email_label')}
             </p>
             <a
               href="mailto:cable8mm@gmail.com"
-              className="mt-4 inline-flex items-center gap-2 text-2xl font-semibold text-zinc-950"
+              className="mt-4 inline-flex items-center gap-2 text-2xl font-semibold text-zinc-950 dark:text-zinc-50"
             >
               cable8mm@gmail.com <Mail size={20} />
             </a>
-            <p className="mt-6 leading-7 text-zinc-600">
+            <p className="mt-6 leading-7 text-zinc-600 dark:text-zinc-400">
               {t('contact.email_note')}
             </p>
           </div>
@@ -1100,13 +1114,13 @@ function NotFoundPage() {
     <PageShell>
       <section className="px-5 pb-24 pt-12 md:px-8 md:pb-32 md:pt-20">
         <div className="mx-auto max-w-3xl">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500 dark:text-zinc-400">
             {t('not_found.eyebrow')}
           </p>
-          <h1 className="text-4xl font-semibold tracking-normal text-zinc-950 md:text-6xl">
+          <h1 className="text-4xl font-semibold tracking-normal text-zinc-950 dark:text-zinc-50 md:text-6xl">
             {t('not_found.title')}
           </h1>
-          <p className="mt-6 text-lg leading-8 text-zinc-600">
+          <p className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             {t('not_found.description')}
           </p>
           <Link
@@ -1184,8 +1198,10 @@ export default function App({ ssrPath } = {}) {
 
       if (isDark) {
         root.classList.add('dark');
+        root.classList.add('dark-mode');
       } else {
         root.classList.remove('dark');
+        root.classList.remove('dark-mode');
       }
     };
 
@@ -1324,7 +1340,7 @@ export default function App({ ssrPath } = {}) {
   }, [rawPath]);
 
   return (
-    <div className="min-h-screen bg-[#f5f7f4] dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 selection:bg-zinc-900 selection:text-zinc-50 dark:selection:bg-zinc-50 dark:selection:text-zinc-950 transition-colors duration-300">
+    <div className="min-h-screen bg-[#f5f7f4] dark:bg-[#0e110d] text-zinc-900 dark:text-zinc-50 selection:bg-zinc-900 selection:text-zinc-50 dark:selection:bg-zinc-50 dark:selection:text-zinc-950 transition-colors duration-300">
       <Header
         isScrolled={isScrolled}
         mobileMenuOpen={mobileMenuOpen}
