@@ -36,6 +36,15 @@ export const projects = [
     thumbnail: '/images/tanz-station-thumb.png',
   },
   {
+    key: 'palgle',
+    slug: 'palgle',
+    originalYear: 2016,
+    revivalYear: 2024,
+    stack: 'WordPress (PHP + MySQL)',
+    status: 'Completed',
+    thumbnail: '/images/palgle-thumb.png',
+  },
+  {
     key: 'template',
     slug: 'archive-record-template',
     originalYear: 2024,
