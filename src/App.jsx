@@ -875,7 +875,7 @@ function ProjectGrid({ projects: projectList, emptyLimit }) {
                 <img
                   src={project.thumbnail}
                   alt={t(`project_data.${project.key}.title`)}
-                  className="h-full w-full object-cover grayscale opacity-80 filter transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.01]"
+                  className="h-full w-full object-cover grayscale-0 md:grayscale opacity-100 md:opacity-80 filter transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.01]"
                   loading="lazy"
                 />
               </div>
@@ -982,7 +982,7 @@ function ProjectDetailPage({ slug }) {
                 <img
                   src={project.thumbnail}
                   alt={t(`project_data.${project.key}.title`)}
-                  className="h-full w-full object-cover grayscale opacity-90 transition-all duration-700 hover:grayscale-0 hover:opacity-100"
+                  className="h-full w-full object-cover grayscale-0 md:grayscale opacity-100 md:opacity-90 transition-all duration-700 hover:grayscale-0 hover:opacity-100"
                   loading="eager"
                 />
               </div>
