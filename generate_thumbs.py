@@ -20,20 +20,12 @@ def create_museum_thumbnail(screenshot_path, output_path, title, subtitle, bg_co
     frame_max_w = canvas_w - 160 # 1120px
     frame_max_h = canvas_h - 220 # 580px
     
-    # Keep screenshot aspect ratio
-    ss_w, ss_h = screenshot.size
-    ss_aspect = ss_w / ss_h
-    
-    # We want a standard browser window aspect ratio, say 16:10 or matching the screenshot
+    # Target browser content size is fixed to maximize the canvas space
     target_w = frame_max_w
-    target_h = int(target_w / ss_aspect)
-    
-    if target_h > frame_max_h:
-        target_h = frame_max_h
-        target_w = int(target_h * ss_aspect)
+    target_h = frame_max_h
         
-    # Resize screenshot
-    screenshot_resized = screenshot.resize((target_w, target_h), Image.Resampling.LANCZOS)
+    # Crop and resize screenshot to fill target size keeping aspect ratio, showing the top of the page
+    screenshot_resized = ImageOps.fit(screenshot, (target_w, target_h), method=Image.Resampling.LANCZOS, centering=(0.5, 0.0))
     
     # 4. Create the browser window container (chrome bar + screenshot content)
     chrome_h = 32
@@ -178,3 +170,12 @@ create_museum_thumbnail(
     "Revival Ver 2024 / Code Base: Jekyll & Markdown",
     bg_color="#e9efe8"
 )
+
+create_museum_thumbnail(
+    "docs/projects/assets/gsc2017-screenshot.png",
+    "public/images/gsc2017-thumb.png",
+    "GSC 2017 Static Site",
+    "Revival Ver 2024 / Code Base: Vanilla HTML/CSS/JS",
+    bg_color="#FAF6F0"
+)
+
