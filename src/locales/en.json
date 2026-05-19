@@ -294,7 +294,8 @@
         "Transformed legacy static pages (which were previously managed via manual code files) into relational database structures, enabling real-time content changes through a custom admin panel.",
         "Engineered a database-driven scheduling engine to replace manual HTML uploads for monthly timetables, providing dance instructors and coordinators with an easy-to-use scheduling manager."
       ]
-    },    "palgle": {
+    },
+    "palgle": {
       "title": "Workpress Data to Markdown Conversion",
       "status": "Converted",
       "summary": "Converted WordPress data to Markdown and restored it as a static site using Jekyll.",
@@ -321,10 +322,19 @@
       "summary": "Successfully compiled, modernized and optimized a 10-year-old Xcode 5-based native iOS project on modern Xcode 15 and iOS 15.3 runtimes.",
       "figCaption": "[Fig 7. Nightdance Revived Platform Original Mobile Screenshot, 2024]",
       "facts": [
-        { "label": "Original Stack", "value": "iOS 7.x / Xcode 5.x / Objective-C" },
+        {
+          "label": "Original Stack",
+          "value": "iOS 7.x / Xcode 5.x / Objective-C"
+        },
         { "label": "Revived Stack", "value": "iOS 15.3 / Xcode 15.x" },
-        { "label": "Assets Cleanup", "value": "200+ unused images purged & optimized" },
-        { "label": "Key Tasks", "value": "Legacy API replacement & source code modernization" }
+        {
+          "label": "Assets Cleanup",
+          "value": "200+ unused images purged & optimized"
+        },
+        {
+          "label": "Key Tasks",
+          "value": "Legacy API replacement & source code modernization"
+        }
       ],
       "notes": [
         "Successfully resolved building blocks and compilation warnings of an ancient Objective-C project locked to Xcode 5.x and iOS 7.x runtimes, enabling solid builds on modern Xcode 15.x compilers.",
