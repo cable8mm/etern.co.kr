@@ -1,5 +1,13 @@
 # Release Notes
 
+## v2.10.0 - 2026-05-19
+
+### What's Changed
+
+* Add livesquare project by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/25
+
+**Full Changelog**: https://github.com/cable8mm/etern.co.kr/compare/v2.9.0...v2.10.0
+
 ## v2.9.0 - 2026-05-19
 
 ### What's Changed
