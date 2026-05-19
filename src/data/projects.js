@@ -45,6 +45,15 @@ export const projects = [
     thumbnail: '/images/palgle-thumb.png',
   },
   {
+    key: 'quote-man',
+    slug: 'quote-man',
+    originalYear: 2015,
+    revivalYear: 2023,
+    stack: 'iPhone native app',
+    status: 'Completed',
+    thumbnail: '/images/quote-man-thumb.png',
+  },
+  {
     key: 'tanz-station',
     slug: 'tanz-station',
     originalYear: 2016,
