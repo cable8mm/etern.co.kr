@@ -1,5 +1,15 @@
 # Release Notes
 
+## v2.9.0 - 2026-05-19
+
+### What's Changed
+
+* Add quote-man project by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/22
+* Improvement project UI for mobile screens by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/23
+* Add nightdance ios app project by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/24
+
+**Full Changelog**: https://github.com/cable8mm/etern.co.kr/compare/v2.8.0...v2.9.0
+
 ## v2.8.0 - 2026-05-19
 
 ### What's Changed
