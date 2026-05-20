@@ -339,10 +339,10 @@ function Header({
             LR
           </span>
           <span>
-            <span className="block text-sm font-semibold tracking-normal text-zinc-950 dark:text-zinc-50">
+            <span className="block text-sm font-semibold tracking-normal text-zinc-950 dark:text-zinc-50 break-keep">
               {t('nav.logo_title', { defaultValue: 'Legacy Revival Studio' })}
             </span>
-            <span className="block text-xs text-zinc-500 dark:text-zinc-400">
+            <span className="hidden md:block text-xs text-zinc-500 dark:text-zinc-400">
               {t('nav.logo_subtitle', { defaultValue: 'Software restoration' })}
             </span>
           </span>
