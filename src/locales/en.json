@@ -203,13 +203,11 @@
       "summary": "Restored a large-scale smart warehouse management logistics system processing 12,000 products and integrating 17 external shopping malls.",
       "figCaption": "[Fig 1. Smart Logistics WMS System Revived Dashboard Snapshot, 2026]",
       "facts": [
-        {
-          "label": "Original Stack",
-          "value": "PHP 7.3 / CakePHP 2 / MySQL 5.7"
-        },
-        { "label": "Revived Stack", "value": "PHP 8.3 / Laravel 12 / MySQL 8" },
-        { "label": "Deployment", "value": "Laravel Cloud" },
-        { "label": "Admin Panel", "value": "Laravel Nova" }
+        { "label": "Original Stack", "value": "PHP 7.3 + CakePHP 2 + MySQL 5.7" },
+        { "label": "Problem", "value": "CakePHP 2 framework reached end-of-life" },
+        { "label": "Recovery", "value": "Migrated to modern stack with Laravel + Nova" },
+        { "label": "Outcome", "value": "New UI + Queue + Cloud Deployment" },
+        { "label": "Status", "value": "Revived" }
       ],
       "notes": [
         "Cleaned up redundant fields and tables from the legacy database, and successfully migrated high-volume product catalogs and logistics ledger data.",
@@ -226,14 +224,11 @@
       "summary": "Migrated the abandoned animal adoption service of Hola Pet to a cloud-based delivery environment integrated with GitHub Actions to bring it back to a fully runnable state.",
       "figCaption": "[Fig 2. Hola Pet Abandoned Animals Platform Revived Mobile Screenshot, 2025]",
       "facts": [
-        {
-          "label": "Original Stack",
-          "value": "PHP 7.3 / Laravel 8 / Bootstrap 3 / MySQL 5.7"
-        },
-        {
-          "label": "Revived Stack",
-          "value": "PHP 8.3 / Laravel 12 / TailwindCSS 3 / MySQL 8.0"
-        }
+        { "label": "Original Stack", "value": "PHP 7.3 / Laravel 8 / Bootstrap 3 / MySQL 5.7" },
+        { "label": "Problem", "value": "Default CSS framework unsupported in modern Laravel" },
+        { "label": "Recovery", "value": "Upgraded to latest version and converted Bootstrap to TailwindCSS" },
+        { "label": "Outcome", "value": "Enabled latest Laravel features and integration of external libraries" },
+        { "label": "Status", "value": "Revived" }
       ],
       "notes": [
         "Cleaned up redundant fields and tables from the legacy database, and successfully migrated shelter information and adoption posts data.",
@@ -248,11 +243,11 @@
       "summary": "Restored a legacy Zeroboard 4-based instrument transaction board to the modernized Aki-in platform powered by the CakePHP 2 framework.",
       "figCaption": "[Fig 3. Aki-in Revived Platform Original Mobile Screenshot, 2024]",
       "facts": [
-        {
-          "label": "Original Stack",
-          "value": "PHP 5.6 / Zeroboard 4.x / MySQL 5.7"
-        },
-        { "label": "Revived Stack", "value": "PHP 8.2 / CakePHP 2 / MySQL 8" }
+        { "label": "Original Stack", "value": "PHP 5.6 / Zeroboard 4.x / MySQL 3.x" },
+        { "label": "Problem", "value": "OS and Zeroboard reached end-of-life" },
+        { "label": "Recovery", "value": "Restored using modern stack and custom-tuned CakePHP 2.x" },
+        { "label": "Outcome", "value": "New Admin UI + Performance improvements" },
+        { "label": "Status", "value": "Revived" }
       ],
       "notes": [
         "Purged unused legacy fields and tables to streamline the database structure, successfully migrating all operational user and post records.",
@@ -270,7 +265,10 @@
       "figCaption": "[Fig 4. GSC 2017 Static Website Restoration Snapshot, 2024]",
       "facts": [
         { "label": "Original Stack", "value": "WordPress" },
-        { "label": "Revived Stack", "value": "Vanilla HTML/CSS/JS" }
+        { "label": "Problem", "value": "Server costs and periodic WordPress patching required" },
+        { "label": "Recovery", "value": "Restored UI using Vite/React + GitHub Pages" },
+        { "label": "Outcome", "value": "Zero-cost serverless hosting, managed entirely via GitHub" },
+        { "label": "Status", "value": "Converted" }
       ],
       "notes": [
         "Crawled the legacy WordPress site to collect all pages, restoring broken links and images to their original state.",
@@ -286,9 +284,10 @@
       "figCaption": "[Fig 5. Seoul Tanz Station Revived Platform Original Web Screenshot, 2022]",
       "facts": [
         { "label": "Original Stack", "value": "PHP 5.6 / Gnuboard5 / MySQL 3" },
-        { "label": "Revived Stack", "value": "PHP 7.2 / CakePHP 2 / MySQL 7" },
-        { "label": "Design Policy", "value": "Do not convert" },
-        { "label": "Content Policy", "value": "Admin-managed dynamic content" }
+        { "label": "Problem", "value": "Outdated server and code prevented content updates and posed security risks" },
+        { "label": "Recovery", "value": "Integrated tuned CakePHP 2 Admin tool to enable dynamic content management" },
+        { "label": "Outcome", "value": "Enabled running on modern stack with content and class scheduling via Admin" },
+        { "label": "Status", "value": "Revived" }
       ],
       "notes": [
         "Introduced a hybrid architectural approach that maintains the Gnuboard 5 core for frontend community actions while delegating complex business ledgers to CakePHP 2.",
@@ -303,13 +302,11 @@
       "summary": "Converted WordPress data to Markdown and restored it as a static site using Jekyll.",
       "figCaption": "[Fig 6. WordPress to Markdown Restoration Original Dashboard Screenshot, 2024]",
       "facts": [
-        { "label": "Artifact Type", "value": "Database(Workpress)" },
-        {
-          "label": "Data Policy",
-          "value": "Original artifacts are never overwritten"
-        },
-        { "label": "Deployment", "value": "Github Pages + Jekyll + Markdown" },
-        { "label": "Requirements", "value": "Remove image and link errors" }
+        { "label": "Original Stack", "value": "WordPress" },
+        { "label": "Problem", "value": "Heavy reliance on plugins restricted diverse content management" },
+        { "label": "Recovery", "value": "Converted content to Markdown, a standard technical document format" },
+        { "label": "Outcome", "value": "Hosted for free on GitHub Pages using Jekyll static builder" },
+        { "label": "Status", "value": "Converted" }
       ],
       "notes": [
         "Extracted over 1,000 blog posts and rich metadata directly from the MySQL database using a custom Node.js script to ensure absolute integrity without relying on unstable third-party plugins.",
@@ -324,19 +321,11 @@
       "summary": "Successfully compiled, modernized and optimized a 10-year-old Xcode 5-based native iOS project on modern Xcode 15 and iOS 15.3 runtimes.",
       "figCaption": "[Fig 7. Nightdance Revived Platform Original Mobile Screenshot, 2024]",
       "facts": [
-        {
-          "label": "Original Stack",
-          "value": "iOS 7.x / Xcode 5.x / Objective-C"
-        },
-        { "label": "Revived Stack", "value": "iOS 15.3 / Xcode 15.x" },
-        {
-          "label": "Assets Cleanup",
-          "value": "200+ unused images purged & optimized"
-        },
-        {
-          "label": "Key Tasks",
-          "value": "Legacy API replacement & source code modernization"
-        }
+        { "label": "Original Stack", "value": "Xcode 5.x + iOS 7.x" },
+        { "label": "Problem", "value": "Failed to compile and build in modern Xcode" },
+        { "label": "Recovery", "value": "Refactored with modern APIs and cleaned up image assets" },
+        { "label": "Outcome", "value": "Successfully built and packaged using Xcode 15.x" },
+        { "label": "Status", "value": "Build Completed" }
       ],
       "notes": [
         "Successfully resolved building blocks and compilation warnings of an ancient Objective-C project locked to Xcode 5.x and iOS 7.x runtimes, enabling solid builds on modern Xcode 15.x compilers.",
@@ -351,19 +340,11 @@
       "summary": "Successfully modernized and ported a 7-year-old YouTube curation web service onto PHP 8.3 and Laravel 10 frameworks, integrating Laravel Nova admin portal and automated CI/CD pipelines.",
       "figCaption": "[Fig 8. Livesquare Revived Platform Original Web Dashboard Screenshot, 2023]",
       "facts": [
-        {
-          "label": "Original Stack",
-          "value": "PHP 7.1 / Laravel 5.3 / Bootstrap 3"
-        },
-        {
-          "label": "Revived Stack",
-          "value": "PHP 8.3 / Laravel 10 / Tailwindcss 3"
-        },
-        {
-          "label": "Infrastructure & Deploy",
-          "value": "Laravel Forge + Envoyer / GitHub Actions"
-        },
-        { "label": "Admin Panel", "value": "Laravel Nova integrated" }
+        { "label": "Original Stack", "value": "PHP 7.1 / Laravel 5.3 / Bootstrap 3" },
+        { "label": "Problem", "value": "Legacy Laravel version reached end-of-life" },
+        { "label": "Recovery", "value": "Refactored codebase to modern version and converted Bootstrap to TailwindCSS" },
+        { "label": "Outcome", "value": "Enabled latest Laravel features and migrated to modern admin portal (Nova)" },
+        { "label": "Status", "value": "Revived" }
       ],
       "notes": [
         "Orchestrated the architectural migration of a legacy Laravel 5.3 application to the modern Laravel 10 framework, rewriting outdated core service providers and ensuring strict PHP 8.3 compiler compatibility.",
@@ -379,16 +360,11 @@
       "summary": "Successfully compiled and restored a legacy Xcode 6-based iOS native project on modern Xcode 13 and iOS 15 runtimes, making it compatible with recent Apple devices.",
       "figCaption": "[Fig 9. Quote Man Revived Platform Original Mobile Screenshot, 2023]",
       "facts": [
-        {
-          "label": "Original Stack",
-          "value": "iOS 8.x / Xcode 6.x / Objective-C"
-        },
-        { "label": "Revived Stack", "value": "iOS 15.3 / Xcode 13.x" },
-        { "label": "Package Manager", "value": "CocoaPods (SSZipArchive)" },
-        {
-          "label": "Key Focus",
-          "value": "Modernized navigation APIs & App Store HIG compliance"
-        }
+        { "label": "Original Stack", "value": "Xcode 6.x + iOS 8.x" },
+        { "label": "Problem", "value": "Failed to compile and build in modern Xcode" },
+        { "label": "Recovery", "value": "Integrated CocoaPods (Podfile) package manager and updated UI" },
+        { "label": "Outcome", "value": "Enabled Xcode 15.x builds and structured CocoaPods dependency management" },
+        { "label": "Status", "value": "Build Completed" }
       ],
       "notes": [
         "Resolved compiler dependencies and modernized obsolete Objective-C structures locked to Xcode 6.x and iOS 8.x, ensuring successful builds and smooth execution on modern Xcode 13.x and iOS 15.3 runtimes.",
