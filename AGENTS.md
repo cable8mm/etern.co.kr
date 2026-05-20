@@ -120,10 +120,10 @@ Each project record in `project_data` (e.g. `project_data.aipro`, `project_data.
 - `summary` (String): Translated brief summary of the project.
 - `figCaption` (String): Figure caption matching the format `[Fig X. [English Title] [Device Chassis Type/Media type] [Snapshot/Screenshot/Mobile Screenshot], [Year]]` (e.g., `[Fig 1. Smart Logistics WMS System Revived Dashboard Snapshot, 2026]`).
 - `facts` (Array of objects): Key-value pairs containing technical specs. Must contain exactly 5 standardized items in this order:
-  1. `원본 기술 환경` (Korean) / `Original Stack` (English)
-  2. `장애 상태` (Korean) / `Problem` (English)
-  3. `복원 작업` (Korean) / `Recovery` (English)
-  4. `복원 결과` (Korean) / `Outcome` (English)
+  1. `원본 기술 환경` (Korean) / `Original stack` (English)
+  2. `장애 상태` (Korean) / `Failure mode` (English)
+  3. `복원 작업` (Korean) / `Recovery actions` (English)
+  4. `복원 결과` (Korean) / `Final outcome` (English)
   5. `현재 상태` (Korean) / `Status` (English)
 - `notes` (Array of Strings): Bulleted details of recovery, optimization, and modernization.
 
@@ -145,10 +145,10 @@ The 5 metadata bullet points in the markdown file map directly to the 5-item `fa
 
 | Markdown Bullet             | Korean `facts` Object (`ko.json`)                   | English `facts` Object (`en.json`)                             |
 | :-------------------------- | :-------------------------------------------------- | :------------------------------------------------------------- |
-| `- 원본 기술 환경: [value]` | `{ "label": "원본 기술 환경", "value": "[value]" }` | `{ "label": "Original Stack", "value": "[translated value]" }` |
-| `- 장애 상태: [value]`      | `{ "label": "장애 상태", "value": "[value]" }`      | `{ "label": "Problem", "value": "[translated value]" }`        |
-| `- 복원 작업: [value]`      | `{ "label": "복원 작업", "value": "[value]" }`      | `{ "label": "Recovery", "value": "[translated value]" }`       |
-| `- 복원 결과: [value]`      | `{ "label": "복원 결과", "value": "[value]" }`      | `{ "label": "Outcome", "value": "[translated value]" }`        |
+| `- 원본 기술 환경: [value]` | `{ "label": "원본 기술 환경", "value": "[value]" }` | `{ "label": "Original stack", "value": "[translated value]" }` |
+| `- 장애 상태: [value]`      | `{ "label": "장애 상태", "value": "[value]" }`      | `{ "label": "Failure mode", "value": "[translated value]" }`   |
+| `- 복원 작업: [value]`      | `{ "label": "복원 작업", "value": "[value]" }`      | `{ "label": "Recovery actions", "value": "[translated value]" }` |
+| `- 복원 결과: [value]`      | `{ "label": "복원 결과", "value": "[value]" }`      | `{ "label": "Final outcome", "value": "[translated value]" }`  |
 | `- 현재 상태: [value]`      | `{ "label": "현재 상태", "value": "[value]" }`      | `{ "label": "Status", "value": "[translated value]" }`         |
 
 _Note: Technical names (e.g. `PHP 7.3`, `MySQL 5.7`, `CakePHP 2`, `Laravel Nova`) must remain untranslated in both languages._
