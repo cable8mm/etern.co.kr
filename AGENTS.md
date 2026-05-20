@@ -79,6 +79,18 @@ Prefer simplicity over novelty.
 
 ---
 
+### Code formatting
+
+After making any changes to the codebase, always execute:
+
+```bash
+npm run format
+```
+
+to ensure style consistency across all modified files.
+
+---
+
 ## Project Media & Thumbnail Guidelines
 
 When a user adds a new project with a raw screenshot image in the workspace (e.g., under `docs/projects/assets/`), the AI agent must automatically process it into a concept-matching, premium museum-style archival thumbnail and save it inside `public/images/[key]-thumb.png`.
