@@ -358,7 +358,7 @@
       ]
     },
     "palgle": {
-      "title": "Workpress Data to Markdown Conversion",
+      "title": "WordPress Data to Markdown Conversion",
       "status": "Converted",
       "summary": "Converted WordPress data to Markdown and restored it as a static site using Jekyll.",
       "figCaption": "[Fig 6. WordPress to Markdown Restoration Original Dashboard Screenshot, 2024]",
