@@ -150,7 +150,12 @@
     "title_page": "Start with the artifacts you still have.",
     "description_page": "A source folder, database dump, old server backup, or partial documentation can be enough to begin a recovery conversation. No matter how old or tangled the code is, the original behavior and valuable data are strictly preserved, so please share with confidence.",
     "email_label": "Email",
-    "email_note": "Including key data and context that must not be lost, such as the original runtime, database type, and last working date, in your first message allows for a faster and more accurate restoration simulation."
+    "email_note": "Including key data and context that must not be lost, such as the original runtime, database type, and last working date, in your first message allows for a faster and more accurate restoration simulation.",
+    "send_title": "What you can share:",
+    "send_item_1": "source code zip",
+    "send_item_2": "database dump",
+    "send_item_3": "screenshots",
+    "send_item_4": "server access (optional)"
   },
   "footer": {
     "copyright": "© 2026 Legacy Revival Studio.",
@@ -188,7 +193,13 @@
     "description": "Legacy Revival Studio grows from the habit of revisiting old projects, making them run again, and refusing to let useful digital work disappear quietly.",
     "p1": "The studio focuses on aging web services, internal tools, undocumented databases, and codebases that organizations still depend on but hesitate to touch.",
     "p2": "The work is deliberately modest: recover artifacts, recreate a runtime, document behavior, and only then decide which parts should be modernized.",
-    "p3": "Over time, the public site will also serve as an archive of revived projects and the technical decisions that helped preserve them."
+    "p3": "Over time, the public site will also serve as an archive of revived projects and the technical decisions that helped preserve them.",
+    "operator": {
+      "title": "Operator Profile",
+      "role": "Independent Software Restoration Engineer",
+      "exp_title": "Over 20 years of experience in building, maintaining, and recovering web systems.",
+      "exp_description": "Bringing legacy systems back to life based on expertise in PHP, Node.js, C++, databases, Git-based version history management, and administrative tool design."
+    }
   },
   "not_found": {
     "eyebrow": "Not found",

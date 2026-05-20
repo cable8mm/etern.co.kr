@@ -21,6 +21,26 @@ import {
 } from 'lucide-react';
 import { projects } from './data/projects';
 
+function Github({ size = 20, className = '' }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-github ${className}`}
+    >
+      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+      <path d="M9 18c-4.51 2-5-2-7-2" />
+    </svg>
+  );
+}
+
 const navLinks = [
   { key: 'projects', href: '/projects' },
   { key: 'philosophy', href: '/#philosophy' },
@@ -658,6 +678,39 @@ function TechnicalGroundSection() {
           </div>
         </div>
       </div>
+
+      {/* Operator Profile Section */}
+      <div className="mx-auto max-w-6xl mt-20 border-t border-zinc-200 dark:border-zinc-800 pt-16">
+        <div className="grid gap-14 md:grid-cols-[1fr_1fr] md:gap-20">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">
+              {t('about_page.operator.title')}
+            </span>
+            <h3 className="mt-4 text-2xl font-semibold text-zinc-950 dark:text-zinc-50 leading-9">
+              {t('about_page.operator.role')}
+            </h3>
+            <div className="mt-6">
+              <a
+                href="https://github.com/cable8mm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5"
+              >
+                <Github size={16} />
+                <span>github.com/cable8mm</span>
+              </a>
+            </div>
+          </div>
+          <div className="space-y-6 text-base leading-8 text-zinc-600 dark:text-zinc-400">
+            <p className="text-lg font-medium text-zinc-900 dark:text-zinc-100 leading-8">
+              {t('about_page.operator.exp_title')}
+            </p>
+            <p className="text-zinc-600 dark:text-zinc-400">
+              {t('about_page.operator.exp_description')}
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
@@ -680,6 +733,29 @@ function ContactBand() {
           <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-300 md:text-lg">
             {t('contact.description')}
           </p>
+          <div className="mt-8 border-t border-zinc-800 dark:border-zinc-800 pt-6">
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-zinc-400 mb-3">
+              {t('contact.send_title')}
+            </p>
+            <ul className="grid gap-x-6 gap-y-2 sm:grid-cols-2 text-sm text-zinc-300">
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-zinc-500 rounded-full"></span>
+                {t('contact.send_item_1')}
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-zinc-500 rounded-full"></span>
+                {t('contact.send_item_2')}
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-zinc-500 rounded-full"></span>
+                {t('contact.send_item_3')}
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-zinc-500 rounded-full"></span>
+                {t('contact.send_item_4')}
+              </li>
+            </ul>
+          </div>
         </div>
         <a
           href="mailto:cable8mm@gmail.com"
@@ -1074,6 +1150,39 @@ function AboutPage() {
             <p>{t('about_page.p3')}</p>
           </div>
         </div>
+
+        {/* Operator Profile Section */}
+        <div className="mx-auto max-w-6xl mt-24 border-t border-zinc-200 dark:border-zinc-800 pt-20">
+          <div className="grid gap-14 md:grid-cols-[0.9fr_1.1fr] md:gap-20">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">
+                {t('about_page.operator.title')}
+              </span>
+              <h3 className="mt-4 text-2xl font-semibold text-zinc-950 dark:text-zinc-50 leading-9">
+                {t('about_page.operator.role')}
+              </h3>
+              <div className="mt-6">
+                <a
+                  href="https://github.com/cable8mm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5"
+                >
+                  <Github size={16} />
+                  <span>github.com/cable8mm</span>
+                </a>
+              </div>
+            </div>
+            <div className="space-y-6 text-base leading-8 text-zinc-600 dark:text-zinc-400">
+              <p className="text-lg font-medium text-zinc-900 dark:text-zinc-100 leading-8">
+                {t('about_page.operator.exp_title')}
+              </p>
+              <p className="text-zinc-600 dark:text-zinc-400">
+                {t('about_page.operator.exp_description')}
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
       <ServicesSection />
     </PageShell>
@@ -1106,6 +1215,30 @@ function ContactPage() {
             <p className="mt-6 leading-7 text-zinc-600 dark:text-zinc-400">
               {t('contact.email_note')}
             </p>
+
+            <div className="mt-8 border-t border-zinc-200 dark:border-zinc-800 pt-6">
+              <p className="text-xs font-bold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-4">
+                {t('contact.send_title')}
+              </p>
+              <ul className="grid gap-x-6 gap-y-3 sm:grid-cols-2 text-sm text-zinc-600 dark:text-zinc-300">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-zinc-400 dark:bg-zinc-600 rounded-full"></span>
+                  {t('contact.send_item_1')}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-zinc-400 dark:bg-zinc-600 rounded-full"></span>
+                  {t('contact.send_item_2')}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-zinc-400 dark:bg-zinc-600 rounded-full"></span>
+                  {t('contact.send_item_3')}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-zinc-400 dark:bg-zinc-600 rounded-full"></span>
+                  {t('contact.send_item_4')}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
