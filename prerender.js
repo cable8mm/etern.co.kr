@@ -41,9 +41,9 @@ const projectMeta = {
   },
   'aki-in': {
     ko: {
-      title: '악기인 제로보드 4 악기장터 복원 기록',
+      title: '악기인 Zeroboard 4 악기장터 복원 기록',
       description:
-        '구형 제로보드 4 악기장터를 CakePHP 2 관계형 데이터베이스 구조로 전면 재구축 및 복원했습니다.',
+        '구형 Zeroboard 4 악기장터를 CakePHP 2 관계형 데이터베이스 구조로 전면 재구축 및 복원했습니다.',
     },
     en: {
       title: 'Aki-in Instrument Platform Restoration',
@@ -54,9 +54,9 @@ const projectMeta = {
   },
   'tanz-station': {
     ko: {
-      title: '서울탄츠스테이션 그누보드 5 복원 기록',
+      title: '서울탄츠스테이션 Gnuboard 5 복원 기록',
       description:
-        '그누보드 5 웹사이트에 CakePHP 2 기반 관리 어드민과 DB 시간표 스케줄러 시스템을 통합 복원했습니다.',
+        'Gnuboard 5 웹사이트에 CakePHP 2 기반 관리 어드민과 DB 시간표 스케줄러 시스템을 통합 복원했습니다.',
     },
     en: {
       title: 'Seoul Tanz Station Web System Restoration',
@@ -80,9 +80,9 @@ const projectMeta = {
   },
   gsc2017: {
     ko: {
-      title: 'GSC 2017 바닐라 정적 웹사이트 변환 기록',
+      title: 'GSC 2017 Vanilla 정적 웹사이트 변환 기록',
       description:
-        '유지보수 및 서버 비용 문제 해결을 위해 기존 워드프레스(WordPress) 사이트를 크롤링하고 검증하여 완전한 바닐라 HTML/CSS/JS 및 GitHub Pages 무비용 환경으로 변환 복원했습니다.',
+        '유지보수 및 서버 비용 문제 해결을 위해 기존 WordPress 사이트를 크롤링하고 검증하여 완전한 Vanilla HTML/CSS/JS 및 GitHub Pages 무비용 환경으로 변환 복원했습니다.',
     },
     en: {
       title: 'GSC 2017 WordPress to Vanilla Static Conversion',
