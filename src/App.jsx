@@ -773,7 +773,19 @@ function Footer() {
   return (
     <footer className="bg-zinc-950 px-5 py-8 text-zinc-500 dark:text-zinc-400 md:px-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 border-t border-zinc-800 pt-8 text-sm md:flex-row md:items-center md:justify-between">
-        <p>{t('footer.copyright')}</p>
+        <div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-4">
+          <p>{t('footer.copyright')}</p>
+          <span className="hidden md:inline text-zinc-800">|</span>
+          <a
+            href="https://github.com/cable8mm"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-zinc-50 transition-colors"
+          >
+            <Github size={14} className="mb-0.5" />
+            <span>GitHub Archive</span>
+          </a>
+        </div>
         <p>{t('footer.slogan')}</p>
       </div>
     </footer>
@@ -795,7 +807,10 @@ function HomePage() {
           <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400 md:text-xl">
             {t('home.description')}
           </p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <p className="mt-6 font-mono text-xs md:text-sm uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+            {t('home.tagline')}
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/projects"
               className="inline-flex items-center justify-center gap-2 bg-zinc-950 px-5 py-3 text-sm font-semibold text-zinc-50 transition-colors hover:bg-zinc-800"
@@ -1166,10 +1181,10 @@ function AboutPage() {
                   href="https://github.com/cable8mm"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5"
+                  className="inline-flex items-center gap-2.5 border border-zinc-300 dark:border-zinc-700 bg-transparent px-4 py-2 text-sm font-semibold text-zinc-950 dark:text-zinc-50 transition-colors hover:border-zinc-950 hover:bg-zinc-50 dark:hover:border-zinc-300 dark:hover:bg-zinc-900"
                 >
                   <Github size={16} />
-                  <span>github.com/cable8mm</span>
+                  <span>GitHub Restoration Archive</span>
                 </a>
               </div>
             </div>
