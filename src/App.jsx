@@ -691,13 +691,13 @@ function TechnicalGroundSection() {
             </h3>
             <div className="mt-6">
               <a
-                href="https://github.com/cable8mm"
+                href="https://github.com/legacy-revival-studio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5"
               >
                 <Github size={16} />
-                <span>github.com/cable8mm</span>
+                <span>github.com/legacy-revival-studio</span>
               </a>
             </div>
           </div>
@@ -758,10 +758,10 @@ function ContactBand() {
           </div>
         </div>
         <a
-          href="mailto:cable8mm@gmail.com"
+          href="mailto:revival@etern.co.kr"
           className="inline-flex items-center justify-center gap-2 border border-zinc-500 px-5 py-3 text-sm font-semibold text-zinc-50 transition-colors hover:border-zinc-50"
         >
-          cable8mm@gmail.com <Mail size={16} />
+          revival@etern.co.kr <Mail size={16} />
         </a>
       </div>
     </section>
@@ -777,7 +777,7 @@ function Footer() {
           <p>{t('footer.copyright')}</p>
           <span className="hidden md:inline text-zinc-800">|</span>
           <a
-            href="https://github.com/cable8mm"
+            href="https://github.com/legacy-revival-studio"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-zinc-50 transition-colors"
@@ -1178,7 +1178,7 @@ function AboutPage() {
               </h3>
               <div className="mt-6">
                 <a
-                  href="https://github.com/cable8mm"
+                  href="https://github.com/legacy-revival-studio"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 border border-zinc-300 dark:border-zinc-700 bg-transparent px-4 py-2 text-sm font-semibold text-zinc-950 dark:text-zinc-50 transition-colors hover:border-zinc-950 hover:bg-zinc-50 dark:hover:border-zinc-300 dark:hover:bg-zinc-900"
@@ -1222,10 +1222,10 @@ function ContactPage() {
               {t('contact.email_label')}
             </p>
             <a
-              href="mailto:cable8mm@gmail.com"
+              href="mailto:revival@etern.co.kr"
               className="mt-4 inline-flex items-center gap-2 text-2xl font-semibold text-zinc-950 dark:text-zinc-50"
             >
-              cable8mm@gmail.com <Mail size={20} />
+              revival@etern.co.kr <Mail size={20} />
             </a>
             <p className="mt-6 leading-7 text-zinc-600 dark:text-zinc-400">
               {t('contact.email_note')}

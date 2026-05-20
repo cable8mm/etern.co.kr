@@ -289,7 +289,7 @@ routes.forEach((route) => {
           alternateName: '레거시 리바이벌 스튜디오',
           url: BASE_URL,
           logo: `${BASE_URL}/favicon.svg`,
-          sameAs: ['https://github.com/cable8mm'],
+          sameAs: ['https://github.com/legacy-revival-studio'],
         },
         {
           '@type': 'WebSite',
