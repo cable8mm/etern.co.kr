@@ -1,5 +1,14 @@
 # Release Notes
 
+## v2.13.0 - 2026-05-20
+
+### What's Changed
+
+* Add about by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/30
+* Add `Response behavior` in `AGENTS.md` by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/31
+
+**Full Changelog**: https://github.com/cable8mm/etern.co.kr/compare/v2.12.0...v2.13.0
+
 ## v2.12.0 - 2026-05-20
 
 ### What's Changed
