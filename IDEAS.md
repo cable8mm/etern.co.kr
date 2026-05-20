@@ -1,70 +1,89 @@
-# Legacy Revival Studio 아이디어 노트
+# Legacy Revival Studio — Idea Notes
 
-## 왜 이 프로젝트를 하는가
+## Why this exists
 
-많은 서비스가 죽는다.
+Software disappears quietly.
 
-하지만 죽는 것은 서비스이지,
-그 안의 데이터와 로직은 아니다.
+Not because it has no value,
+but because the environment around it changes.
 
-예전 시스템에는 여전히 가치가 있다.
+Old systems are often abandoned when:
 
-문제는 대부분 사람들이:
+- nobody understands them anymore
+- original developers are gone
+- dependencies break
+- infrastructure evolves
+- migration feels dangerous
 
-- 무서워서 건드리지 못하고
-- 새로 만드는 것이 더 싸다고 생각하고
-- 결국 방치한다
+Yet many of these systems still contain:
 
-나는 반대로 생각한다.
+- operational knowledge
+- business history
+- irreplaceable data
+- workflows organizations still depend on
 
-오래된 시스템은 되살릴 수 있다.
+Legacy Revival Studio exists to keep those systems alive.
 
 ---
 
-## 핵심 철학
+## Core Philosophy
 
 ### Revive first
 
-먼저 살린다.
+Restoration comes before replacement.
 
-새로 만들기 전에,
-원래 시스템이 다시 돌아가게 만든다.
+Before rewriting,  
+before redesigning,  
+before migrating—
+
+first make the original system runnable again.
 
 ---
 
 ### Original behavior matters
 
-옛날 시스템의 동작 방식은 중요하다.
+Legacy systems are historical artifacts.
 
-단순히 기능만 같으면 되는 것이 아니다.
+Their behavior,  
+quirks,  
+and structure often contain years of accumulated operational knowledge.
+
+Restoration is not imitation.
+
+It is preservation.
 
 ---
 
 ### Data is sacred
 
-데이터 손실은 실패다.
+Data loss is failure.
+
+Preserving historical integrity is more important than modernization speed.
 
 ---
 
-## 가치 제안
+## Working Belief
 
-고객은 이런 말을 한다.
+Most people say:
 
-- 이 시스템은 너무 오래돼서 못 건드려요
-- 개발자가 없어요
-- 어떻게 돌아가는지 몰라요
-- 데이터만이라도 살리고 싶어요
+- “This system is too old.”
+- “Nobody knows how it works.”
+- “It would be easier to rebuild everything.”
 
-나는 이렇게 답한다.
+Legacy Revival Studio begins differently:
 
-- 일단 띄워봅시다
+> “Let’s try to revive it first.”
 
 ---
 
-## 미래 가능성
+## Long-term Direction
 
-- 기업용 복원 서비스
-- 유지보수 계약
-- 레거시 감사(audit)
-- 내부 시스템 문서화
-- 자동 코드 변환 도구
+Possible future directions include:
+
+- enterprise restoration services
+- legacy infrastructure maintenance
+- internal system documentation
+- recovery consulting
+- archival engineering
+- automated migration tooling
+- AI-assisted legacy analysis
