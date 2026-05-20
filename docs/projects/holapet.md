@@ -2,10 +2,10 @@
 - 프로젝트 제목: 올라펫 유기동물 플랫폼 복원
 - 과거 제작 연도: 2022
 - 복원 완료 연도: 2025
-- Original stack: PHP 7.3 / Laravel 8 / Bootstrap 3 / MySQL 5.7
-- Problem: Laravel에서 기본 CSS 프레임워크가 지원 종료됨
-- Recovery: 최신 버전으로 업그레이드 하고 Bootstrap 코드를 Tailwindcss로 변경
-- Outcome: Laravel 최신 버전 이용이 가능해 졌고, 외부 라이브러리 이용 가능해 짐
+- 원본 기술 환경: PHP 7.3 / Laravel 8 / Bootstrap 3 / MySQL 5.7
+- 장애 상태: Laravel에서 기본 CSS 프레임워크가 지원 종료됨
+- 복원 작업: 최신 버전으로 업그레이드 하고 Bootstrap 코드를 Tailwindcss로 변경
+- 복원 결과: Laravel 최신 버전 이용이 가능해 졌고, 외부 라이브러리 이용 가능해 짐
 - 현재 상태: 복원 완료
 - 이미지 파일명: assets/holapet-screenshot.png
 - 한 줄 요약: 올라펫의 버려진 유기동물 입양 서비스를 Github Action을 이용한 클라우드 배포 환경으로 이전하여 다시 구동 가능하게 만들었습니다.

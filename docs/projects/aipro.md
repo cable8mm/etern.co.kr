@@ -2,10 +2,10 @@
 - 프로젝트 제목: 스마트 물류 시스템 복원
 - 과거 제작 연도: 2022
 - 복원 완료 연도: 2026
-- Original stack: PHP 7.3 + CakePHP 2 + MySQL 5.7
-- Problem: CakePHP 2 프레임워크가 지원 종료됨
-- Recovery: 최신 스택과 Laravel + Nova 로 마이그레이션
-- Outcome: 새로운 UI + 큐 + 클라우드 배포
+- 원본 기술 환경: PHP 7.3 + CakePHP 2 + MySQL 5.7
+- 장애 상태: CakePHP 2 프레임워크가 지원 종료됨
+- 복원 작업: 최신 스택과 Laravel + Nova 로 마이그레이션
+- 복원 결과: 새로운 UI + 큐 + 클라우드 배포
 - 현재 상태: 복원 완료
 - 이미지 파일명: assets/aipro-screenshot.png
 - 한 줄 요약: 상품 12,000개, 연결 쇼핑몰 17개를 처리하는 물류 시스템을 복원했습니다.

@@ -2,10 +2,10 @@
 - 프로젝트 제목: Workpress 데이터 Markdown으로 변환
 - 과거 제작 연도: 2016
 - 복원 완료 연도: 2024
-- Original stack: 워드프레스
-- Problem: 많은 플러그인 사용으로 다양한 콘텐츠 사용 불가
-- Recovery: 기술 표준 문서 포멧인 마크다운으로 콘텐츠 변환
-- Outcome: 변환 후 Jekyll 도구를 이용해서 무료 Github Pages로 호스팅
+- 원본 기술 환경: 워드프레스
+- 장애 상태: 많은 플러그인 사용으로 다양한 콘텐츠 사용 불가
+- 복원 작업: 기술 표준 문서 포멧인 마크다운으로 콘텐츠 변환
+- 복원 결과: 변환 후 Jekyll 도구를 이용해서 무료 Github Pages로 호스팅
 - 현재 상태: 변환 완료
 - 이미지 파일명: assets/palgle-screenshot.png
 - 한 줄 요약: Workpress 데이터를 Markdown로 변환하며, jekyll을 이용한 정적 사이트로 복원했습니다.

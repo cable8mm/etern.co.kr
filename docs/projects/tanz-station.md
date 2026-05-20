@@ -2,10 +2,10 @@
 - 프로젝트 제목: 서울탄츠스테이션
 - 과거 제작 연도: 2016
 - 복원 완료 연도: 2022
-- Original stack: PHP 5.6 / Gnuboard5 / MySQL 3
-- Problem: 너무 오래된 서버, 코드라 콘텐츠 변경 불가능하고 보안 문제 발생
-- Recovery: 튜닝된 CakePHP2 Admin 툴 도입해서 콘텐츠를 관리할 수 있게 변경
-- Outcome: 최신 스택에서 구동이 가능해 졌고, Admin 에서 콘텐츠 및 수업 변경 가능
+- 원본 기술 환경: PHP 5.6 / Gnuboard5 / MySQL 3
+- 장애 상태: 너무 오래된 서버, 코드라 콘텐츠 변경 불가능하고 보안 문제 발생
+- 복원 작업: 튜닝된 CakePHP2 Admin 툴 도입해서 콘텐츠를 관리할 수 있게 변경
+- 복원 결과: 최신 스택에서 구동이 가능해 졌고, Admin 에서 콘텐츠 및 수업 변경 가능
 - 현재 상태: 복원 완료
 - 이미지 파일명: assets/tanz-station-screenshot.png
 - 한 줄 요약: 그누보드 기반 웹사이트에 CakePHP 2 기반 Admin을 통합하였습니다.

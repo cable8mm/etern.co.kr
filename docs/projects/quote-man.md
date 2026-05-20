@@ -2,10 +2,10 @@
 - 프로젝트 제목: 견적맨
 - 과거 제작 연도: 2015
 - 복원 완료 연도: 2023
-- Original stack: XCode 6.x + iOS 8.x
-- Problem: 최신 XCode에서 컴파일 및 빌드 불가
-- Recovery: Podfile 패키지 관리자 도입과 UI 수정
-- Outcome: XCode 15.x 버전으로 빌드 및 Podfile 패키지관리자 사용 가능
+- 원본 기술 환경: XCode 6.x + iOS 8.x
+- 장애 상태: 최신 XCode에서 컴파일 및 빌드 불가
+- 복원 작업: Podfile 패키지 관리자 도입과 UI 수정
+- 복원 결과: XCode 15.x 버전으로 빌드 및 Podfile 패키지관리자 사용 가능
 - 현재 상태: 빌드 완료
 - 이미지 파일명: assets/quote-man-screenshot.png
 - 한 줄 요약: 8년 전 XCode 소스코드를 최신 버전에서 빌드에 성공했습니다.

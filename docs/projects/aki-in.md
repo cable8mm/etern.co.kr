@@ -2,10 +2,10 @@
 - 프로젝트 제목: 악기인(구 악기장터)
 - 과거 제작 연도: 2016
 - 복원 완료 연도: 2024
-- Original stack: PHP 5.6 / Zeroboard 4.x / MySQL 3.x
-- Problem: OS, Zeroboard 지원 종료
-- Recovery: 최신 스택과 자체 튜닝한 CakePHP 2.x로 복원
-- Outcome: 새로운 Admin UI + 퍼포먼스 개선
+- 원본 기술 환경: PHP 5.6 / Zeroboard 4.x / MySQL 3.x
+- 장애 상태: OS, Zeroboard 지원 종료
+- 복원 작업: 최신 스택과 자체 튜닝한 CakePHP 2.x로 복원
+- 복원 결과: 새로운 Admin UI + 퍼포먼스 개선
 - 현재 상태: 복원 완료
 - 이미지 파일명: assets/aki-in-screenshot.png
 - 한 줄 요약: 악기 장터 사이트를 악기인으로 복원했습니다.

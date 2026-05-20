@@ -2,10 +2,10 @@
 - 프로젝트 제목: 나이트댄스 아이폰 앱
 - 과거 제작 연도: 2014
 - 복원 완료 연도: 2024
-- Original stack: XCode 5.x + iOS 7.x
-- Problem: 최신 XCode에서 컴파일 및 빌드 불가
-- Recovery: 최신 API로 리펙토링하고 이미지 에셋 정리
-- Outcome: XCode 15.x 버전으로 빌드 및 패키징 가능
+- 원본 기술 환경: XCode 5.x + iOS 7.x
+- 장애 상태: 최신 XCode에서 컴파일 및 빌드 불가
+- 복원 작업: 최신 API로 리펙토링하고 이미지 에셋 정리
+- 복원 결과: XCode 15.x 버전으로 빌드 및 패키징 가능
 - 기술 스택: iPhone native app
 - 목표: XCode 최신 버전에서 빌드
 - 현재 상태: 빌드 완료

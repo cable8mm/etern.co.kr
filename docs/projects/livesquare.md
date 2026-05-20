@@ -2,10 +2,10 @@
 - 프로젝트 제목: 라이브스퀘어
 - 과거 제작 연도: 2018
 - 복원 완료 연도: 2023
-- Original stack: PHP 7.1 / Laravel 5.3 / Bootstrap 3
-- Problem: Laravel 버전 지원 종료함
-- Recovery: 최신 버전으로 코드 리팩토링 하고 Bootstrap 코드를 Tailwindcss로 변경
-- Outcome: Laravel 최신 버전 이용이 가능해 졌고, 최신 어드민(Nova)으로 변경
+- 원본 기술 환경: PHP 7.1 / Laravel 5.3 / Bootstrap 3
+- 장애 상태: Laravel 버전 지원 종료함
+- 복원 작업: 최신 버전으로 코드 리팩토링 하고 Bootstrap 코드를 Tailwindcss로 변경
+- 복원 결과: Laravel 최신 버전 이용이 가능해 졌고, 최신 어드민(Nova)으로 변경
 - 현재 상태: 복원 완료
 - 이미지 파일명: assets/livesquare-screenshot.png
 - 한 줄 요약: 7년 전 유튜브 채널 영상 콘텐츠를 모아보는 서비스.
