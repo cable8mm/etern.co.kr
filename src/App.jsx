@@ -41,6 +41,27 @@ function Github({ size = 20, className = '' }) {
   );
 }
 
+function Linkedin({ size = 20, className = '' }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-linkedin ${className}`}
+    >
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect x="2" y="9" width="4" height="12" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+}
+
 const navLinks = [
   { key: 'projects', href: '/projects' },
   { key: 'philosophy', href: '/#philosophy' },
@@ -689,15 +710,47 @@ function TechnicalGroundSection() {
             <h3 className="mt-4 text-2xl font-semibold text-zinc-950 dark:text-zinc-50 leading-9">
               {t('about_page.operator.role')}
             </h3>
-            <div className="mt-6">
+            <div className="mt-6 flex flex-col gap-3.5">
               <a
                 href="https://github.com/legacy-revival-studio"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
               >
                 <Github size={16} />
                 <span>github.com/legacy-revival-studio</span>
+              </a>
+              <a
+                href="https://linkedin.com/company/legacy-revival-studio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
+              >
+                <Linkedin size={16} />
+                <span>linkedin.com/company/legacy-revival-studio</span>
+              </a>
+
+              <span className="text-xs font-bold tracking-[0.15em] text-zinc-400 dark:text-zinc-500 mt-3 mb-1">
+                Founder:
+              </span>
+
+              <a
+                href="https://github.com/cable8mm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
+              >
+                <Github size={16} />
+                <span>github.com/cable8mm</span>
+              </a>
+              <a
+                href="https://linkedin.com/in/cable8mm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
+              >
+                <Linkedin size={16} />
+                <span>linkedin.com/in/cable8mm</span>
               </a>
             </div>
           </div>
@@ -776,15 +829,35 @@ function Footer() {
         <div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-4">
           <p>{t('footer.copyright')}</p>
           <span className="hidden md:inline text-zinc-800">|</span>
-          <a
-            href="https://github.com/legacy-revival-studio"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-zinc-50 transition-colors"
-          >
-            <Github size={14} className="mb-0.5" />
-            <span>GitHub Archive</span>
-          </a>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <a
+              href="https://github.com/legacy-revival-studio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-zinc-50 transition-colors"
+            >
+              <Github size={14} className="mb-0.5" />
+              <span>GitHub</span>
+            </a>
+            <span className="text-zinc-800">|</span>
+            <a
+              href="https://www.linkedin.com/company/legacy-revival-studio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-zinc-50 transition-colors"
+            >
+              <Linkedin size={14} className="mb-0.5" />
+              <span>LinkedIn</span>
+            </a>
+            <span className="text-zinc-800">|</span>
+            <a
+              href="mailto:revival@etern.co.kr"
+              className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-zinc-50 transition-colors"
+            >
+              <Mail size={14} className="mb-0.5" />
+              <span>revival@etern.co.kr</span>
+            </a>
+          </div>
         </div>
         <p className="whitespace-pre-line text-left md:text-right">
           {t('footer.slogan')}
@@ -1178,15 +1251,47 @@ function AboutPage() {
               <h3 className="mt-4 text-2xl font-semibold text-zinc-950 dark:text-zinc-50 leading-9">
                 {t('about_page.operator.role')}
               </h3>
-              <div className="mt-6">
+              <div className="mt-6 flex flex-col gap-3.5">
                 <a
                   href="https://github.com/legacy-revival-studio"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 border border-zinc-300 dark:border-zinc-700 bg-transparent px-4 py-2 text-sm font-semibold text-zinc-950 dark:text-zinc-50 transition-colors hover:border-zinc-950 hover:bg-zinc-50 dark:hover:border-zinc-300 dark:hover:bg-zinc-900"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
                 >
                   <Github size={16} />
-                  <span>GitHub Restoration Archive</span>
+                  <span>github.com/legacy-revival-studio</span>
+                </a>
+                <a
+                  href="https://linkedin.com/company/legacy-revival-studio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
+                >
+                  <Linkedin size={16} />
+                  <span>linkedin.com/company/legacy-revival-studio</span>
+                </a>
+
+                <span className="text-xs font-bold tracking-[0.15em] text-zinc-400 dark:text-zinc-500 mt-3 mb-1">
+                  Founder:
+                </span>
+
+                <a
+                  href="https://github.com/cable8mm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
+                >
+                  <Github size={16} />
+                  <span>github.com/cable8mm</span>
+                </a>
+                <a
+                  href="https://linkedin.com/in/cable8mm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
+                >
+                  <Linkedin size={16} />
+                  <span>linkedin.com/in/cable8mm</span>
                 </a>
               </div>
             </div>
