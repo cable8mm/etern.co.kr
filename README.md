@@ -1,8 +1,15 @@
 # Legacy Revival Studio
 
+![Preservation First](https://img.shields.io/badge/philosophy-preservation--first-2f4f4f)
+
 Reviving old software with care.
 
-Legacy Revival Studio restores aging software systems so they can run again on modern infrastructure—without erasing their original logic, structure, or history.
+Legacy Revival Studio restores aging software systems  
+so they can run again on modern infrastructure—
+
+without erasing their original logic,  
+structure,  
+or history.
 
 We believe software should not disappear simply because technology changes.
 
@@ -48,7 +55,7 @@ The goal is to:
 
 ---
 
-## What we do
+## Restoration Areas
 
 ### Legacy Recovery
 
@@ -128,3 +135,12 @@ A project succeeds when:
 - migration risk is minimized
 - original data remains intact
 - people regain access to forgotten systems
+
+---
+
+## Contact
+
+<revival@etern.co.kr>
+
+Website:  
+<https://etern.co.kr>

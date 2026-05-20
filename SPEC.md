@@ -1,4 +1,4 @@
-# Legacy Revival Studio Specification (v0.2)
+# Legacy Revival Studio Specification (v0.3)
 
 ## Goal
 
@@ -20,23 +20,45 @@ The project combines:
 
 ## Repository Structure
 
+Each revival project should follow a preservation-oriented repository structure.
+
+Example:
+
 ```text
 /raw/
     original source snapshots
+    untouched artifacts
 
 /runtime/
     dockerized execution environments
+    local runtime configuration
 
 /analysis/
     dependency reports
     compatibility checks
+    reverse engineering notes
 
 /migration/
     modernization patches
+    compatibility shims
 
 /docs/
     recovery notes
+    architecture documentation
+    restoration logs
+
+/archive/
+    screenshots
+    original binaries
+    exported references
 ```
+
+The repository itself functions as both:
+
+- a restoration workspace
+- a historical archive
+
+Original artifacts must remain preserved permanently.
 
 ---
 
@@ -48,10 +70,17 @@ Always preserve:
 - original database dumps
 - original configuration
 - original file structure
+- historical runtime assumptions
 
 Never overwrite original artifacts.
 
-All modifications must remain reversible.
+All modifications must remain:
+
+- reversible
+- traceable
+- documented
+
+Prefer additive recovery over destructive rewriting.
 
 ---
 
@@ -66,6 +95,10 @@ Collect all original materials:
 - deployment files
 - screenshots
 - documentation
+- archived binaries
+- environment information
+
+Preserve original timestamps whenever possible.
 
 ---
 
@@ -77,7 +110,12 @@ Preferred methods:
 
 - Docker
 - isolated virtual environments
+- runtime emulation
 - version pinning
+
+The first milestone is not modernization.
+
+The first milestone is successful execution.
 
 ---
 
@@ -88,7 +126,10 @@ Document how the original system behaves:
 - key workflows
 - expected outputs
 - visible UI behavior
+- operational assumptions
 - known failures
+
+Capture screenshots and runtime logs whenever possible.
 
 ---
 
@@ -100,21 +141,31 @@ Examples:
 
 - dependency updates
 - runtime shims
+- polyfills
 - configuration patches
+- database compatibility fixes
 
 Avoid unnecessary redesign.
+
+Avoid altering historical behavior unless required for stability or security.
 
 ---
 
 ### Step 5: Optional Modernization
 
-Modernize only where beneficial:
+Modernize only where beneficial.
+
+Examples:
 
 - framework upgrades
 - deployment simplification
 - maintainability improvements
+- security hardening
+- CI/CD integration
 
 Original behavior should remain recognizable.
+
+Modernization must not erase system identity.
 
 ---
 
@@ -125,8 +176,9 @@ A system is considered revived when:
 - it starts successfully
 - core functions work
 - data remains intact
-- behavior is documented
+- historical behavior is preserved
 - recovery steps are reproducible
+- future maintenance becomes possible
 
 ---
 
@@ -137,6 +189,8 @@ Preferred tools:
 - Git
 - GitHub
 - Docker
+- Node.js
+- PHP
 - Python
 - SQL tools
 - static analyzers
@@ -147,12 +201,25 @@ Principles:
 - human-guided
 - AI-assisted
 - Git-preserved
+- minimally invasive
+- reproducible
+
+AI should assist investigation and recovery,
+not blindly rewrite systems.
 
 ---
 
 # 3. Studio Website Architecture
 
 The public website (`etern.co.kr`) presents the Legacy Revival Studio philosophy and portfolio.
+
+The website itself should reflect the studio philosophy:
+
+- minimal
+- archival
+- technical
+- durable
+- content-first
 
 ---
 
@@ -191,6 +258,22 @@ The public website (`etern.co.kr`) presents the Legacy Revival Studio philosophy
 
 ---
 
+## Project Documentation Model
+
+Each project page should document:
+
+- original stack
+- failure mode
+- recovery actions
+- preservation concerns
+- modernization scope
+- final outcome
+
+Projects should read like technical restoration records,
+not marketing case studies.
+
+---
+
 ## Services Model
 
 The studio communicates available work through service categories rather than fixed pricing.
@@ -225,6 +308,8 @@ Pricing should remain consultation-based:
 - Scope dependent
 - Project-based engagement
 
+Avoid commodity-style pricing presentation.
+
 ---
 
 # 4. Static Site Generation & SEO Architecture
@@ -240,6 +325,7 @@ Search engines must be able to read meaningful HTML without executing JavaScript
 - Vite
 - React
 - static prerender generation
+- react-i18next
 - GitHub Pages deployment
 
 ---
@@ -287,17 +373,58 @@ dist/en/projects/index.html
 - `/` → Korean
 - `/en` → English
 
-### Translation Files & Architecture
+English should remain the primary indexing language for international discoverability.
+
+Korean content exists for local accessibility.
+
+---
+
+## Translation Files & Architecture
 
 Translation dictionaries are located at:
 
-- `src/locales/ko.json` (Korean dictionary)
-- `src/locales/en.json` (English dictionary)
+- `src/locales/ko.json`
+- `src/locales/en.json`
 
-Both dictionaries must be structurally identical. The UI loads them via `react-i18next` with `i18next-browser-languagedetector` configured to detect path prefixes.
-Dynamic lists (such as `facts` and `notes` under `project_data`) are fetched using `{ returnObjects: true }` and must maintain consistent data types (e.g., array of objects vs array of strings) across both dictionaries.
+Requirements:
 
-Project records located inside `docs/projects/[slug].md` serve as the single source of truth and must be systematically synchronized to `project_data.[slug]` in both `ko.json` and `en.json` according to the precise mapping and translation guidelines documented in `AGENTS.md`.
+- both dictionaries must remain structurally identical
+- keys must never drift
+- dynamic arrays must preserve consistent data structures
+- missing translations must fail visibly during development
+
+The UI loads translations using:
+
+- `react-i18next`
+- `i18next-browser-languagedetector`
+
+Language detection should prioritize URL path prefixes.
+
+---
+
+## Project Data Synchronization
+
+Project records located inside:
+
+```text
+docs/projects/[slug].md
+```
+
+serve as the canonical source of truth.
+
+Public website translation entries under:
+
+```text
+project_data.[slug]
+```
+
+must remain synchronized with project documents.
+
+Synchronization rules and transformation policies are documented in:
+
+```text
+AGENTS.md
+```
 
 ---
 
@@ -313,6 +440,14 @@ Every public route must include:
 - hreflang alternate links
 - JSON-LD structured data
 
+Metadata should prioritize:
+
+- clarity
+- archival identity
+- technical credibility
+
+Avoid exaggerated marketing language.
+
 ---
 
 ## Search Engine Artifacts
@@ -322,6 +457,12 @@ Generated support files:
 - `public/sitemap.xml`
 - `public/robots.txt`
 
+Recommended additions:
+
+- structured project schema
+- Open Graph preview images
+- project-specific metadata
+
 ---
 
 ## Maintenance Boundary
@@ -329,11 +470,74 @@ Generated support files:
 When pages are added or modified:
 
 - update source files
-- update `prerender.js`
-- update `public/sitemap.xml`
+- update prerender routes
+- update sitemap
 - rebuild
 - validate generated HTML
+- validate metadata output
 
 Never edit `dist/` manually.
 
 `dist/` is generated output only.
+
+---
+
+# 5. Engineering Philosophy
+
+Legacy Revival Studio follows several core beliefs:
+
+## Software Has Historical Value
+
+Old systems are operational artifacts.
+
+They contain:
+
+- organizational memory
+- undocumented workflows
+- historical assumptions
+- accumulated business logic
+
+Destroying them carelessly destroys knowledge.
+
+---
+
+## Running Software Matters More Than Perfect Software
+
+A runnable imperfect system is often more valuable than a rewritten replacement that loses historical behavior.
+
+---
+
+## Preservation Before Reinvention
+
+Revival work begins with understanding.
+
+Not replacement.
+
+Not abstraction.
+
+Not trend-driven rewrites.
+
+---
+
+## Minimalism Over Complexity
+
+Prefer:
+
+- small patches
+- isolated fixes
+- reversible changes
+- transparent systems
+
+Avoid unnecessary architectural complexity.
+
+---
+
+## AI as Restoration Assistance
+
+AI is used as:
+
+- an investigative assistant
+- a compatibility analysis tool
+- a documentation accelerator
+
+Human judgment remains authoritative.
