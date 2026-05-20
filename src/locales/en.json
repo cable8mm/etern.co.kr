@@ -29,6 +29,7 @@
     "subtitle": "Archive-first software recovery",
     "title": "Old software can live again.",
     "description": "Legacy Revival Studio restores aging web services, internal tools, and forgotten systems so their code, data, and behavior can run again on modern infrastructure.",
+    "tagline": "PHP · MySQL · Zeroboard · Legacy Admin Panels · Internal Tools",
     "browse_archive": "Browse the project archive",
     "see_workflow": "See the recovery workflow"
   },

@@ -795,7 +795,10 @@ function HomePage() {
           <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400 md:text-xl">
             {t('home.description')}
           </p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <p className="mt-6 font-mono text-xs md:text-sm uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+            {t('home.tagline')}
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/projects"
               className="inline-flex items-center justify-center gap-2 bg-zinc-950 px-5 py-3 text-sm font-semibold text-zinc-50 transition-colors hover:bg-zinc-800"
