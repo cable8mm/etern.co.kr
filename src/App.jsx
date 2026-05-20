@@ -733,6 +733,29 @@ function ContactBand() {
           <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-300 md:text-lg">
             {t('contact.description')}
           </p>
+          <div className="mt-8 border-t border-zinc-800 dark:border-zinc-800 pt-6">
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-zinc-400 mb-3">
+              {t('contact.send_title')}
+            </p>
+            <ul className="grid gap-x-6 gap-y-2 sm:grid-cols-2 text-sm text-zinc-300">
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-zinc-500 rounded-full"></span>
+                {t('contact.send_item_1')}
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-zinc-500 rounded-full"></span>
+                {t('contact.send_item_2')}
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-zinc-500 rounded-full"></span>
+                {t('contact.send_item_3')}
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-zinc-500 rounded-full"></span>
+                {t('contact.send_item_4')}
+              </li>
+            </ul>
+          </div>
         </div>
         <a
           href="mailto:cable8mm@gmail.com"
@@ -1192,6 +1215,30 @@ function ContactPage() {
             <p className="mt-6 leading-7 text-zinc-600 dark:text-zinc-400">
               {t('contact.email_note')}
             </p>
+
+            <div className="mt-8 border-t border-zinc-200 dark:border-zinc-800 pt-6">
+              <p className="text-xs font-bold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-4">
+                {t('contact.send_title')}
+              </p>
+              <ul className="grid gap-x-6 gap-y-3 sm:grid-cols-2 text-sm text-zinc-600 dark:text-zinc-300">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-zinc-400 dark:bg-zinc-600 rounded-full"></span>
+                  {t('contact.send_item_1')}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-zinc-400 dark:bg-zinc-600 rounded-full"></span>
+                  {t('contact.send_item_2')}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-zinc-400 dark:bg-zinc-600 rounded-full"></span>
+                  {t('contact.send_item_3')}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-zinc-400 dark:bg-zinc-600 rounded-full"></span>
+                  {t('contact.send_item_4')}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
