@@ -290,6 +290,7 @@ dist/en/projects/index.html
 ### Translation Files & Architecture
 
 Translation dictionaries are located at:
+
 - `src/locales/ko.json` (Korean dictionary)
 - `src/locales/en.json` (English dictionary)
 

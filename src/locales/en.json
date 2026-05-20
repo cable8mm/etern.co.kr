@@ -203,9 +203,18 @@
       "summary": "Restored a large-scale smart warehouse management logistics system processing 12,000 products and integrating 17 external shopping malls.",
       "figCaption": "[Fig 1. Smart Logistics WMS System Revived Dashboard Snapshot, 2026]",
       "facts": [
-        { "label": "Original Stack", "value": "PHP 7.3 + CakePHP 2 + MySQL 5.7" },
-        { "label": "Problem", "value": "CakePHP 2 framework reached end-of-life" },
-        { "label": "Recovery", "value": "Migrated to modern stack with Laravel + Nova" },
+        {
+          "label": "Original Stack",
+          "value": "PHP 7.3 + CakePHP 2 + MySQL 5.7"
+        },
+        {
+          "label": "Problem",
+          "value": "CakePHP 2 framework reached end-of-life"
+        },
+        {
+          "label": "Recovery",
+          "value": "Migrated to modern stack with Laravel + Nova"
+        },
         { "label": "Outcome", "value": "New UI + Queue + Cloud Deployment" },
         { "label": "Status", "value": "Revived" }
       ],
@@ -224,10 +233,22 @@
       "summary": "Migrated the abandoned animal adoption service of Hola Pet to a cloud-based delivery environment integrated with GitHub Actions to bring it back to a fully runnable state.",
       "figCaption": "[Fig 2. Hola Pet Abandoned Animals Platform Revived Mobile Screenshot, 2025]",
       "facts": [
-        { "label": "Original Stack", "value": "PHP 7.3 / Laravel 8 / Bootstrap 3 / MySQL 5.7" },
-        { "label": "Problem", "value": "Default CSS framework unsupported in modern Laravel" },
-        { "label": "Recovery", "value": "Upgraded to latest version and converted Bootstrap to TailwindCSS" },
-        { "label": "Outcome", "value": "Enabled latest Laravel features and integration of external libraries" },
+        {
+          "label": "Original Stack",
+          "value": "PHP 7.3 / Laravel 8 / Bootstrap 3 / MySQL 5.7"
+        },
+        {
+          "label": "Problem",
+          "value": "Default CSS framework unsupported in modern Laravel"
+        },
+        {
+          "label": "Recovery",
+          "value": "Upgraded to latest version and converted Bootstrap to TailwindCSS"
+        },
+        {
+          "label": "Outcome",
+          "value": "Enabled latest Laravel features and integration of external libraries"
+        },
         { "label": "Status", "value": "Revived" }
       ],
       "notes": [
@@ -243,10 +264,19 @@
       "summary": "Restored a legacy Zeroboard 4-based instrument transaction board to the modernized Aki-in platform powered by the CakePHP 2 framework.",
       "figCaption": "[Fig 3. Aki-in Revived Platform Original Mobile Screenshot, 2024]",
       "facts": [
-        { "label": "Original Stack", "value": "PHP 5.6 / Zeroboard 4.x / MySQL 3.x" },
+        {
+          "label": "Original Stack",
+          "value": "PHP 5.6 / Zeroboard 4.x / MySQL 3.x"
+        },
         { "label": "Problem", "value": "OS and Zeroboard reached end-of-life" },
-        { "label": "Recovery", "value": "Restored using modern stack and custom-tuned CakePHP 2.x" },
-        { "label": "Outcome", "value": "New Admin UI + Performance improvements" },
+        {
+          "label": "Recovery",
+          "value": "Restored using modern stack and custom-tuned CakePHP 2.x"
+        },
+        {
+          "label": "Outcome",
+          "value": "New Admin UI + Performance improvements"
+        },
         { "label": "Status", "value": "Revived" }
       ],
       "notes": [
@@ -265,9 +295,18 @@
       "figCaption": "[Fig 4. GSC 2017 Static Website Restoration Snapshot, 2024]",
       "facts": [
         { "label": "Original Stack", "value": "WordPress" },
-        { "label": "Problem", "value": "Server costs and periodic WordPress patching required" },
-        { "label": "Recovery", "value": "Restored UI using Vite/React + GitHub Pages" },
-        { "label": "Outcome", "value": "Zero-cost serverless hosting, managed entirely via GitHub" },
+        {
+          "label": "Problem",
+          "value": "Server costs and periodic WordPress patching required"
+        },
+        {
+          "label": "Recovery",
+          "value": "Restored UI using Vite/React + GitHub Pages"
+        },
+        {
+          "label": "Outcome",
+          "value": "Zero-cost serverless hosting, managed entirely via GitHub"
+        },
         { "label": "Status", "value": "Converted" }
       ],
       "notes": [
@@ -284,9 +323,18 @@
       "figCaption": "[Fig 5. Seoul Tanz Station Revived Platform Original Web Screenshot, 2022]",
       "facts": [
         { "label": "Original Stack", "value": "PHP 5.6 / Gnuboard5 / MySQL 3" },
-        { "label": "Problem", "value": "Outdated server and code prevented content updates and posed security risks" },
-        { "label": "Recovery", "value": "Integrated tuned CakePHP 2 Admin tool to enable dynamic content management" },
-        { "label": "Outcome", "value": "Enabled running on modern stack with content and class scheduling via Admin" },
+        {
+          "label": "Problem",
+          "value": "Outdated server and code prevented content updates and posed security risks"
+        },
+        {
+          "label": "Recovery",
+          "value": "Integrated tuned CakePHP 2 Admin tool to enable dynamic content management"
+        },
+        {
+          "label": "Outcome",
+          "value": "Enabled running on modern stack with content and class scheduling via Admin"
+        },
         { "label": "Status", "value": "Revived" }
       ],
       "notes": [
@@ -303,9 +351,18 @@
       "figCaption": "[Fig 6. WordPress to Markdown Restoration Original Dashboard Screenshot, 2024]",
       "facts": [
         { "label": "Original Stack", "value": "WordPress" },
-        { "label": "Problem", "value": "Heavy reliance on plugins restricted diverse content management" },
-        { "label": "Recovery", "value": "Converted content to Markdown, a standard technical document format" },
-        { "label": "Outcome", "value": "Hosted for free on GitHub Pages using Jekyll static builder" },
+        {
+          "label": "Problem",
+          "value": "Heavy reliance on plugins restricted diverse content management"
+        },
+        {
+          "label": "Recovery",
+          "value": "Converted content to Markdown, a standard technical document format"
+        },
+        {
+          "label": "Outcome",
+          "value": "Hosted for free on GitHub Pages using Jekyll static builder"
+        },
         { "label": "Status", "value": "Converted" }
       ],
       "notes": [
@@ -322,9 +379,18 @@
       "figCaption": "[Fig 7. Nightdance Revived Platform Original Mobile Screenshot, 2024]",
       "facts": [
         { "label": "Original Stack", "value": "Xcode 5.x + iOS 7.x" },
-        { "label": "Problem", "value": "Failed to compile and build in modern Xcode" },
-        { "label": "Recovery", "value": "Refactored with modern APIs and cleaned up image assets" },
-        { "label": "Outcome", "value": "Successfully built and packaged using Xcode 15.x" },
+        {
+          "label": "Problem",
+          "value": "Failed to compile and build in modern Xcode"
+        },
+        {
+          "label": "Recovery",
+          "value": "Refactored with modern APIs and cleaned up image assets"
+        },
+        {
+          "label": "Outcome",
+          "value": "Successfully built and packaged using Xcode 15.x"
+        },
         { "label": "Status", "value": "Build Completed" }
       ],
       "notes": [
@@ -340,10 +406,22 @@
       "summary": "Successfully modernized and ported a 7-year-old YouTube curation web service onto PHP 8.3 and Laravel 10 frameworks, integrating Laravel Nova admin portal and automated CI/CD pipelines.",
       "figCaption": "[Fig 8. Livesquare Revived Platform Original Web Dashboard Screenshot, 2023]",
       "facts": [
-        { "label": "Original Stack", "value": "PHP 7.1 / Laravel 5.3 / Bootstrap 3" },
-        { "label": "Problem", "value": "Legacy Laravel version reached end-of-life" },
-        { "label": "Recovery", "value": "Refactored codebase to modern version and converted Bootstrap to TailwindCSS" },
-        { "label": "Outcome", "value": "Enabled latest Laravel features and migrated to modern admin portal (Nova)" },
+        {
+          "label": "Original Stack",
+          "value": "PHP 7.1 / Laravel 5.3 / Bootstrap 3"
+        },
+        {
+          "label": "Problem",
+          "value": "Legacy Laravel version reached end-of-life"
+        },
+        {
+          "label": "Recovery",
+          "value": "Refactored codebase to modern version and converted Bootstrap to TailwindCSS"
+        },
+        {
+          "label": "Outcome",
+          "value": "Enabled latest Laravel features and migrated to modern admin portal (Nova)"
+        },
         { "label": "Status", "value": "Revived" }
       ],
       "notes": [
@@ -361,9 +439,18 @@
       "figCaption": "[Fig 9. Quote Man Revived Platform Original Mobile Screenshot, 2023]",
       "facts": [
         { "label": "Original Stack", "value": "Xcode 6.x + iOS 8.x" },
-        { "label": "Problem", "value": "Failed to compile and build in modern Xcode" },
-        { "label": "Recovery", "value": "Integrated CocoaPods (Podfile) package manager and updated UI" },
-        { "label": "Outcome", "value": "Enabled Xcode 15.x builds and structured CocoaPods dependency management" },
+        {
+          "label": "Problem",
+          "value": "Failed to compile and build in modern Xcode"
+        },
+        {
+          "label": "Recovery",
+          "value": "Integrated CocoaPods (Podfile) package manager and updated UI"
+        },
+        {
+          "label": "Outcome",
+          "value": "Enabled Xcode 15.x builds and structured CocoaPods dependency management"
+        },
         { "label": "Status", "value": "Build Completed" }
       ],
       "notes": [

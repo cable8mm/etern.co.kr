@@ -202,9 +202,15 @@
       "summary": "상품 12,000개, 연결 쇼핑몰 17개를 처리하는 대규모 스마트 물류 시스템을 복원했습니다.",
       "figCaption": "[Fig 1. 스마트 물류 시스템 복원 대시보드 스냅샷, 2026]",
       "facts": [
-        { "label": "원본 기술 환경", "value": "PHP 7.3 + CakePHP 2 + MySQL 5.7" },
+        {
+          "label": "원본 기술 환경",
+          "value": "PHP 7.3 + CakePHP 2 + MySQL 5.7"
+        },
         { "label": "장애 상태", "value": "CakePHP 2 프레임워크가 지원 종료됨" },
-        { "label": "복원 작업", "value": "최신 스택과 Laravel + Nova 로 마이그레이션" },
+        {
+          "label": "복원 작업",
+          "value": "최신 스택과 Laravel + Nova 로 마이그레이션"
+        },
         { "label": "복원 결과", "value": "새로운 UI + 큐 + 클라우드 배포" },
         { "label": "현재 상태", "value": "복원 완료" }
       ],
@@ -223,10 +229,22 @@
       "summary": "올라펫의 버려진 유기동물 입양 서비스를 Github Actions를 이용한 클라우드 배포 환경으로 이전하여 다시 구동 가능하게 만들었습니다.",
       "figCaption": "[Fig 2. 올라펫 유기동물 플랫폼 복원 모바일 스크린샷, 2025]",
       "facts": [
-        { "label": "원본 기술 환경", "value": "PHP 7.3 / Laravel 8 / Bootstrap 3 / MySQL 5.7" },
-        { "label": "장애 상태", "value": "Laravel에서 기본 CSS 프레임워크가 지원 종료됨" },
-        { "label": "복원 작업", "value": "최신 버전으로 업그레이드 하고 Bootstrap 코드를 Tailwindcss로 변경" },
-        { "label": "복원 결과", "value": "Laravel 최신 버전 이용이 가능해 졌고, 외부 라이브러리 이용 가능해 짐" },
+        {
+          "label": "원본 기술 환경",
+          "value": "PHP 7.3 / Laravel 8 / Bootstrap 3 / MySQL 5.7"
+        },
+        {
+          "label": "장애 상태",
+          "value": "Laravel에서 기본 CSS 프레임워크가 지원 종료됨"
+        },
+        {
+          "label": "복원 작업",
+          "value": "최신 버전으로 업그레이드 하고 Bootstrap 코드를 Tailwindcss로 변경"
+        },
+        {
+          "label": "복원 결과",
+          "value": "Laravel 최신 버전 이용이 가능해 졌고, 외부 라이브러리 이용 가능해 짐"
+        },
         { "label": "현재 상태", "value": "복원 완료" }
       ],
       "notes": [
@@ -242,9 +260,15 @@
       "summary": "구형 제로보드 4 기반의 악기 장터 사이트를 현대적인 CakePHP 2 프레임워크 기반의 악기인 플랫폼으로 안전하게 복원했습니다.",
       "figCaption": "[Fig 3. 악기인 복원 플랫폼 오리지널 스냅샷, 2024]",
       "facts": [
-        { "label": "원본 기술 환경", "value": "PHP 5.6 / Zeroboard 4.x / MySQL 3.x" },
+        {
+          "label": "원본 기술 환경",
+          "value": "PHP 5.6 / Zeroboard 4.x / MySQL 3.x"
+        },
         { "label": "장애 상태", "value": "OS, Zeroboard 지원 종료" },
-        { "label": "복원 작업", "value": "최신 스택과 자체 튜닝한 CakePHP 2.x로 복원" },
+        {
+          "label": "복원 작업",
+          "value": "최신 스택과 자체 튜닝한 CakePHP 2.x로 복원"
+        },
         { "label": "복원 결과", "value": "새로운 Admin UI + 퍼포먼스 개선" },
         { "label": "현재 상태", "value": "복원 완료" }
       ],
@@ -265,8 +289,14 @@
       "facts": [
         { "label": "원본 기술 환경", "value": "워드프레스" },
         { "label": "장애 상태", "value": "서버비와 워드프레스 패치 작업 필요" },
-        { "label": "복원 작업", "value": "UI만 Vite/React + Github Pages로 복원" },
-        { "label": "복원 결과", "value": "서버없이 무료 운영이 가능해 졌고, Github으로 관리" },
+        {
+          "label": "복원 작업",
+          "value": "UI만 Vite/React + Github Pages로 복원"
+        },
+        {
+          "label": "복원 결과",
+          "value": "서버없이 무료 운영이 가능해 졌고, Github으로 관리"
+        },
         { "label": "현재 상태", "value": "복원 완료" }
       ],
       "notes": [
@@ -283,9 +313,18 @@
       "figCaption": "[Fig 5. 서울탄츠스테이션 복원 플랫폼 오리지널 스냅샷, 2022]",
       "facts": [
         { "label": "원본 기술 환경", "value": "PHP 5.6 / Gnuboard5 / MySQL 3" },
-        { "label": "장애 상태", "value": "너무 오래된 서버, 코드라 콘텐츠 변경 불가능하고 보안 문제 발생" },
-        { "label": "복원 작업", "value": "튜닝된 CakePHP2 Admin 툴 도입해서 콘텐츠를 관리할 수 있게 변경" },
-        { "label": "복원 결과", "value": "최신 스택에서 구동이 가능해 졌고, Admin 에서 콘텐츠 및 수업 변경 가능" },
+        {
+          "label": "장애 상태",
+          "value": "너무 오래된 서버, 코드라 콘텐츠 변경 불가능하고 보안 문제 발생"
+        },
+        {
+          "label": "복원 작업",
+          "value": "튜닝된 CakePHP2 Admin 툴 도입해서 콘텐츠를 관리할 수 있게 변경"
+        },
+        {
+          "label": "복원 결과",
+          "value": "최신 스택에서 구동이 가능해 졌고, Admin 에서 콘텐츠 및 수업 변경 가능"
+        },
         { "label": "현재 상태", "value": "복원 완료" }
       ],
       "notes": [
@@ -302,9 +341,18 @@
       "figCaption": "[Fig 6. WordPress 데이터 Markdown 복원 플랫폼 오리지널 스냅샷, 2024]",
       "facts": [
         { "label": "원본 기술 환경", "value": "워드프레스" },
-        { "label": "장애 상태", "value": "많은 플러그인 사용으로 다양한 콘텐츠 사용 불가" },
-        { "label": "복원 작업", "value": "기술 표준 문서 포멧인 마크다운으로 콘텐츠 변환" },
-        { "label": "복원 결과", "value": "변환 후 Jekyll 도구를 이용해서 무료 Github Pages로 호스팅" },
+        {
+          "label": "장애 상태",
+          "value": "많은 플러그인 사용으로 다양한 콘텐츠 사용 불가"
+        },
+        {
+          "label": "복원 작업",
+          "value": "기술 표준 문서 포멧인 마크다운으로 콘텐츠 변환"
+        },
+        {
+          "label": "복원 결과",
+          "value": "변환 후 Jekyll 도구를 이용해서 무료 Github Pages로 호스팅"
+        },
         { "label": "현재 상태", "value": "변환 완료" }
       ],
       "notes": [
@@ -322,8 +370,14 @@
       "facts": [
         { "label": "원본 기술 환경", "value": "XCode 5.x + iOS 7.x" },
         { "label": "장애 상태", "value": "최신 XCode에서 컴파일 및 빌드 불가" },
-        { "label": "복원 작업", "value": "최신 API로 리펙토링하고 이미지 에셋 정리" },
-        { "label": "복원 결과", "value": "XCode 15.x 버전으로 빌드 및 패키징 가능" },
+        {
+          "label": "복원 작업",
+          "value": "최신 API로 리펙토링하고 이미지 에셋 정리"
+        },
+        {
+          "label": "복원 결과",
+          "value": "XCode 15.x 버전으로 빌드 및 패키징 가능"
+        },
         { "label": "현재 상태", "value": "빌드 완료" }
       ],
       "notes": [
@@ -339,10 +393,19 @@
       "summary": "7년 전 서비스되던 유튜브 채널 영상 큐레이션 플랫폼을 최신 PHP 8.3 및 Laravel 10 사양으로 코드 포팅하고, Laravel Nova 관리 포털과 자동 배포 자동화를 완벽 구현하여 복원했습니다.",
       "figCaption": "[Fig 8. 라이브스퀘어 복원 플랫폼 오리지널 스냅샷, 2023]",
       "facts": [
-        { "label": "원본 기술 환경", "value": "PHP 7.1 / Laravel 5.3 / Bootstrap 3" },
+        {
+          "label": "원본 기술 환경",
+          "value": "PHP 7.1 / Laravel 5.3 / Bootstrap 3"
+        },
         { "label": "장애 상태", "value": "Laravel 버전 지원 종료함" },
-        { "label": "복원 작업", "value": "최신 버전으로 코드 리팩토링 하고 Bootstrap 코드를 Tailwindcss로 변경" },
-        { "label": "복원 결과", "value": "Laravel 최신 버전 이용이 가능해 졌고, 최신 어드민(Nova)으로 변경" },
+        {
+          "label": "복원 작업",
+          "value": "최신 버전으로 코드 리팩토링 하고 Bootstrap 코드를 Tailwindcss로 변경"
+        },
+        {
+          "label": "복원 결과",
+          "value": "Laravel 최신 버전 이용이 가능해 졌고, 최신 어드민(Nova)으로 변경"
+        },
         { "label": "현재 상태", "value": "복원 완료" }
       ],
       "notes": [
@@ -361,8 +424,14 @@
       "facts": [
         { "label": "원본 기술 환경", "value": "XCode 6.x + iOS 8.x" },
         { "label": "장애 상태", "value": "최신 XCode에서 컴파일 및 빌드 불가" },
-        { "label": "복원 작업", "value": "Podfile 패키지 관리자 도입과 UI 수정" },
-        { "label": "복원 결과", "value": "XCode 15.x 버전으로 빌드 및 Podfile 패키지관리자 사용 가능" },
+        {
+          "label": "복원 작업",
+          "value": "Podfile 패키지 관리자 도입과 UI 수정"
+        },
+        {
+          "label": "복원 결과",
+          "value": "XCode 15.x 버전으로 빌드 및 Podfile 패키지관리자 사용 가능"
+        },
         { "label": "현재 상태", "value": "빌드 완료" }
       ],
       "notes": [

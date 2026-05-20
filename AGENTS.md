@@ -97,19 +97,24 @@ When a user adds a new project with a raw screenshot image in the workspace (e.g
 This project uses `react-i18next` for internationalization. Translators and AI agents must follow these rules strictly to ensure correct behavior and rendering.
 
 ### Locale File Locations
+
 - Korean translations: `src/locales/ko.json`
 - English translations: `src/locales/en.json`
 
 ### Structural Parity & Key Matching
+
 - Both locale files must maintain **exact structural parity**. Every key, object, and array structure present in one file must also exist in the other with the identical key name and nesting.
 - If a translation is missing, do not omit the key; use a placeholder, the original text, or a fallback.
 
 ### Key Naming Conventions
+
 - Top-level components and page-wide blocks should use lowercase snake_case (e.g. `studio_metrics`, `before_after`, `core_principle`, `project_preview`, `project_grid`, `projects_page`).
 - Nested keys should be logical and match existing patterns.
 
 ### Project Data Schema (`project_data.[slug]`)
+
 Each project record in `project_data` (e.g. `project_data.aipro`, `project_data.holapet`) must conform to the following schema:
+
 - `title` (String): Translated title of the project.
 - `status` (String): Translated restoration status (e.g., "복원 완료" in `ko.json` vs "Revived" or "Converted" in `en.json`).
 - `summary` (String): Translated brief summary of the project.
@@ -123,42 +128,49 @@ Each project record in `project_data` (e.g. `project_data.aipro`, `project_data.
 - `notes` (Array of Strings): Bulleted details of recovery, optimization, and modernization.
 
 ### Project Markdown to i18n Sync Rules
+
 Project Markdown files located in `docs/projects/[slug].md` serve as the primary source of truth in Korean. When a markdown file is created or updated, agents must sync the data to the locale JSON files using direct translation.
 
 #### 1. File Metadata Mapping
+
 - **`프로젝트 영문: key [slug]`**: Determines the JSON object key name under `project_data.[slug]` (e.g., `aipro`).
 - **`프로젝트 제목`**: Maps to `title` (Korean in `ko.json`, professionally translated to English in `en.json`).
 - **`한 줄 요약`**: Maps to `summary` (Korean in `ko.json`, translated to English in `en.json`).
 - **`현재 상태`**: Maps to `status` (e.g. "복원 완료" in `ko.json` vs "Revived" or "Converted" in `en.json`).
-- **`이미지 파일명`**: Refers to the original media. This must trigger the processing of the raw screenshot to standard archival thumbnail `public/images/[slug]-thumb.png` (using `16:10` aspect ratio and a device chassis) as described in *Project Media & Thumbnail Guidelines*.
+- **`이미지 파일명`**: Refers to the original media. This must trigger the processing of the raw screenshot to standard archival thumbnail `public/images/[slug]-thumb.png` (using `16:10` aspect ratio and a device chassis) as described in _Project Media & Thumbnail Guidelines_.
 
 #### 2. Project Facts Mapping
+
 The 5 metadata bullet points in the markdown file map directly to the 5-item `facts` array in the JSON schema. Standardize the labels and translate the values cleanly:
 
-| Markdown Bullet | Korean `facts` Object (`ko.json`) | English `facts` Object (`en.json`) |
-| :--- | :--- | :--- |
+| Markdown Bullet             | Korean `facts` Object (`ko.json`)                   | English `facts` Object (`en.json`)                             |
+| :-------------------------- | :-------------------------------------------------- | :------------------------------------------------------------- |
 | `- 원본 기술 환경: [value]` | `{ "label": "원본 기술 환경", "value": "[value]" }` | `{ "label": "Original Stack", "value": "[translated value]" }` |
-| `- 장애 상태: [value]` | `{ "label": "장애 상태", "value": "[value]" }` | `{ "label": "Problem", "value": "[translated value]" }` |
-| `- 복원 작업: [value]` | `{ "label": "복원 작업", "value": "[value]" }` | `{ "label": "Recovery", "value": "[translated value]" }` |
-| `- 복원 결과: [value]` | `{ "label": "복원 결과", "value": "[value]" }` | `{ "label": "Outcome", "value": "[translated value]" }` |
-| `- 현재 상태: [value]` | `{ "label": "현재 상태", "value": "[value]" }` | `{ "label": "Status", "value": "[translated value]" }` |
+| `- 장애 상태: [value]`      | `{ "label": "장애 상태", "value": "[value]" }`      | `{ "label": "Problem", "value": "[translated value]" }`        |
+| `- 복원 작업: [value]`      | `{ "label": "복원 작업", "value": "[value]" }`      | `{ "label": "Recovery", "value": "[translated value]" }`       |
+| `- 복원 결과: [value]`      | `{ "label": "복원 결과", "value": "[value]" }`      | `{ "label": "Outcome", "value": "[translated value]" }`        |
+| `- 현재 상태: [value]`      | `{ "label": "현재 상태", "value": "[value]" }`      | `{ "label": "Status", "value": "[translated value]" }`         |
 
-*Note: Technical names (e.g. `PHP 7.3`, `MySQL 5.7`, `CakePHP 2`, `Laravel Nova`) must remain untranslated in both languages.*
+_Note: Technical names (e.g. `PHP 7.3`, `MySQL 5.7`, `CakePHP 2`, `Laravel Nova`) must remain untranslated in both languages._
 
 #### 3. Recovery Notes (`notes`) Mapping
+
 The nested bullets under `- 복구 노트 내용:` map to the `notes` array of strings:
+
 - Strip out list indices (e.g. change `1. 데이터베이스 설계\n - 과거 사이트에서는...` into a clean, concise, self-contained bullet point).
 - Compile sub-bullets or nested descriptions into direct, robust sentences.
 - Make sure every bullet in Korean is matched by an elegant, professional technical translation in English.
 - If a note contains a markdown link (e.g., `[전용 툴](https://github.com/cable8mm/xeed)`), preserve the exact same link structure and URL target in both languages.
 
 ### Technical Term Preservation
+
 - Do not write phonetic transliterations in Korean for standard technical tools, languages, frameworks, or databases. Keep their original English/Latin spelling in both locale files.
   - **Correct**: `Laravel`, `MySQL`, `Docker`, `CakePHP 2`, `Objective-C`
   - **Incorrect**: `라라벨`, `마이에스큐엘`, `도커`, `케이크PHP`
 - Standard nouns, pricing notes, and status labels must be translated naturally (e.g., "By consultation" -> "상담 후 결정", "Original Stack" -> "과거 스택").
 
 ### URLs and External Redirections
+
 - Any reference URLs or repository links (e.g. `https://github.com/cable8mm/xeed`) must remain identical in both files to ensure correct links across locales.
 
 ---
