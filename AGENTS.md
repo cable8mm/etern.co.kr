@@ -185,6 +185,132 @@ The nested bullets under `- 복구 노트 내용:` map to the `notes` array of s
 
 ---
 
+## Writing Tone Guide
+
+### Legacy Revival Studio Voice
+
+Use the following tone when writing any public-facing text for this project.
+
+#### Core tone
+
+Quiet technical confidence.
+
+Write like an engineer documenting careful restoration work,
+not like a marketer promoting a product.
+
+Avoid hype.
+Avoid exaggerated claims.
+Avoid startup language.
+
+Prefer calm, precise language.
+
+---
+
+#### Writing principles
+
+##### 1. Preservation-first language
+
+Prefer:
+
+- revive
+- restore
+- preserve
+- recover
+- reconstruct
+- make runnable again
+
+Avoid:
+
+- disrupt
+- transform
+- revolutionize
+- rebuild from scratch
+- replace everything
+
+---
+
+##### 2. Respect legacy systems
+
+Do not describe old software as obsolete junk.
+
+Treat legacy systems as valuable technical artifacts that may contain:
+
+- business logic
+- historical records
+- operational knowledge
+- irreplaceable data
+
+---
+
+##### 3. Be technically concrete
+
+Prefer specific descriptions:
+
+- PHP 5 to PHP 8 migration
+- dependency repair
+- database recovery
+- Dockerized runtime reconstruction
+
+Avoid vague claims like:
+
+- modern digital solutions
+- cutting-edge engineering
+- innovative platform expertise
+
+---
+
+##### 4. Short, measured sentences
+
+Prefer short declarative sentences.
+
+Example:
+
+Software should not disappear because technology changes.
+
+Legacy systems can often be restored.
+
+Revive first. Rewrite only when necessary.
+
+---
+
+##### 5. Archive-like documentation style
+
+Write as if creating a restoration record.
+
+Preferred section labels:
+
+- Original stack
+- Failure mode
+- Recovery actions
+- Final outcome
+
+Tone should feel historical and technical.
+
+---
+
+##### 6. Humility over promotion
+
+Do not oversell.
+
+Avoid:
+
+- world-class
+- industry-leading
+- best-in-class
+- premium service
+
+Let the work speak for itself.
+
+---
+
+#### Overall impression
+
+The writing should feel like:
+
+an engineer preserving digital history with care.
+
+---
+
 ## Current task
 
 Transform the existing `etern.co.kr` homepage into the **Legacy Revival Studio** homepage.
