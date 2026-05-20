@@ -710,15 +710,47 @@ function TechnicalGroundSection() {
             <h3 className="mt-4 text-2xl font-semibold text-zinc-950 dark:text-zinc-50 leading-9">
               {t('about_page.operator.role')}
             </h3>
-            <div className="mt-6">
+            <div className="mt-6 flex flex-col gap-3.5">
               <a
                 href="https://github.com/legacy-revival-studio"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
               >
                 <Github size={16} />
                 <span>github.com/legacy-revival-studio</span>
+              </a>
+              <a
+                href="https://linkedin.com/company/legacy-revival-studio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
+              >
+                <Linkedin size={16} />
+                <span>linkedin.com/company/legacy-revival-studio</span>
+              </a>
+
+              <span className="text-xs font-bold tracking-[0.15em] text-zinc-400 dark:text-zinc-500 mt-3 mb-1">
+                Founder:
+              </span>
+
+              <a
+                href="https://github.com/cable8mm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
+              >
+                <Github size={16} />
+                <span>github.com/cable8mm</span>
+              </a>
+              <a
+                href="https://linkedin.com/in/cable8mm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
+              >
+                <Linkedin size={16} />
+                <span>linkedin.com/in/cable8mm</span>
               </a>
             </div>
           </div>
@@ -1219,15 +1251,47 @@ function AboutPage() {
               <h3 className="mt-4 text-2xl font-semibold text-zinc-950 dark:text-zinc-50 leading-9">
                 {t('about_page.operator.role')}
               </h3>
-              <div className="mt-6">
+              <div className="mt-6 flex flex-col gap-3.5">
                 <a
                   href="https://github.com/legacy-revival-studio"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 border border-zinc-300 dark:border-zinc-700 bg-transparent px-4 py-2 text-sm font-semibold text-zinc-950 dark:text-zinc-50 transition-colors hover:border-zinc-950 hover:bg-zinc-50 dark:hover:border-zinc-300 dark:hover:bg-zinc-900"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
                 >
                   <Github size={16} />
-                  <span>GitHub Restoration Archive</span>
+                  <span>github.com/legacy-revival-studio</span>
+                </a>
+                <a
+                  href="https://linkedin.com/company/legacy-revival-studio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
+                >
+                  <Linkedin size={16} />
+                  <span>linkedin.com/company/legacy-revival-studio</span>
+                </a>
+
+                <span className="text-xs font-bold tracking-[0.15em] text-zinc-400 dark:text-zinc-500 mt-3 mb-1">
+                  Founder:
+                </span>
+
+                <a
+                  href="https://github.com/cable8mm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
+                >
+                  <Github size={16} />
+                  <span>github.com/cable8mm</span>
+                </a>
+                <a
+                  href="https://linkedin.com/in/cable8mm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-zinc-300 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50 border-b border-zinc-300 dark:border-zinc-700 pb-0.5 w-fit"
+                >
+                  <Linkedin size={16} />
+                  <span>linkedin.com/in/cable8mm</span>
                 </a>
               </div>
             </div>
