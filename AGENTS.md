@@ -201,6 +201,11 @@ Transform the existing `etern.co.kr` homepage into the **Legacy Revival Studio**
 
 ## Response behavior
 
+### Proactive Clarification Rule
+
+- **Do NOT proceed on assumptions**: If there is any ambiguity, uncertainty, or if a design, structural, or functional choice requires the user's opinion, thoughts, or decisions, the agent **must stop and ask clarifying questions first**.
+- **Before starting work**, proactively request clarifying feedback and obtain explicit alignment on any unresolved options or decisions.
+
 Before editing:
 
 1. summarize understanding
