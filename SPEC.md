@@ -24,7 +24,7 @@ Each revival project should follow a preservation-oriented repository structure.
 
 Example:
 
-~~~text
+```text
 /raw/
     original source snapshots
     untouched artifacts
@@ -51,7 +51,7 @@ Example:
     screenshots
     original binaries
     exported references
-~~~
+```
 
 The repository itself functions as both:
 
@@ -225,7 +225,7 @@ The website itself should reflect the studio philosophy:
 
 ## Site Structure
 
-~~~text
+```text
 /
     Homepage (Korean)
 
@@ -254,7 +254,7 @@ The website itself should reflect the studio philosophy:
 /en/services
 /en/philosophy
 /en/about
-~~~
+```
 
 ---
 
@@ -334,37 +334,37 @@ Search engines must be able to read meaningful HTML without executing JavaScript
 
 ### Client build
 
-~~~bash
+```bash
 npx vite build --outDir dist/client
-~~~
+```
 
 ---
 
 ### SSR build
 
-~~~bash
+```bash
 npx vite build --ssr src/entry-server.jsx --outDir dist/server
-~~~
+```
 
 ---
 
 ### Prerender
 
-~~~bash
+```bash
 node prerender.js
-~~~
+```
 
 This generates route-specific static HTML files.
 
 Example:
 
-~~~text
+```text
 dist/index.html
 dist/projects/index.html
 dist/philosophy/index.html
 dist/en/index.html
 dist/en/projects/index.html
-~~~
+```
 
 ---
 
@@ -406,25 +406,25 @@ Language detection should prioritize URL path prefixes.
 
 Project records located inside:
 
-~~~text
+```text
 docs/projects/[slug].md
-~~~
+```
 
 serve as the canonical source of truth.
 
 Public website translation entries under:
 
-~~~text
+```text
 project_data.[slug]
-~~~
+```
 
 must remain synchronized with project documents.
 
 Synchronization rules and transformation policies are documented in:
 
-~~~text
+```text
 AGENTS.md
-~~~
+```
 
 ---
 
