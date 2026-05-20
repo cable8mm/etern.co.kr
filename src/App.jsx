@@ -41,6 +41,27 @@ function Github({ size = 20, className = '' }) {
   );
 }
 
+function Linkedin({ size = 20, className = '' }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-linkedin ${className}`}
+    >
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect x="2" y="9" width="4" height="12" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+}
+
 const navLinks = [
   { key: 'projects', href: '/projects' },
   { key: 'philosophy', href: '/#philosophy' },
@@ -776,15 +797,35 @@ function Footer() {
         <div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-4">
           <p>{t('footer.copyright')}</p>
           <span className="hidden md:inline text-zinc-800">|</span>
-          <a
-            href="https://github.com/legacy-revival-studio"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-zinc-50 transition-colors"
-          >
-            <Github size={14} className="mb-0.5" />
-            <span>GitHub Archive</span>
-          </a>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <a
+              href="https://github.com/legacy-revival-studio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-zinc-50 transition-colors"
+            >
+              <Github size={14} className="mb-0.5" />
+              <span>GitHub</span>
+            </a>
+            <span className="text-zinc-800">|</span>
+            <a
+              href="https://www.linkedin.com/company/legacy-revival-studio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-zinc-50 transition-colors"
+            >
+              <Linkedin size={14} className="mb-0.5" />
+              <span>LinkedIn</span>
+            </a>
+            <span className="text-zinc-800">|</span>
+            <a
+              href="mailto:revival@etern.co.kr"
+              className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-zinc-50 transition-colors"
+            >
+              <Mail size={14} className="mb-0.5" />
+              <span>revival@etern.co.kr</span>
+            </a>
+          </div>
         </div>
         <p className="whitespace-pre-line text-left md:text-right">
           {t('footer.slogan')}
