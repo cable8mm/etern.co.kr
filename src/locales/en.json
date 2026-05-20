@@ -218,8 +218,7 @@
         {
           "label": "Final outcome",
           "value": "New UI + Queue + Cloud Deployment"
-        },
-        { "label": "Status", "value": "Revived" }
+        }
       ],
       "notes": [
         "Cleaned up redundant fields and tables from the legacy database, and successfully migrated high-volume product catalogs and logistics ledger data.",
@@ -251,8 +250,7 @@
         {
           "label": "Final outcome",
           "value": "Enabled latest Laravel features and integration of external libraries"
-        },
-        { "label": "Status", "value": "Revived" }
+        }
       ],
       "notes": [
         "Cleaned up redundant fields and tables from the legacy database, and successfully migrated shelter information and adoption posts data.",
@@ -282,8 +280,7 @@
         {
           "label": "Final outcome",
           "value": "New Admin UI + Performance improvements"
-        },
-        { "label": "Status", "value": "Revived" }
+        }
       ],
       "notes": [
         "Purged unused legacy fields and tables to streamline the database structure, successfully migrating all operational user and post records.",
@@ -312,8 +309,7 @@
         {
           "label": "Final outcome",
           "value": "Zero-cost serverless hosting, managed entirely via GitHub"
-        },
-        { "label": "Status", "value": "Converted" }
+        }
       ],
       "notes": [
         "Crawled the legacy WordPress site to collect all pages, restoring broken links and images to their original state.",
@@ -340,8 +336,7 @@
         {
           "label": "Final outcome",
           "value": "Enabled running on modern stack with content and class scheduling via Admin"
-        },
-        { "label": "Status", "value": "Revived" }
+        }
       ],
       "notes": [
         "Introduced a hybrid architectural approach that maintains the Gnuboard 5 core for frontend community actions while delegating complex business ledgers to CakePHP 2.",
@@ -368,8 +363,7 @@
         {
           "label": "Final outcome",
           "value": "Hosted for free on GitHub Pages using Jekyll static builder"
-        },
-        { "label": "Status", "value": "Converted" }
+        }
       ],
       "notes": [
         "Extracted over 1,000 blog posts and rich metadata directly from the MySQL database using a custom Node.js script to ensure absolute integrity without relying on unstable third-party plugins.",
@@ -396,8 +390,7 @@
         {
           "label": "Final outcome",
           "value": "Successfully built and packaged using Xcode 15.x"
-        },
-        { "label": "Status", "value": "Build Completed" }
+        }
       ],
       "notes": [
         "Successfully resolved building blocks and compilation warnings of an ancient Objective-C project locked to Xcode 5.x and iOS 7.x runtimes, enabling solid builds on modern Xcode 15.x compilers.",
@@ -427,8 +420,7 @@
         {
           "label": "Final outcome",
           "value": "Enabled latest Laravel features and migrated to modern admin portal (Nova)"
-        },
-        { "label": "Status", "value": "Revived" }
+        }
       ],
       "notes": [
         "Orchestrated the architectural migration of a legacy Laravel 5.3 application to the modern Laravel 10 framework, rewriting outdated core service providers and ensuring strict PHP 8.3 compiler compatibility.",
@@ -456,8 +448,7 @@
         {
           "label": "Final outcome",
           "value": "Enabled Xcode 15.x builds and structured CocoaPods dependency management"
-        },
-        { "label": "Status", "value": "Build Completed" }
+        }
       ],
       "notes": [
         "Resolved compiler dependencies and modernized obsolete Objective-C structures locked to Xcode 6.x and iOS 8.x, ensuring successful builds and smooth execution on modern Xcode 13.x and iOS 15.3 runtimes.",
