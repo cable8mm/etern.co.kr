@@ -786,7 +786,9 @@ function Footer() {
             <span>GitHub Archive</span>
           </a>
         </div>
-        <p>{t('footer.slogan')}</p>
+        <p className="whitespace-pre-line text-left md:text-right">
+          {t('footer.slogan')}
+        </p>
       </div>
     </footer>
   );
