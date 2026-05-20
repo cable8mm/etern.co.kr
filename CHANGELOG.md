@@ -1,5 +1,14 @@
 # Release Notes
 
+## v2.11.0 - 2026-05-20
+
+### What's Changed
+
+* Change title and slogan as Korean by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/26
+* Revive title and slogan by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/etern.co.kr/pull/27
+
+**Full Changelog**: https://github.com/cable8mm/etern.co.kr/compare/v2.10.0...v2.11.0
+
 ## v2.10.0 - 2026-05-19
 
 ### What's Changed
