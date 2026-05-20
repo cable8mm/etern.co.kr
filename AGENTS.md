@@ -143,13 +143,13 @@ Project Markdown files located in `docs/projects/[slug].md` serve as the primary
 
 The 5 metadata bullet points in the markdown file map directly to the 5-item `facts` array in the JSON schema. Standardize the labels and translate the values cleanly:
 
-| Markdown Bullet             | Korean `facts` Object (`ko.json`)                   | English `facts` Object (`en.json`)                             |
-| :-------------------------- | :-------------------------------------------------- | :------------------------------------------------------------- |
-| `- 원본 기술 환경: [value]` | `{ "label": "원본 기술 환경", "value": "[value]" }` | `{ "label": "Original stack", "value": "[translated value]" }` |
-| `- 장애 상태: [value]`      | `{ "label": "장애 상태", "value": "[value]" }`      | `{ "label": "Failure mode", "value": "[translated value]" }`   |
+| Markdown Bullet             | Korean `facts` Object (`ko.json`)                   | English `facts` Object (`en.json`)                               |
+| :-------------------------- | :-------------------------------------------------- | :--------------------------------------------------------------- |
+| `- 원본 기술 환경: [value]` | `{ "label": "원본 기술 환경", "value": "[value]" }` | `{ "label": "Original stack", "value": "[translated value]" }`   |
+| `- 장애 상태: [value]`      | `{ "label": "장애 상태", "value": "[value]" }`      | `{ "label": "Failure mode", "value": "[translated value]" }`     |
 | `- 복원 작업: [value]`      | `{ "label": "복원 작업", "value": "[value]" }`      | `{ "label": "Recovery actions", "value": "[translated value]" }` |
-| `- 복원 결과: [value]`      | `{ "label": "복원 결과", "value": "[value]" }`      | `{ "label": "Final outcome", "value": "[translated value]" }`  |
-| `- 현재 상태: [value]`      | `{ "label": "현재 상태", "value": "[value]" }`      | `{ "label": "Status", "value": "[translated value]" }`         |
+| `- 복원 결과: [value]`      | `{ "label": "복원 결과", "value": "[value]" }`      | `{ "label": "Final outcome", "value": "[translated value]" }`    |
+| `- 현재 상태: [value]`      | `{ "label": "현재 상태", "value": "[value]" }`      | `{ "label": "Status", "value": "[translated value]" }`           |
 
 _Note: Technical names (e.g. `PHP 7.3`, `MySQL 5.7`, `CakePHP 2`, `Laravel Nova`) must remain untranslated in both languages._
 
