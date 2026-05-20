@@ -1,5 +1,16 @@
 # Release Notes
 
+## v2.14.0 - 2026-05-20
+
+### What's Changed
+
+* Add tones in `AGENTS.md` by [@cable8mm](https://github.com/cable8mm) in https://github.com/legacy-revival-studio/etern.co.kr/pull/32
+* Make advanced for customers by [@cable8mm](https://github.com/cable8mm) in https://github.com/legacy-revival-studio/etern.co.kr/pull/33
+* Replace github informations by [@cable8mm](https://github.com/cable8mm) in https://github.com/legacy-revival-studio/etern.co.kr/pull/34
+* Replace footer messages by [@cable8mm](https://github.com/cable8mm) in https://github.com/legacy-revival-studio/etern.co.kr/pull/35
+
+**Full Changelog**: https://github.com/legacy-revival-studio/etern.co.kr/compare/v2.13.0...v2.14.0
+
 ## v2.13.0 - 2026-05-20
 
 ### What's Changed
