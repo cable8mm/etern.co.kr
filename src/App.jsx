@@ -298,6 +298,7 @@ function Header({
   setTheme,
 }) {
   const { t, i18n } = useTranslation();
+  const lang = (i18n.language || 'ko').startsWith('en') ? 'en' : 'ko';
 
   const toggleLanguage = () => {
     const isEn = (i18n.language || 'ko').startsWith('en');
@@ -328,17 +329,21 @@ function Header({
           href="/"
           onNavigate={() => setMobileMenuOpen(false)}
           className="flex items-center gap-3 text-left"
-          aria-label="Legacy Revival Studio home"
+          aria-label={
+            lang === 'ko'
+              ? '레거시 리바이벌 스튜디오 홈'
+              : 'Legacy Revival Studio home'
+          }
         >
           <span className="flex h-9 w-9 items-center justify-center border border-zinc-300 bg-zinc-950 text-sm font-semibold text-zinc-50 dark:border-zinc-700 dark:bg-zinc-50 dark:text-zinc-950">
             LR
           </span>
           <span>
             <span className="block text-sm font-semibold tracking-normal text-zinc-950 dark:text-zinc-50">
-              Legacy Revival Studio
+              {t('nav.logo_title', { defaultValue: 'Legacy Revival Studio' })}
             </span>
             <span className="block text-xs text-zinc-500 dark:text-zinc-400">
-              Software restoration
+              {t('nav.logo_subtitle', { defaultValue: 'Software restoration' })}
             </span>
           </span>
         </Link>
@@ -1236,7 +1241,8 @@ export default function App({ ssrPath } = {}) {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    const baseTitle = 'Legacy Revival Studio';
+    const baseTitle =
+      lang === 'ko' ? '레거시 리바이벌 스튜디오' : 'Legacy Revival Studio';
     let pageTitle;
     let descriptionText =
       '오래된 웹사이트를 복원하고 다시 살아 움직이게 합니다.';

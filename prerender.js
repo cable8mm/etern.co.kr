@@ -134,35 +134,35 @@ const routes = [
   {
     path: '/projects',
     lang: 'ko',
-    title: '프로젝트 아카이브 | Legacy Revival Studio',
+    title: '프로젝트 아카이브 | 레거시 리바이벌 스튜디오',
     description:
       '부활한 소프트웨어의 작동 상태, 복원 과정, 레거시 시스템 현대화 패치 내역을 문서화한 아카이브 아티팩트 목록입니다.',
   },
   {
     path: '/services',
     lang: 'ko',
-    title: '복원 서비스 안내 | Legacy Revival Studio',
+    title: '복원 서비스 안내 | 레거시 리바이벌 스튜디오',
     description:
       '구형 코드 분석(레거시 리뷰), 시스템 복구 가능성 평가, 의존성 현대화 및 낡은 웹 서비스를 작동 가능한 상태로 되살리는 전문 엔지니어링 서비스를 제공합니다.',
   },
   {
     path: '/philosophy',
     lang: 'ko',
-    title: '엔지니어링 철학 | Legacy Revival Studio',
+    title: '엔지니어링 철학 | 레거시 리바이벌 스튜디오',
     description:
       '역사를 재디자인하지 않고 원본의 의도를 보존하는 기술적 태도, 소프트웨어의 부패를 방지하고 영속성을 보장하는 아카이브 우선주의 철학을 소개합니다.',
   },
   {
     path: '/about',
     lang: 'ko',
-    title: '스튜디오 소개 | Legacy Revival Studio',
+    title: '스튜디오 소개 | 레거시 리바이벌 스튜디오',
     description:
       '오래되었지만 가치 있는 사내 시스템, 낡은 웹 앱, 문서화되지 않은 DB를 연구하고 조용히 소멸하지 않도록 런타임을 재현하는 기술 보존 스튜디오입니다.',
   },
   {
     path: '/contact',
     lang: 'ko',
-    title: '복원 의뢰 및 문의 | Legacy Revival Studio',
+    title: '복원 의뢰 및 문의 | 레거시 리바이벌 스튜디오',
     description:
       '구형 시스템 백업본, 데이터베이스 덤프, 낡은 소스코드만으로도 상담이 가능합니다. 레거시 소프트웨어 복구 및 작동 가능성 문의를 보내주세요.',
   },
