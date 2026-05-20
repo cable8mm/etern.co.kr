@@ -188,7 +188,13 @@
     "description": "Legacy Revival Studio grows from the habit of revisiting old projects, making them run again, and refusing to let useful digital work disappear quietly.",
     "p1": "The studio focuses on aging web services, internal tools, undocumented databases, and codebases that organizations still depend on but hesitate to touch.",
     "p2": "The work is deliberately modest: recover artifacts, recreate a runtime, document behavior, and only then decide which parts should be modernized.",
-    "p3": "Over time, the public site will also serve as an archive of revived projects and the technical decisions that helped preserve them."
+    "p3": "Over time, the public site will also serve as an archive of revived projects and the technical decisions that helped preserve them.",
+    "operator": {
+      "title": "Operator Profile",
+      "role": "Independent Software Restoration Engineer",
+      "exp_title": "Over 20 years of experience in building, maintaining, and recovering web systems.",
+      "exp_description": "Bringing legacy systems back to life based on expertise in PHP, Node.js, C++, databases, Git-based version history management, and administrative tool design."
+    }
   },
   "not_found": {
     "eyebrow": "Not found",

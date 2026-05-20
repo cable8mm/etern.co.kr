@@ -658,6 +658,28 @@ function TechnicalGroundSection() {
           </div>
         </div>
       </div>
+
+      {/* Operator Profile Section */}
+      <div className="mx-auto max-w-6xl mt-20 border-t border-zinc-200 dark:border-zinc-800 pt-16">
+        <div className="grid gap-14 md:grid-cols-[1fr_1fr] md:gap-20">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">
+              {t('about_page.operator.title')}
+            </span>
+            <h3 className="mt-4 text-2xl font-semibold text-zinc-950 dark:text-zinc-50 leading-9">
+              {t('about_page.operator.role')}
+            </h3>
+          </div>
+          <div className="space-y-6 text-base leading-8 text-zinc-600 dark:text-zinc-400">
+            <p className="text-lg font-medium text-zinc-900 dark:text-zinc-100 leading-8">
+              {t('about_page.operator.exp_title')}
+            </p>
+            <p className="text-zinc-600 dark:text-zinc-400">
+              {t('about_page.operator.exp_description')}
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
@@ -1072,6 +1094,28 @@ function AboutPage() {
             <p>{t('about_page.p1')}</p>
             <p>{t('about_page.p2')}</p>
             <p>{t('about_page.p3')}</p>
+          </div>
+        </div>
+
+        {/* Operator Profile Section */}
+        <div className="mx-auto max-w-6xl mt-24 border-t border-zinc-200 dark:border-zinc-800 pt-20">
+          <div className="grid gap-14 md:grid-cols-[0.9fr_1.1fr] md:gap-20">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">
+                {t('about_page.operator.title')}
+              </span>
+              <h3 className="mt-4 text-2xl font-semibold text-zinc-950 dark:text-zinc-50 leading-9">
+                {t('about_page.operator.role')}
+              </h3>
+            </div>
+            <div className="space-y-6 text-base leading-8 text-zinc-600 dark:text-zinc-400">
+              <p className="text-lg font-medium text-zinc-900 dark:text-zinc-100 leading-8">
+                {t('about_page.operator.exp_title')}
+              </p>
+              <p className="text-zinc-600 dark:text-zinc-400">
+                {t('about_page.operator.exp_description')}
+              </p>
+            </div>
           </div>
         </div>
       </section>
