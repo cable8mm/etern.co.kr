@@ -92,6 +92,44 @@ When a user adds a new project with a raw screenshot image in the workspace (e.g
 
 ---
 
+## Translation & Localization (i18n) Rules
+
+This project uses `react-i18next` for internationalization. Translators and AI agents must follow these rules strictly to ensure correct behavior and rendering.
+
+### Locale File Locations
+- Korean translations: `src/locales/ko.json`
+- English translations: `src/locales/en.json`
+
+### Structural Parity & Key Matching
+- Both locale files must maintain **exact structural parity**. Every key, object, and array structure present in one file must also exist in the other with the identical key name and nesting.
+- If a translation is missing, do not omit the key; use a placeholder, the original text, or a fallback.
+
+### Key Naming Conventions
+- Top-level components and page-wide blocks should use lowercase snake_case (e.g. `studio_metrics`, `before_after`, `core_principle`, `project_preview`, `project_grid`, `projects_page`).
+- Nested keys should be logical and match existing patterns.
+
+### Project Data Schema (`project_data.[slug]`)
+Each project record in `project_data` (e.g. `project_data.aipro`, `project_data.holapet`) must conform to the following schema:
+- `title` (String): Translated title of the project.
+- `status` (String): Translated restoration status (e.g., "복원 완료" in `ko.json` vs "Revived" or "Converted" in `en.json`).
+- `summary` (String): Translated brief summary of the project.
+- `figCaption` (String): Figure caption matching the format `[Fig X. [Title] [Media type] 스냅샷/스크린샷, [Year]]`.
+- `facts` (Array of objects): Key-value pairs containing technical specs. Each object must have:
+  - `label` (String): Translated label (e.g., "과거 스택" vs "Original Stack").
+  - `value` (String): Technical stack value.
+- `notes` (Array of Strings): Bulleted details of recovery, optimization, and modernization.
+
+### Technical Term Preservation
+- Do not write phonetic transliterations in Korean for standard technical tools, languages, frameworks, or databases. Keep their original English/Latin spelling in both locale files.
+  - **Correct**: `Laravel`, `MySQL`, `Docker`, `CakePHP 2`, `Objective-C`
+  - **Incorrect**: `라라벨`, `마이에스큐엘`, `도커`, `케이크PHP`
+- Standard nouns, pricing notes, and status labels must be translated naturally (e.g., "By consultation" -> "상담 후 결정", "Original Stack" -> "과거 스택").
+
+### URLs and External Redirections
+- Any reference URLs or repository links (e.g. `https://github.com/cable8mm/xeed`) must remain identical in both files to ensure correct links across locales.
+
+---
+
 ## Current task
 
 Transform the existing `etern.co.kr` homepage into the **Legacy Revival Studio** homepage.

@@ -287,6 +287,15 @@ dist/en/projects/index.html
 - `/` → Korean
 - `/en` → English
 
+### Translation Files & Architecture
+
+Translation dictionaries are located at:
+- `src/locales/ko.json` (Korean dictionary)
+- `src/locales/en.json` (English dictionary)
+
+Both dictionaries must be structurally identical. The UI loads them via `react-i18next` with `i18next-browser-languagedetector` configured to detect path prefixes.
+Dynamic lists (such as `facts` and `notes` under `project_data`) are fetched using `{ returnObjects: true }` and must maintain consistent data types (e.g., array of objects vs array of strings) across both dictionaries.
+
 ---
 
 ## Metadata Requirements
