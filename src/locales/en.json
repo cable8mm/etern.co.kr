@@ -5,7 +5,9 @@
     "workflow": "Workflow",
     "services": "Services",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "logo_title": "Legacy Revival Studio",
+    "logo_subtitle": "Software restoration"
   },
   "theme": {
     "light": "Light",
