@@ -1,5 +1,14 @@
 # Release Notes
 
+## v2.15.0 - 2026-05-20
+
+### What's Changed
+
+* Revise markdowns by [@cable8mm](https://github.com/cable8mm) in https://github.com/legacy-revival-studio/etern.co.kr/pull/36
+* Revise typo in markdown files by [@cable8mm](https://github.com/cable8mm) in https://github.com/legacy-revival-studio/etern.co.kr/pull/37
+
+**Full Changelog**: https://github.com/legacy-revival-studio/etern.co.kr/compare/v2.14.0...v2.15.0
+
 ## v2.14.0 - 2026-05-20
 
 ### What's Changed
