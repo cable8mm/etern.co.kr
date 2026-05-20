@@ -113,11 +113,44 @@ Each project record in `project_data` (e.g. `project_data.aipro`, `project_data.
 - `title` (String): Translated title of the project.
 - `status` (String): Translated restoration status (e.g., "복원 완료" in `ko.json` vs "Revived" or "Converted" in `en.json`).
 - `summary` (String): Translated brief summary of the project.
-- `figCaption` (String): Figure caption matching the format `[Fig X. [Title] [Media type] 스냅샷/스크린샷, [Year]]`.
-- `facts` (Array of objects): Key-value pairs containing technical specs. Each object must have:
-  - `label` (String): Translated label (e.g., "과거 스택" vs "Original Stack").
-  - `value` (String): Technical stack value.
+- `figCaption` (String): Figure caption matching the format `[Fig X. [English Title] [Device Chassis Type/Media type] [Snapshot/Screenshot/Mobile Screenshot], [Year]]` (e.g., `[Fig 1. Smart Logistics WMS System Revived Dashboard Snapshot, 2026]`).
+- `facts` (Array of objects): Key-value pairs containing technical specs. Must contain exactly 5 standardized items in this order:
+  1. `원본 기술 환경` (Korean) / `Original Stack` (English)
+  2. `장애 상태` (Korean) / `Problem` (English)
+  3. `복원 작업` (Korean) / `Recovery` (English)
+  4. `복원 결과` (Korean) / `Outcome` (English)
+  5. `현재 상태` (Korean) / `Status` (English)
 - `notes` (Array of Strings): Bulleted details of recovery, optimization, and modernization.
+
+### Project Markdown to i18n Sync Rules
+Project Markdown files located in `docs/projects/[slug].md` serve as the primary source of truth in Korean. When a markdown file is created or updated, agents must sync the data to the locale JSON files using direct translation.
+
+#### 1. File Metadata Mapping
+- **`프로젝트 영문: key [slug]`**: Determines the JSON object key name under `project_data.[slug]` (e.g., `aipro`).
+- **`프로젝트 제목`**: Maps to `title` (Korean in `ko.json`, professionally translated to English in `en.json`).
+- **`한 줄 요약`**: Maps to `summary` (Korean in `ko.json`, translated to English in `en.json`).
+- **`현재 상태`**: Maps to `status` (e.g. "복원 완료" in `ko.json` vs "Revived" or "Converted" in `en.json`).
+- **`이미지 파일명`**: Refers to the original media. This must trigger the processing of the raw screenshot to standard archival thumbnail `public/images/[slug]-thumb.png` (using `16:10` aspect ratio and a device chassis) as described in *Project Media & Thumbnail Guidelines*.
+
+#### 2. Project Facts Mapping
+The 5 metadata bullet points in the markdown file map directly to the 5-item `facts` array in the JSON schema. Standardize the labels and translate the values cleanly:
+
+| Markdown Bullet | Korean `facts` Object (`ko.json`) | English `facts` Object (`en.json`) |
+| :--- | :--- | :--- |
+| `- 원본 기술 환경: [value]` | `{ "label": "원본 기술 환경", "value": "[value]" }` | `{ "label": "Original Stack", "value": "[translated value]" }` |
+| `- 장애 상태: [value]` | `{ "label": "장애 상태", "value": "[value]" }` | `{ "label": "Problem", "value": "[translated value]" }` |
+| `- 복원 작업: [value]` | `{ "label": "복원 작업", "value": "[value]" }` | `{ "label": "Recovery", "value": "[translated value]" }` |
+| `- 복원 결과: [value]` | `{ "label": "복원 결과", "value": "[value]" }` | `{ "label": "Outcome", "value": "[translated value]" }` |
+| `- 현재 상태: [value]` | `{ "label": "현재 상태", "value": "[value]" }` | `{ "label": "Status", "value": "[translated value]" }` |
+
+*Note: Technical names (e.g. `PHP 7.3`, `MySQL 5.7`, `CakePHP 2`, `Laravel Nova`) must remain untranslated in both languages.*
+
+#### 3. Recovery Notes (`notes`) Mapping
+The nested bullets under `- 복구 노트 내용:` map to the `notes` array of strings:
+- Strip out list indices (e.g. change `1. 데이터베이스 설계\n - 과거 사이트에서는...` into a clean, concise, self-contained bullet point).
+- Compile sub-bullets or nested descriptions into direct, robust sentences.
+- Make sure every bullet in Korean is matched by an elegant, professional technical translation in English.
+- If a note contains a markdown link (e.g., `[전용 툴](https://github.com/cable8mm/xeed)`), preserve the exact same link structure and URL target in both languages.
 
 ### Technical Term Preservation
 - Do not write phonetic transliterations in Korean for standard technical tools, languages, frameworks, or databases. Keep their original English/Latin spelling in both locale files.
