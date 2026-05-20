@@ -131,12 +131,11 @@ Each project record in `project_data` (e.g. `project_data.aipro`, `project_data.
 - `status` (String): Translated restoration status (e.g., "복원 완료" in `ko.json` vs "Revived" or "Converted" in `en.json`).
 - `summary` (String): Translated brief summary of the project.
 - `figCaption` (String): Figure caption matching the format `[Fig X. [English Title] [Device Chassis Type/Media type] [Snapshot/Screenshot/Mobile Screenshot], [Year]]` (e.g., `[Fig 1. Smart Logistics WMS System Revived Dashboard Snapshot, 2026]`).
-- `facts` (Array of objects): Key-value pairs containing technical specs. Must contain exactly 5 standardized items in this order:
+- `facts` (Array of objects): Key-value pairs containing technical specs. Must contain exactly 4 standardized items in this order (Note: `현재 상태` / `Status` must NOT be included in the `facts` array as it is already handled by the top-level `status` field):
   1. `원본 기술 환경` (Korean) / `Original stack` (English)
   2. `장애 상태` (Korean) / `Failure mode` (English)
   3. `복원 작업` (Korean) / `Recovery actions` (English)
   4. `복원 결과` (Korean) / `Final outcome` (English)
-  5. `현재 상태` (Korean) / `Status` (English)
 - `notes` (Array of Strings): Bulleted details of recovery, optimization, and modernization.
 
 ### Project Markdown to i18n Sync Rules
@@ -148,12 +147,12 @@ Project Markdown files located in `docs/projects/[slug].md` serve as the primary
 - **`프로젝트 영문: key [slug]`**: Determines the JSON object key name under `project_data.[slug]` (e.g., `aipro`).
 - **`프로젝트 제목`**: Maps to `title` (Korean in `ko.json`, professionally translated to English in `en.json`).
 - **`한 줄 요약`**: Maps to `summary` (Korean in `ko.json`, translated to English in `en.json`).
-- **`현재 상태`**: Maps to `status` (e.g. "복원 완료" in `ko.json` vs "Revived" or "Converted" in `en.json`).
+- **`현재 상태`**: Maps **ONLY** to the top-level `status` field (e.g. "복원 완료" in `ko.json` vs "Revived" or "Converted" in `en.json`). **Do NOT include this inside the `facts` array.**
 - **`이미지 파일명`**: Refers to the original media. This must trigger the processing of the raw screenshot to standard archival thumbnail `public/images/[slug]-thumb.png` (using `16:10` aspect ratio and a device chassis) as described in _Project Media & Thumbnail Guidelines_.
 
 #### 2. Project Facts Mapping
 
-The 5 metadata bullet points in the markdown file map directly to the 5-item `facts` array in the JSON schema. Standardize the labels and translate the values cleanly:
+The first 4 metadata bullet points in the markdown file map directly to the 4-item `facts` array in the JSON schema. Standardize the labels and translate the values cleanly:
 
 | Markdown Bullet             | Korean `facts` Object (`ko.json`)                   | English `facts` Object (`en.json`)                               |
 | :-------------------------- | :-------------------------------------------------- | :--------------------------------------------------------------- |
@@ -161,7 +160,6 @@ The 5 metadata bullet points in the markdown file map directly to the 5-item `fa
 | `- 장애 상태: [value]`      | `{ "label": "장애 상태", "value": "[value]" }`      | `{ "label": "Failure mode", "value": "[translated value]" }`     |
 | `- 복원 작업: [value]`      | `{ "label": "복원 작업", "value": "[value]" }`      | `{ "label": "Recovery actions", "value": "[translated value]" }` |
 | `- 복원 결과: [value]`      | `{ "label": "복원 결과", "value": "[value]" }`      | `{ "label": "Final outcome", "value": "[translated value]" }`    |
-| `- 현재 상태: [value]`      | `{ "label": "현재 상태", "value": "[value]" }`      | `{ "label": "Status", "value": "[translated value]" }`           |
 
 _Note: Technical names (e.g. `PHP 7.3`, `MySQL 5.7`, `CakePHP 2`, `Laravel Nova`) must remain untranslated in both languages._
 
