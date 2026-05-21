@@ -1,5 +1,14 @@
 # Release Notes
 
+## v2.16.0 - 2026-05-20
+
+### What's Changed
+
+* Add a tool - logo generator by [@cable8mm](https://github.com/cable8mm) in https://github.com/legacy-revival-studio/etern.co.kr/pull/46
+* Add linked-in address by [@cable8mm](https://github.com/cable8mm) in https://github.com/legacy-revival-studio/etern.co.kr/pull/47
+
+**Full Changelog**: https://github.com/legacy-revival-studio/etern.co.kr/compare/v2.15.0...v2.16.0
+
 ## v2.15.0 - 2026-05-20
 
 ### What's Changed
