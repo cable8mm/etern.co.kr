@@ -1,535 +1,395 @@
 # AGENTS.md
 
-## Project Identity
+# Next State Studio
 
-Title (English): **Legacy Revival Studio**
-
-Description (English):
-
-A project dedicated to reviving old software, preserving digital artifacts, and modernizing legacy systems while respecting their original intent.
-
-Title (한글): **레거시 리바이벌 스튜디오**
-
-Description (한글):
-
-오래된 웹사이트와 시스템을 복원하고 다시 살아 움직이게 합니다.
+Project Constitution
 
 ---
 
-## Read before making any changes
+# Mission
 
-Read these files in this order:
+Build and maintain the official website of Next State Studio.
 
-1. `docs/chatgpt-context.md`
-2. `README.md`
-3. `SPEC.md`
-4. `IDEAS.md`
+The website exists to establish trust with companies operating existing web and mobile services.
 
-Do not begin implementation before understanding the project philosophy.
+This is NOT a software agency website.
 
----
+This is NOT a freelancer portfolio.
 
-## Working Principles
+This is NOT a startup marketing website.
 
-### Preserve before replacing
-
-Prefer improving existing code over rewriting it.
-
-Do not remove historical artifacts unless explicitly instructed.
+This is a consulting-focused website for technical modernization, migration, stabilization, and operational improvement.
 
 ---
 
-### Minimal and reversible changes
+# Company Positioning
 
-Prefer small, incremental modifications.
+Next State Studio helps organizations safely evolve existing production systems.
 
-Avoid large refactors unless necessary.
+Primary services:
 
-Explain major architectural changes before implementing them.
+- Commerce Migration
+- PHP Modernization
+- WordPress Modernization
+- Mobile Modernization
+- Infrastructure Modernization
+- Service Recovery & Stabilization
 
----
+The company specializes in operational systems that are already in production.
 
-### Respect original intent
-
-This project is not about redesigning history.
-
-It is about helping old software live again.
-
-Preserve original structure and spirit whenever possible.
-
----
-
-### Archive-first mindset
-
-Documentation matters.
-
-Code comments matter.
-
-Historical context matters.
-
-Whenever making meaningful changes, document why.
+The company does not focus on building brand-new products from scratch.
 
 ---
 
-### Favor durable technologies
+# Core Message
 
-Choose technologies and patterns that are likely to remain maintainable over time.
+운영 중인 웹·모바일 서비스를
+안전하게 다음 상태로 이동시킵니다.
 
-Prefer simplicity over novelty.
+Before rebuilding, understand.
 
----
+Before replacing, evaluate.
 
-## Protected Areas
-
-Unless explicitly instructed, do not:
-
-- rewrite the routing architecture
-- replace the build system
-- migrate away from Vite
-- replace static prerender architecture
-- convert the project into a full SSR framework
-- remove historical project records
-- rename stable public URLs
-
-Preserve backward compatibility whenever possible.
+Before migrating, plan.
 
 ---
 
-## Generated Build Boundary
+# Target Customers
 
-`dist/` is generated output only.
+Primary
 
-Never use generated files inside `dist/` as implementation context.
+- Small and medium businesses
+- Ecommerce operators
+- Companies with legacy systems
+- Startups with existing products
 
-Always trace issues back to source files.
+Common situations
 
-Never manually edit generated HTML files.
-
----
-
-## Philosophy Overrides
-
-When optimization conflicts with preservation,
-preservation takes priority.
-
-When modernization conflicts with historical behavior,
-historical behavior takes priority unless explicitly instructed otherwise.
-
-Revive first.
-
-Rewrite only when necessary.
+- Legacy technology
+- Missing documentation
+- Former developers unavailable
+- Migration requirements
+- Technical debt
+- Operational instability
+- Performance problems
+- Maintenance difficulties
 
 ---
 
-## Forbidden Marketing Language
+# Brand Personality
 
-Avoid phrases such as:
+Professional
 
-- cutting-edge
+Experienced
+
+Practical
+
+Reliable
+
+Calm
+
+Business-oriented
+
+Trustworthy
+
+The tone should communicate:
+
+"We have solved this kind of problem before."
+
+Avoid:
+
+- hype
+- exaggeration
+- startup buzzwords
+- trend chasing
+- artificial urgency
+
+---
+
+# Writing Style
+
+Use short and direct sentences.
+
+Prefer clarity over cleverness.
+
+Prefer practical language over marketing language.
+
+Avoid generic claims.
+
+Avoid meaningless adjectives.
+
+Avoid buzzwords such as:
+
 - revolutionary
-- next-generation
-- world-class
 - disruptive
-- innovative platform
-- best-in-class
-- premium engineering
-
-Prefer calm technical language.
-
-The tone should feel archival,
-measured,
-and technically grounded.
-
----
-
-## Code Formatting
-
-After making any changes to the codebase, always execute:
-
-```bash
-npm run format
-```
-
-to ensure style consistency across all modified files.
-
----
-
-## Development Workflow
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run development server:
-
-```bash
-npm run dev
-```
-
-Build static site:
-
-```bash
-npm run build
-```
-
-Preview production build:
-
-```bash
-npm run preview
-```
-
-Always verify prerendered HTML output after:
-
-- SEO changes
-- metadata changes
-- routing changes
-- i18n structure changes
-
----
-
-## Project Media & Thumbnail Guidelines
-
-When a user adds a new project with a raw screenshot image in the workspace (e.g., under `docs/projects/assets/`), the AI agent must automatically process it into a concept-matching, premium museum-style archival thumbnail and save it inside:
-
-```text
-public/images/[key]-thumb.png
-```
-
-### Archival Design Concept
-
-- Landscape aspect ratio (`16:10`)
-- Museum-style presentation
-- Realistic retro-modern device chassis
-- Soft archival background tones
-- Minimal technical metadata labels
-- Preserve historical feel
-- Remove raw temporary screenshots after processing
-
----
-
-## Translation & Localization (i18n) Rules
-
-This project uses `react-i18next` for internationalization.
-
-### Locale File Locations
-
-- `src/locales/ko.json`
-- `src/locales/en.json`
-
----
-
-### Structural Parity
-
-Both locale files must maintain exact structural parity.
-
-Do not remove keys from one language only.
-
----
-
-### Technical Term Preservation
-
-Do not transliterate technical stack names into Korean.
-
-Correct examples:
-
-- Laravel
-- Docker
-- MySQL
-- CakePHP 2
-- Objective-C
-
-Incorrect examples:
-
-- 라라벨
-- 도커
-- 마이에스큐엘
-
----
-
-## Project Data Schema (`project_data.[slug]`)
-
-Each project record must contain:
-
-- `title`
-- `status`
-- `summary`
-- `figCaption`
-- `facts`
-- `notes`
-
-### Standardized Facts Order
-
-1. Original stack
-2. Failure mode
-3. Recovery actions
-4. Final outcome
-
----
-
-## Project Markdown Synchronization Rules
-
-Markdown project files located at:
-
-```text
-docs/projects/[slug].md
-```
-
-serve as the primary source of truth.
-
-Agents must synchronize project data into:
-
-- `ko.json`
-- `en.json`
-
-while preserving schema consistency.
-
----
-
-## URLs and External Links
-
-External URLs and repository links must remain identical across all locales.
-
-Never localize URLs.
-
----
-
-## Writing Tone Guide
-
-### Legacy Revival Studio Voice
-
-Quiet technical confidence.
-
-Write like an engineer documenting careful restoration work.
-
-Not like a marketer promoting a startup.
-
-Avoid hype.
-
-Avoid exaggerated claims.
-
-Prefer calm, precise language.
-
----
-
-### Preferred Language
-
-Prefer:
-
-- revive
-- restore
-- preserve
-- recover
-- reconstruct
-- make runnable again
-
-Avoid:
-
-- disrupt
-- revolutionize
-- transform everything
-- rebuild from scratch
-- replace everything
-
----
-
-### Respect legacy systems
-
-Treat old systems as valuable technical artifacts.
-
-Legacy systems may contain:
-
-- business logic
-- historical records
-- operational knowledge
-- irreplaceable data
-
----
-
-### Be technically concrete
-
-Prefer specific descriptions:
-
-- PHP 5 → PHP 8 migration
-- dependency repair
-- Dockerized runtime reconstruction
-- database recovery
-
-Avoid vague marketing phrases.
-
----
-
-### Short, measured sentences
-
-Prefer concise declarative writing.
-
-Example:
-
-Software should not disappear because technology changes.
-
-Legacy systems can often be restored.
-
-Revive first. Rewrite only when necessary.
-
----
-
-### Archive-style documentation
-
-Preferred labels:
-
-- Original stack
-- Failure mode
-- Recovery actions
-- Final outcome
-
-Tone should feel historical and technical.
-
----
-
-### Humility over promotion
-
-Do not oversell.
-
-Avoid:
-
+- cutting-edge
+- game-changing
 - world-class
-- industry-leading
-- best-in-class
-- premium platform
+- next generation
 
-Let the work speak for itself.
+Every statement should feel credible.
 
 ---
 
-## Current Mission
+# Design Philosophy
 
-Transform `etern.co.kr` into the public home of Legacy Revival Studio.
+Content first.
 
-Goals:
+Trust first.
 
-- preserve calm visual design
-- communicate software preservation philosophy
-- maintain technical credibility
-- preserve build/deployment architecture
-- support multilingual archival presentation
+Readability first.
 
----
+Use whitespace generously.
 
-## Response Behavior
+Keep layouts simple.
 
-### Clarification Rule
+Keep navigation obvious.
 
-Do not proceed on assumptions.
+Use visual hierarchy instead of decoration.
 
-If uncertainty exists:
+The site should feel closer to:
 
-1. summarize understanding
-2. propose implementation plan
-3. ask for clarification before major changes
+- enterprise consulting
+- technical advisory
+- professional services
 
-When uncertain, ask rather than assume.
+than:
 
----
-
-## Ignore Generated Artifacts
-
-The `dist/` directory is generated output only.
-
-Do not use it as source context.
-
-Always work from source files.
+- startup landing pages
+- design portfolios
+- marketing agencies
 
 ---
 
-## Static Site Generation (SSG) Rules
+# Visual Guidelines
 
-This project uses static prerendering for SEO.
+Preferred:
 
-Do not treat the site as a pure SPA.
+- clean typography
+- restrained colors
+- strong spacing
+- structured layouts
+- subtle interactions
 
-Search engines must be able to read meaningful HTML without executing JavaScript.
+Avoid:
 
----
-
-### Preferred Stack
-
-Preserve current architecture:
-
-- Vite
-- React
-- static prerender generation
-- GitHub Pages deployment
-
-Do not migrate to:
-
-- Next.js
-- Nuxt.js
-- full SSR frameworks
+- flashy animations
+- parallax effects
+- animated backgrounds
+- excessive gradients
+- startup illustrations
+- stock business people photos
+- decorative effects without purpose
 
 ---
 
-### Required Prerender Coverage
+# Content Structure
 
-Korean routes:
+Every page should answer:
 
-- `/`
-- `/projects`
-- `/services`
-- `/philosophy`
-- `/about`
-
-English routes:
-
-- `/en`
-- `/en/projects`
-- `/en/services`
-- `/en/philosophy`
-- `/en/about`
+1. What problem exists?
+2. Why does it matter?
+3. How does Next State Studio help?
+4. What outcome can be expected?
+5. What action should the visitor take next?
 
 ---
 
-### Metadata Requirements
+# Case Studies
 
-Every public route must statically render:
+Case studies are critical.
 
-- page title
+Every case study should contain:
+
+- Context
+- Problem
+- Analysis
+- Solution
+- Outcome
+- Lessons Learned
+
+Focus on:
+
+- business impact
+- operational impact
+- technical decision making
+
+Avoid purely technical storytelling.
+
+---
+
+# SEO Rules
+
+Every page must include:
+
+- title
 - meta description
-- canonical URL
-- Open Graph tags
-- Twitter Card tags
-- hreflang links
-- JSON-LD structured data
+- Open Graph metadata
+
+Use semantic HTML.
+
+Use proper heading hierarchy.
+
+Prefer descriptive URLs.
+
+Use structured content whenever possible.
+
+Target search intent rather than keyword stuffing.
 
 ---
 
-### Verification Workflow
+# Accessibility
 
-After SEO-related changes:
+WCAG friendly.
 
-1. run `npm run build`
-2. inspect generated files in `dist/`
-3. verify:
-   - prerendered HTML exists
-   - correct metadata exists
-   - canonical URLs are correct
-   - hreflang links are correct
-   - Open Graph tags exist
-   - structured data exists
+Keyboard accessible.
+
+Proper contrast ratios.
+
+Semantic elements preferred.
+
+Accessible forms.
+
+Accessible navigation.
 
 ---
 
-## Future Documentation Scaling
+# Performance
 
-As the project grows, operational guides may move into:
+Target Lighthouse:
 
-```text
-docs/agents/
-    philosophy.md
-    seo.md
-    localization.md
-    media.md
-    recovery-workflow.md
-```
+- Performance > 90
+- Accessibility > 95
+- SEO > 95
+- Best Practices > 95
 
-`AGENTS.md` remains the primary high-level instruction file.
+Avoid unnecessary dependencies.
+
+Prefer static rendering when possible.
+
+Optimize images.
+
+Minimize JavaScript complexity.
+
+---
+
+# Technical Stack
+
+Framework:
+
+- React
+- Vite
+
+Language:
+
+- TypeScript
+
+Styling:
+
+- Tailwind CSS
+
+Routing:
+
+- React Router
+
+Deployment:
+
+- Static hosting compatible
+
+---
+
+# Component Principles
+
+Create reusable components.
+
+Avoid page-specific duplication.
+
+Keep components small and composable.
+
+Prefer composition over complexity.
+
+Avoid premature abstractions.
+
+---
+
+# Expected Pages
+
+Home
+
+Services
+
+Case Studies
+
+About
+
+Blog
+
+Contact
+
+---
+
+# Navigation
+
+Navigation should remain simple.
+
+Recommended structure:
+
+Home
+
+Services
+
+Case Studies
+
+About
+
+Blog
+
+Contact
+
+---
+
+# Non-Negotiable Rules
+
+The website must never feel like:
+
+- a freelancer portfolio
+- a software outsourcing company
+- a generic development agency
+- a startup landing page
+- a SaaS marketing website
+
+The website must consistently communicate:
+
+"We help existing services evolve safely."
+
+Every design and content decision should reinforce this message.
+
+---
+
+# Source Documents
+
+Use the following documents as the source of truth:
+
+docs/BRAND.md
+
+docs/BUSINESS.md
+
+docs/SERVICES.md
+
+docs/OFFER.md
+
+docs/LANDING_PAGE.md
+
+docs/CASE_STUDIES.md
+
+docs/FAQ.md
+
+docs/SITE_MAP.md
+
+When conflicts exist:
+
+BRAND.md has highest priority.
+
+BUSINESS.md is second.
+
+All implementation decisions should align with the brand positioning.
