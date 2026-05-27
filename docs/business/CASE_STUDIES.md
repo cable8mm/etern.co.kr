@@ -1,6 +1,6 @@
 # CASE_STUDIES.md
 
-# Next State Studio — Proven Track Records
+# ETERNOps — Proven Track Records
 
 이미 운영 중인 비즈니스를 안전하게 다음 상태(Next State)로 이동시킨 실제 엔지니어링 사례들입니다.
 

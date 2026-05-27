@@ -1,6 +1,6 @@
 # AUDIT_TEMPLATE.md
 
-# Next State Studio
+# ETERNOps
 
 System Audit Report
 
@@ -287,7 +287,7 @@ Analytics:
 
 # 8. Next State Recommendation
 
-Next State Studio 권장안
+ETERNOps 권장안
 
 ---
 

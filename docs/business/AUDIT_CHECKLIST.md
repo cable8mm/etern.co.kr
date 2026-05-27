@@ -1,4 +1,4 @@
-# Next State Studio — Technical Audit Master Checklist
+# ETERNOps — Technical Audit Master Checklist
 
 본 문서는 Technical Assessment 수행 시 사용하는 내부 마스터 체크리스트입니다.
 

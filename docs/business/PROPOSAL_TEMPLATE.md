@@ -1,4 +1,4 @@
-# Next State Studio — Project Proposal
+# ETERNOps — Project Proposal
 
 본 문서는 Technical Assessment 완료 후,
 고객사의 비즈니스를 안전한 다음 상태(Next State)로 이동시키기 위한
@@ -15,7 +15,7 @@
 | 프로젝트명 | |
 | 고객사 | |
 | 제안일 | |
-| 제안 담당 | Next State Studio |
+| 제안 담당 | ETERNOps |
 | 작성자 | Senior Architect |
 
 ---
@@ -305,7 +305,7 @@ API
 
 # Closing Statement
 
-Next State Studio는
+ETERNOps는
 새로운 서비스를 만드는 것보다,
 
 이미 성공적으로 운영 중인 비즈니스를
@@ -315,6 +315,6 @@ Next State Studio는
 
 제안인
 
-Next State Studio
+ETERNOps
 
 Senior Architect

@@ -1,6 +1,6 @@
 # SPEC.md
 
-# Next State Studio Specification
+# ETERNOps Specification
 
 Version 1.0
 
@@ -8,7 +8,7 @@ Version 1.0
 
 # Purpose
 
-Next State Studio는 운영 중인 웹·모바일 서비스를
+ETERNOps는 운영 중인 웹·모바일 서비스를
 안전하게 다음 상태(Next State)로 이동시키기 위한
 실행 원칙과 기술 기준을 정의한다.
 

@@ -1,6 +1,6 @@
 # BUSINESS.md
 
-# Next State Studio
+# ETERNOps
 
 운영 중인 웹·모바일 서비스를
 안전하게 다음 상태로 이동시킵니다.
@@ -9,7 +9,7 @@
 
 # Executive Summary
 
-Next State Studio는
+ETERNOps는
 
 운영 중인 웹 서비스와 모바일 애플리케이션을 대상으로
 
@@ -89,7 +89,7 @@ PHP 버전이 오래되었다.
 
 # Solution
 
-Next State Studio는
+ETERNOps는
 
 운영 중인 서비스를 분석하고
 
@@ -325,7 +325,7 @@ SEO 콘텐츠
 
 # Long Term Direction
 
-Next State Studio는
+ETERNOps는
 
 개발 용역 회사가 되는 것을 목표로 하지 않는다.
 

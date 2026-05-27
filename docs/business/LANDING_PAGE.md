@@ -1,6 +1,6 @@
 # LANDING_PAGE.md
 
-# Next State Studio — Landing Page
+# ETERNOps — Landing Page
 
 ---
 
@@ -443,11 +443,11 @@
 
 ---
 
-# 7. WHY NEXT STATE STUDIO
+# 7. WHY ETERNOps
 
 ## Headline
 
-## 왜 Next State Studio인가
+## 왜 ETERNOps인가
 
 ---
 
@@ -537,7 +537,7 @@
 
 # 9. FOOTER
 
-**Next State Studio**
+**ETERNOps**
 
 Migration · Modernization · Stabilization
 
@@ -549,6 +549,6 @@ Assessment · Planning · Execution · Stabilization
 
 <contact@etern.co.kr>
 
-© 2026 Next State Studio
+© 2026 ETERNOps
 
 운영 중인 웹·모바일 서비스를 안전하게 다음 상태로 이동시킵니다.

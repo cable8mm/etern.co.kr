@@ -1,6 +1,6 @@
 # OFFER.md
 
-# Next State Studio
+# ETERNOps
 
 Service Packages
 

@@ -1,6 +1,6 @@
 # DISCOVERY_CALL.md
 
-# Next State Studio — Discovery Call & Intake Form
+# ETERNOps — Discovery Call & Intake Form
 
 현재 운영 중인 서비스의 정확한 상태를 파악하고, 안전한 개선 계획을 수립하기 위한 기초 진단서입니다. 파악 가능한 범위까지만 작성해 주세요.
 
@@ -80,7 +80,7 @@
 
 # 안내 사항
 
-Next State Studio는 운영 중인 서비스의 안정성과 데이터 보호를 최우선으로 생각합니다.
+ETERNOps는 운영 중인 서비스의 안정성과 데이터 보호를 최우선으로 생각합니다.
 
 프로젝트를 시작하기 전 현재 시스템의 구조와 운영 상태를 정확하게 이해하기 위해 Technical Assessment 과정을 먼저 진행합니다.
 

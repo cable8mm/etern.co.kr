@@ -1,6 +1,6 @@
 # PROJECT_BRIEF.md
 
-# Next State Studio
+# ETERNOps
 
 운영 중인 웹·모바일 서비스를
 안전하게 다음 상태로 이동시킵니다.

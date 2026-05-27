@@ -1,6 +1,6 @@
 # NOT_TO_DO.md
 
-# Next State Studio — Anti-Scope & Engagement Policy
+# ETERNOps — Anti-Scope & Engagement Policy
 
 Version 1.0
 
@@ -8,7 +8,7 @@ Version 1.0
 
 # Purpose
 
-Next State Studio는 모든 프로젝트를 수주하지는 않습니다.
+ETERNOps는 모든 프로젝트를 수주하지는 않습니다.
 
 우리는 제한된 리소스를 가장 가치 있는 문제 해결에 집중함으로써,
 고객에게 더 높은 품질과 더 높은 성공 확률을 제공합니다.
@@ -46,7 +46,7 @@ Next State Studio는 모든 프로젝트를 수주하지는 않습니다.
 
 ### 이유
 
-이러한 프로젝트는 Next State Studio의 핵심 역량인
+이러한 프로젝트는 ETERNOps의 핵심 역량인
 
 - 시스템 분석
 - 데이터 보호
@@ -75,7 +75,7 @@ Next State Studio는 모든 프로젝트를 수주하지는 않습니다.
 
 ### 이유
 
-Next State Studio는 디자인 및 퍼블리싱 전문 스튜디오가 아닙니다.
+ETERNOps는 디자인 및 퍼블리싱 전문 스튜디오가 아닙니다.
 
 우리는 운영 중인 서비스의
 아키텍처, 데이터, 인프라 문제 해결에 집중합니다.
@@ -122,7 +122,7 @@ Next State Studio는 디자인 및 퍼블리싱 전문 스튜디오가 아닙니
 
 ### 이유
 
-Next State Studio는 외부 파트너로서
+ETERNOps는 외부 파트너로서
 문제 해결과 구조 개선을 담당합니다.
 
 특정 조직의 인력 공백을 메우는 역할은 수행하지 않습니다.
@@ -210,7 +210,7 @@ Stabilization 프로젝트는
 
 # 3. Preferred Projects
 
-다음 영역은 Next State Studio가
+다음 영역은 ETERNOps가
 가장 높은 성과를 제공할 수 있는 분야입니다.
 
 ## Migration
@@ -280,7 +280,7 @@ Stabilization 프로젝트는
 
 대표님, 문의 주셔서 감사합니다.
 
-다만 Next State Studio는 신규 홈페이지 제작이나 디자인·퍼블리싱 중심 프로젝트보다는 운영 중인 서비스의 마이그레이션, 현대화, 안정화 프로젝트에 집중하고 있습니다.
+다만 ETERNOps는 신규 홈페이지 제작이나 디자인·퍼블리싱 중심 프로젝트보다는 운영 중인 서비스의 마이그레이션, 현대화, 안정화 프로젝트에 집중하고 있습니다.
 
 문의 주신 내용은 해당 분야 전문 업체가 더 적합할 것으로 판단됩니다.
 

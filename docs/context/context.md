@@ -2,7 +2,7 @@
 
 # Project
 
-Next State Studio
+ETERNOps
 
 ---
 
@@ -96,7 +96,7 @@ Common situations:
 
 # Core Positioning
 
-Next State Studio helps organizations safely evolve existing web and mobile services.
+ETERNOps helps organizations safely evolve existing web and mobile services.
 
 Focus areas:
 
@@ -294,7 +294,7 @@ Technology:
 
 Planned rebranding:
 
-Etern → Next State Studio
+Etern → ETERNOps
 
 ---
 

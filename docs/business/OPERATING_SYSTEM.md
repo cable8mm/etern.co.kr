@@ -1,6 +1,6 @@
 # OPERATING_SYSTEM.md
 
-# Next State Studio Operating System
+# ETERNOps Operating System
 
 Version 2.0
 
@@ -8,7 +8,7 @@ Version 2.0
 
 # Purpose
 
-이 문서는 Next State Studio의 모든 기술적 판단, 프로젝트 수주, 시스템 엔지니어링, 고객 커뮤니케이션의 핵심 원칙과 의사결정 기준을 정의합니다.
+이 문서는 ETERNOps의 모든 기술적 판단, 프로젝트 수주, 시스템 엔지니어링, 고객 커뮤니케이션의 핵심 원칙과 의사결정 기준을 정의합니다.
 
 새로운 프로젝트, 신규 기술, 예상치 못한 기회가 등장하더라도 우리는 언제나 이 문서를 기준으로 판단합니다.
 

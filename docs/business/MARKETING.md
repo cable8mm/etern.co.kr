@@ -1,6 +1,6 @@
 # MARKETING.md
 
-# Next State Studio — Marketing Strategy
+# ETERNOps — Marketing Strategy
 
 Version 3.0
 
@@ -30,7 +30,7 @@ Version 3.0
 
 # Positioning
 
-Next State Studio는 단순 코딩을 대행하는 개발사가 아니다.
+ETERNOps는 단순 코딩을 대행하는 개발사가 아니다.
 
 우리는 운영 중인 비즈니스의 기술적 리스크를 줄이고,
 안전하게 다음 상태(Next State)로 이동시키는

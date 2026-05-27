@@ -1,6 +1,6 @@
 # AGENTS.md
 
-# Next State Studio
+# ETERNOps
 
 Project Constitution
 
@@ -8,7 +8,7 @@ Project Constitution
 
 # Mission
 
-Build and maintain the official website of Next State Studio.
+Build and maintain the official website of ETERNOps.
 
 The website exists to establish trust with companies operating existing web and mobile services.
 
@@ -24,7 +24,7 @@ This is a consulting-focused website for technical modernization, migration, sta
 
 # Company Positioning
 
-Next State Studio helps organizations safely evolve existing production systems.
+ETERNOps helps organizations safely evolve existing production systems.
 
 Primary services:
 
@@ -189,7 +189,7 @@ Every page should answer:
 
 1. What problem exists?
 2. Why does it matter?
-3. How does Next State Studio help?
+3. How does ETERNOps help?
 4. What outcome can be expected?
 5. What action should the visitor take next?
 

@@ -1,6 +1,6 @@
 # IDEAS.md
 
-# Next State Studio
+# ETERNOps
 
 ## One Sentence
 
@@ -36,7 +36,7 @@
 하지만 둘 다
 비즈니스 연속성을 위협하는 선택입니다.
 
-Next State Studio는
+ETERNOps는
 세 번째 선택지를 제안합니다.
 
 > 운영 중인 서비스를 깊이 이해하고,
@@ -77,7 +77,7 @@ Next State Studio는
 
 운영 중인 시스템을 안전하게 바꾸는 것이 어렵습니다.
 
-Next State Studio는
+ETERNOps는
 바로 그 어려운 일을 합니다.
 
 ---
@@ -284,7 +284,7 @@ AI를 활용하여
 고객이 기술을 걱정하지 않고
 비즈니스에 집중할 수 있게 된 프로젝트입니다.
 
-Next State Studio는
+ETERNOps는
 
 서비스를 새로 만드는 회사가 아니라,
 

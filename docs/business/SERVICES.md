@@ -1,6 +1,6 @@
 # SERVICES.md
 
-# Next State Studio Services
+# ETERNOps Services
 
 운영 중인 웹·모바일 서비스를 안전하게 다음 상태(Next State)로 이동시킵니다.
 
@@ -8,7 +8,7 @@
 
 # What We Do
 
-Next State Studio는 새로운 서비스를 무작정 만드는 회사가 아닙니다.
+ETERNOps는 새로운 서비스를 무작정 만드는 회사가 아닙니다.
 
 이미 성공적으로 운영되고 있는 서비스를
 
@@ -526,7 +526,7 @@ Next State Studio는 새로운 서비스를 무작정 만드는 회사가 아닙
 
 운영 중인 시스템을 안전하게 바꾸는 것이 어렵습니다.
 
-Next State Studio는 바로 그 어려운 일을 합니다.
+ETERNOps는 바로 그 어려운 일을 합니다.
 
 ---
 

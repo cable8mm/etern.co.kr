@@ -1,6 +1,6 @@
 # POSITIONING.md
 
-# Next State Studio — Market Positioning
+# ETERNOps — Market Positioning
 
 ---
 
@@ -75,7 +75,7 @@
 
 # 4. Positioning Statement
 
-Next State Studio는
+ETERNOps는
 
 운영 중인 웹·모바일 서비스의
 Migration · Modernization · Stabilization에 특화된 엔지니어링 스튜디오입니다.

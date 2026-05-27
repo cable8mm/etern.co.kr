@@ -1,6 +1,6 @@
 # AUDIT_TEMPLATE_BACKUP.md
 
-# Next State Studio — Technical Assessment Report (Sample)
+# ETERNOps — Technical Assessment Report (Sample)
 
 ---
 
@@ -13,7 +13,7 @@
 | Company | (주)올라커머스 (Olapet Shop) |
 | Service | 올라펫 반려동물 쇼핑몰 (Web + Mobile App) |
 | Assessment Date | 2026-05-26 |
-| Prepared By | Next State Studio Senior Architect |
+| Prepared By | ETERNOps Senior Architect |
 
 ---
 
@@ -544,7 +544,7 @@ PHP 8.2+
 
 ---
 
-**Prepared by Next State Studio**
+**Prepared by ETERNOps**
 
 *Migration · Modernization · Stabilization*
 
