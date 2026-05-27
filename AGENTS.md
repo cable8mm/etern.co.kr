@@ -1,535 +1,425 @@
 # AGENTS.md
 
-## Project Identity
+# ETERNOps — Project Constitution & Agent Guideline
 
-Title (English): **Legacy Revival Studio**
-
-Description (English):
-
-A project dedicated to reviving old software, preserving digital artifacts, and modernizing legacy systems while respecting their original intent.
-
-Title (한글): **레거시 리바이벌 스튜디오**
-
-Description (한글):
-
-오래된 웹사이트와 시스템을 복원하고 다시 살아 움직이게 합니다.
+Version 5.0
 
 ---
 
-## Read before making any changes
+# Mission
 
-Read these files in this order:
+Build and maintain the official ETERNOps website (`https://etern.co.kr`).
 
-1. `docs/chatgpt-context.md`
-2. `README.md`
-3. `SPEC.md`
-4. `IDEAS.md`
+The website exists to establish trust with business owners, executives, and technical decision-makers responsible for operating existing production systems.
 
-Do not begin implementation before understanding the project philosophy.
+ETERNOps specializes in:
 
----
+- Migration
+- Modernization
+- Stabilization
 
-## Working Principles
+of already-operating business systems.
 
-### Preserve before replacing
+The objective of the website is not to entertain visitors.
 
-Prefer improving existing code over rewriting it.
-
-Do not remove historical artifacts unless explicitly instructed.
+The objective is to communicate credibility, competence, operational maturity, and engineering discipline.
 
 ---
 
-### Minimal and reversible changes
+# Core Positioning
 
-Prefer small, incremental modifications.
+ETERNOps is NOT:
 
-Avoid large refactors unless necessary.
+- a freelancer portfolio
+- a software outsourcing agency
+- a startup studio
+- a no-code agency
+- a marketing agency
+- a web design company
 
-Explain major architectural changes before implementing them.
+ETERNOps IS:
 
----
+A specialized engineering practice focused on safely evolving production systems while preserving:
 
-### Respect original intent
-
-This project is not about redesigning history.
-
-It is about helping old software live again.
-
-Preserve original structure and spirit whenever possible.
-
----
-
-### Archive-first mindset
-
-Documentation matters.
-
-Code comments matter.
-
-Historical context matters.
-
-Whenever making meaningful changes, document why.
+- Business Continuity
+- Data Integrity
+- Operational Sustainability
 
 ---
 
-### Favor durable technologies
+# Primary Audience
 
-Choose technologies and patterns that are likely to remain maintainable over time.
+Decision makers responsible for existing systems.
 
-Prefer simplicity over novelty.
+Examples:
 
----
+- CEO
+- Founder
+- CTO
+- Technical Lead
+- Product Owner
+- Operations Manager
 
-## Protected Areas
+Typical visitor concerns:
 
-Unless explicitly instructed, do not:
-
-- rewrite the routing architecture
-- replace the build system
-- migrate away from Vite
-- replace static prerender architecture
-- convert the project into a full SSR framework
-- remove historical project records
-- rename stable public URLs
-
-Preserve backward compatibility whenever possible.
-
----
-
-## Generated Build Boundary
-
-`dist/` is generated output only.
-
-Never use generated files inside `dist/` as implementation context.
-
-Always trace issues back to source files.
-
-Never manually edit generated HTML files.
+- legacy PHP systems
+- aging WordPress environments
+- commerce platform migration
+- infrastructure modernization
+- deployment instability
+- operational risk
+- disappearing maintainers
+- undocumented systems
+- database migration risk
 
 ---
 
-## Philosophy Overrides
+# Non-Negotiable Business Rules
 
-When optimization conflicts with preservation,
-preservation takes priority.
+## Never Sell Rebuilds
 
-When modernization conflicts with historical behavior,
-historical behavior takes priority unless explicitly instructed otherwise.
+The website must never encourage:
 
-Revive first.
+- complete rewrites
+- greenfield replacement projects
+- unnecessary platform replacement
 
-Rewrite only when necessary.
+ETERNOps philosophy:
 
----
-
-## Forbidden Marketing Language
-
-Avoid phrases such as:
-
-- cutting-edge
-- revolutionary
-- next-generation
-- world-class
-- disruptive
-- innovative platform
-- best-in-class
-- premium engineering
-
-Prefer calm technical language.
-
-The tone should feel archival,
-measured,
-and technically grounded.
+> Understand before change.
+>
+> Recover before change.
+>
+> Preserve before replace.
 
 ---
 
-## Code Formatting
+## Discovery Call Restriction
 
-After making any changes to the codebase, always execute:
+The only free offering is:
 
-```bash
-npm run format
-```
+### 30-Minute Free Discovery Call
 
-to ensure style consistency across all modified files.
+The agent must NEVER generate:
 
----
+- free audit offers
+- free technical assessments
+- free migration reports
+- free consulting packages
+- free architecture reviews
 
-## Development Workflow
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run development server:
-
-```bash
-npm run dev
-```
-
-Build static site:
-
-```bash
-npm run build
-```
-
-Preview production build:
-
-```bash
-npm run preview
-```
-
-Always verify prerendered HTML output after:
-
-- SEO changes
-- metadata changes
-- routing changes
-- i18n structure changes
+without explicit instructions from repository source documents.
 
 ---
 
-## Project Media & Thumbnail Guidelines
+## No Fake Authority
 
-When a user adds a new project with a raw screenshot image in the workspace (e.g., under `docs/projects/assets/`), the AI agent must automatically process it into a concept-matching, premium museum-style archival thumbnail and save it inside:
+Never invent:
 
-```text
-public/images/[key]-thumb.png
-```
+- customers
+- case studies
+- testimonials
+- project counts
+- revenue figures
+- uptime statistics
+- migration numbers
+- certifications
 
-### Archival Design Concept
-
-- Landscape aspect ratio (`16:10`)
-- Museum-style presentation
-- Realistic retro-modern device chassis
-- Soft archival background tones
-- Minimal technical metadata labels
-- Preserve historical feel
-- Remove raw temporary screenshots after processing
+If evidence does not exist in repository documents,
+do not generate it.
 
 ---
 
-## Translation & Localization (i18n) Rules
+# Tone & Writing Style
 
-This project uses `react-i18next` for internationalization.
+Required qualities:
 
-### Locale File Locations
+- Professional
+- Calm
+- Senior
+- Practical
+- Direct
+- Trustworthy
+- Technical
+- Measured
 
-- `src/locales/ko.json`
-- `src/locales/en.json`
+Preferred writing style:
 
----
+- short paragraphs
+- factual statements
+- minimal adjectives
+- high clarity
+- executive readability
 
-### Structural Parity
+Avoid:
 
-Both locale files must maintain exact structural parity.
-
-Do not remove keys from one language only.
-
----
-
-### Technical Term Preservation
-
-Do not transliterate technical stack names into Korean.
-
-Correct examples:
-
-- Laravel
-- Docker
-- MySQL
-- CakePHP 2
-- Objective-C
-
-Incorrect examples:
-
-- 라라벨
-- 도커
-- 마이에스큐엘
+- hype
+- fear marketing
+- exaggerated urgency
+- startup language
+- marketing clichés
 
 ---
 
-## Project Data Schema (`project_data.[slug]`)
+# Forbidden Vocabulary
 
-Each project record must contain:
+Do not use:
 
-- `title`
-- `status`
-- `summary`
-- `figCaption`
-- `facts`
-- `notes`
+- Revolutionary
+- Disruptive
+- Cutting-edge
+- Game-changing
+- Next-generation
+- World-class
+- Best-in-class
+- Unicorn
+- Hyper-growth
 
-### Standardized Facts Order
-
-1. Original stack
-2. Failure mode
-3. Recovery actions
-4. Final outcome
+unless directly quoted from source documents.
 
 ---
 
-## Project Markdown Synchronization Rules
+# Design System Principles
 
-Markdown project files located at:
+Content first.
 
-```text
-docs/projects/[slug].md
-```
+Trust first.
 
-serve as the primary source of truth.
+Readability first.
 
-Agents must synchronize project data into:
+Visual hierarchy must support comprehension.
 
-- `ko.json`
-- `en.json`
+Website should resemble:
 
-while preserving schema consistency.
+- technical advisory firms
+- enterprise consulting firms
+- audit firms
+- professional legal services
 
----
+More than:
 
-## URLs and External Links
-
-External URLs and repository links must remain identical across all locales.
-
-Never localize URLs.
+- startup landing pages
+- agency portfolios
+- SaaS marketing sites
 
 ---
 
-## Writing Tone Guide
+# Visual Constraints
 
-### Legacy Revival Studio Voice
+Preferred:
 
-Quiet technical confidence.
+- monochrome palette
+- charcoal
+- slate
+- neutral gray
+- restrained accent colors
 
-Write like an engineer documenting careful restoration work.
+Required:
 
-Not like a marketer promoting a startup.
+- generous whitespace
+- strong typography hierarchy
+- semantic layout
+- accessibility compliance
 
-Avoid hype.
+Forbidden:
 
-Avoid exaggerated claims.
-
-Prefer calm, precise language.
+- parallax effects
+- decorative animations
+- auto-playing video
+- animated counters
+- flashy gradients
+- stock photography
+- fake dashboards
+- 3D illustrations
 
 ---
 
-### Preferred Language
+# Engineering Standards
+
+## Framework
+
+Use:
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
 
 Prefer:
 
-- revive
-- restore
-- preserve
-- recover
-- reconstruct
-- make runnable again
-
-Avoid:
-
-- disrupt
-- revolutionize
-- transform everything
-- rebuild from scratch
-- replace everything
+- Server Components
+- Static Rendering
+- Minimal Client Components
 
 ---
 
-### Respect legacy systems
+## Performance Targets
 
-Treat old systems as valuable technical artifacts.
+Lighthouse Targets:
 
-Legacy systems may contain:
-
-- business logic
-- historical records
-- operational knowledge
-- irreplaceable data
+- Performance > 90
+- Accessibility > 95
+- Best Practices > 95
+- SEO > 95
 
 ---
 
-### Be technically concrete
-
-Prefer specific descriptions:
-
-- PHP 5 → PHP 8 migration
-- dependency repair
-- Dockerized runtime reconstruction
-- database recovery
-
-Avoid vague marketing phrases.
-
----
-
-### Short, measured sentences
-
-Prefer concise declarative writing.
-
-Example:
-
-Software should not disappear because technology changes.
-
-Legacy systems can often be restored.
-
-Revive first. Rewrite only when necessary.
-
----
-
-### Archive-style documentation
-
-Preferred labels:
-
-- Original stack
-- Failure mode
-- Recovery actions
-- Final outcome
-
-Tone should feel historical and technical.
-
----
-
-### Humility over promotion
-
-Do not oversell.
-
-Avoid:
-
-- world-class
-- industry-leading
-- best-in-class
-- premium platform
-
-Let the work speak for itself.
-
----
-
-## Current Mission
-
-Transform `etern.co.kr` into the public home of Legacy Revival Studio.
-
-Goals:
-
-- preserve calm visual design
-- communicate software preservation philosophy
-- maintain technical credibility
-- preserve build/deployment architecture
-- support multilingual archival presentation
-
----
-
-## Response Behavior
-
-### Clarification Rule
-
-Do not proceed on assumptions.
-
-If uncertainty exists:
-
-1. summarize understanding
-2. propose implementation plan
-3. ask for clarification before major changes
-
-When uncertain, ask rather than assume.
-
----
-
-## Ignore Generated Artifacts
-
-The `dist/` directory is generated output only.
-
-Do not use it as source context.
-
-Always work from source files.
-
----
-
-## Static Site Generation (SSG) Rules
-
-This project uses static prerendering for SEO.
-
-Do not treat the site as a pure SPA.
-
-Search engines must be able to read meaningful HTML without executing JavaScript.
-
----
-
-### Preferred Stack
-
-Preserve current architecture:
-
-- Vite
-- React
-- static prerender generation
-- GitHub Pages deployment
-
-Do not migrate to:
-
-- Next.js
-- Nuxt.js
-- full SSR frameworks
-
----
-
-### Required Prerender Coverage
-
-Korean routes:
-
-- `/`
-- `/projects`
-- `/services`
-- `/philosophy`
-- `/about`
-
-English routes:
-
-- `/en`
-- `/en/projects`
-- `/en/services`
-- `/en/philosophy`
-- `/en/about`
-
----
-
-### Metadata Requirements
-
-Every public route must statically render:
-
-- page title
-- meta description
-- canonical URL
-- Open Graph tags
-- Twitter Card tags
-- hreflang links
-- JSON-LD structured data
-
----
-
-### Verification Workflow
-
-After SEO-related changes:
-
-1. run `npm run build`
-2. inspect generated files in `dist/`
-3. verify:
-   - prerendered HTML exists
-   - correct metadata exists
-   - canonical URLs are correct
-   - hreflang links are correct
-   - Open Graph tags exist
-   - structured data exists
-
----
-
-## Future Documentation Scaling
-
-As the project grows, operational guides may move into:
-
-```text
-docs/agents/
-    philosophy.md
-    seo.md
-    localization.md
-    media.md
-    recovery-workflow.md
+## HTML Standards
+
+Use semantic structure:
+
+```html
+<header>
+  <main>
+    <section>
+      <article>
+        <footer></footer>
+      </article>
+    </section>
+  </main>
+</header>
 ```
 
-`AGENTS.md` remains the primary high-level instruction file.
+Avoid div-heavy layouts when semantic elements exist.
+
+---
+
+## Accessibility
+
+Required:
+
+- proper heading hierarchy
+- alt text
+- keyboard accessibility
+- sufficient color contrast
+
+---
+
+# Repository Source of Truth
+
+Implementation must follow repository documents.
+
+No external assumptions.
+
+No invented business logic.
+
+No invented service offerings.
+
+No invented copy.
+
+---
+
+## Priority 1 — Core Business Documents
+
+Highest authority.
+
+- docs/business/BRAND.md
+- docs/business/POSITIONING.md
+- docs/business/SERVICES.md
+- docs/business/OFFER.md
+- docs/business/NOT_TO_DO.md
+- docs/business/SPEC.md
+
+If conflicts occur:
+
+BRAND.md overrides all documents.
+
+POSIITONING.md overrides implementation decisions.
+
+---
+
+## Priority 2 — Business Operations
+
+- docs/business/BUSINESS.md
+- docs/business/IDEAS.md
+- docs/business/OPERATING_SYSTEM.md
+- docs/business/DISCOVERY_CALL.md
+- docs/business/FAQ.md
+
+---
+
+## Priority 3 — Marketing Layer
+
+- docs/business/MARKETING.md
+- docs/business/CONTENT_STRATEGY.md
+- docs/business/CONTENT_PLAN_90D.md
+- docs/business/CASE_STUDIES.md
+- docs/business/LANDING_PAGE.md
+
+LANDING_PAGE.md is the primary homepage blueprint.
+
+Homepage structure should follow it unless explicitly instructed otherwise.
+
+---
+
+## Priority 4 — Delivery Artifacts
+
+Reference only.
+
+- docs/business/AUDIT_CHECKLIST.md
+
+- docs/templates/ASSESSMENT_TEMPLATE.md
+- docs/templates/CONTRACT_TEMPLATE.md
+- docs/templates/PROPOSAL_TEMPLATE.md
+- docs/templates/SOW_TEMPLATE.md
+- docs/templates/RUNBOOK_TEMPLATE.md
+- docs/templates/RECOVERY_GUIDE_TEMPLATE.md
+
+These documents explain methodology and deliverables.
+
+They do not define homepage layout.
+
+---
+
+# Routing Rules
+
+Only create routes supported by repository content.
+
+Do not invent pages.
+
+Possible routes may include:
+
+- /
+- /services
+- /case-studies
+- /faq
+- /contact
+
+Only if corresponding content exists.
+
+---
+
+# Content Generation Rules
+
+Never create:
+
+- fake case studies
+- fake metrics
+- fake client logos
+- fake reviews
+- fake partner badges
+
+Never exaggerate outcomes.
+
+Never promise:
+
+- zero risk
+- guaranteed success
+- guaranteed uptime
+
+Use precise engineering language.
+
+---
+
+# Final Principle
+
+Every implementation decision must reinforce:
+
+Business Continuity.
+
+Data Integrity.
+
+Operational Sustainability.
+
+If a design choice increases visual excitement but decreases credibility,
+
+choose credibility.
