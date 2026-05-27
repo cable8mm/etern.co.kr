@@ -6,13 +6,15 @@ Hero
 
 Problem
 
-Solutions
+Why Waiting Is Expensive
 
-Services
+Methodology
+
+Core Services
 
 Case Studies
 
-Process
+Why ETERNOps
 
 CTA
 
@@ -21,6 +23,8 @@ CTA
 # Services
 
 Overview
+
+Technical Assessment
 
 Commerce Migration
 
@@ -54,27 +58,31 @@ PHP Modernization Case
 
 # About
 
-Founder Story
+Why ETERNOps
 
-Philosophy
+Founder
 
 Experience
 
-Core Principles
+Principles
+
+Methodology
 
 ---
 
-# Blog
+# FAQ
 
-Technical Articles
+General Questions
 
-Migration
+Migration Questions
 
-Modernization
+Modernization Questions
 
-Operations
+Operations Questions
 
-Architecture
+Project Process Questions
+
+Pricing Questions
 
 ---
 

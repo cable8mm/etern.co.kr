@@ -1,137 +1,185 @@
 # AGENTS.md
 
-# ETERNOps
+# ETERNOps — Project Constitution & Agent Guideline
 
-Project Constitution
+Version 5.0
 
 ---
 
 # Mission
 
-Build and maintain the official website of ETERNOps.
+Build and maintain the official ETERNOps website (`https://etern.co.kr`).
 
-The website exists to establish trust with companies operating existing web and mobile services.
+The website exists to establish trust with business owners, executives, and technical decision-makers responsible for operating existing production systems.
 
-This is NOT a software agency website.
+ETERNOps specializes in:
 
-This is NOT a freelancer portfolio.
+- Migration
+- Modernization
+- Stabilization
 
-This is NOT a startup marketing website.
+of already-operating business systems.
 
-This is a consulting-focused website for technical modernization, migration, stabilization, and operational improvement.
+The objective of the website is not to entertain visitors.
 
----
-
-# Company Positioning
-
-ETERNOps helps organizations safely evolve existing production systems.
-
-Primary services:
-
-- Commerce Migration
-- PHP Modernization
-- WordPress Modernization
-- Mobile Modernization
-- Infrastructure Modernization
-- Service Recovery & Stabilization
-
-The company specializes in operational systems that are already in production.
-
-The company does not focus on building brand-new products from scratch.
+The objective is to communicate credibility, competence, operational maturity, and engineering discipline.
 
 ---
 
-# Core Message
+# Core Positioning
 
-운영 중인 웹·모바일 서비스를
-안전하게 다음 상태로 이동시킵니다.
+ETERNOps is NOT:
 
-Before rebuilding, understand.
+- a freelancer portfolio
+- a software outsourcing agency
+- a startup studio
+- a no-code agency
+- a marketing agency
+- a web design company
 
-Before replacing, evaluate.
+ETERNOps IS:
 
-Before migrating, plan.
+A specialized engineering practice focused on safely evolving production systems while preserving:
 
----
-
-# Target Customers
-
-Primary
-
-- Small and medium businesses
-- Ecommerce operators
-- Companies with legacy systems
-- Startups with existing products
-
-Common situations
-
-- Legacy technology
-- Missing documentation
-- Former developers unavailable
-- Migration requirements
-- Technical debt
-- Operational instability
-- Performance problems
-- Maintenance difficulties
+- Business Continuity
+- Data Integrity
+- Operational Sustainability
 
 ---
 
-# Brand Personality
+# Primary Audience
 
-Professional
+Decision makers responsible for existing systems.
 
-Experienced
+Examples:
 
-Practical
+- CEO
+- Founder
+- CTO
+- Technical Lead
+- Product Owner
+- Operations Manager
 
-Reliable
+Typical visitor concerns:
 
-Calm
+- legacy PHP systems
+- aging WordPress environments
+- commerce platform migration
+- infrastructure modernization
+- deployment instability
+- operational risk
+- disappearing maintainers
+- undocumented systems
+- database migration risk
 
-Business-oriented
+---
 
-Trustworthy
+# Non-Negotiable Business Rules
 
-The tone should communicate:
+## Never Sell Rebuilds
 
-"We have solved this kind of problem before."
+The website must never encourage:
+
+- complete rewrites
+- greenfield replacement projects
+- unnecessary platform replacement
+
+ETERNOps philosophy:
+
+> Understand before change.
+>
+> Recover before change.
+>
+> Preserve before replace.
+
+---
+
+## Discovery Call Restriction
+
+The only free offering is:
+
+### 30-Minute Free Discovery Call
+
+The agent must NEVER generate:
+
+- free audit offers
+- free technical assessments
+- free migration reports
+- free consulting packages
+- free architecture reviews
+
+without explicit instructions from repository source documents.
+
+---
+
+## No Fake Authority
+
+Never invent:
+
+- customers
+- case studies
+- testimonials
+- project counts
+- revenue figures
+- uptime statistics
+- migration numbers
+- certifications
+
+If evidence does not exist in repository documents,
+do not generate it.
+
+---
+
+# Tone & Writing Style
+
+Required qualities:
+
+- Professional
+- Calm
+- Senior
+- Practical
+- Direct
+- Trustworthy
+- Technical
+- Measured
+
+Preferred writing style:
+
+- short paragraphs
+- factual statements
+- minimal adjectives
+- high clarity
+- executive readability
 
 Avoid:
 
 - hype
-- exaggeration
-- startup buzzwords
-- trend chasing
-- artificial urgency
+- fear marketing
+- exaggerated urgency
+- startup language
+- marketing clichés
 
 ---
 
-# Writing Style
+# Forbidden Vocabulary
 
-Use short and direct sentences.
+Do not use:
 
-Prefer clarity over cleverness.
+- Revolutionary
+- Disruptive
+- Cutting-edge
+- Game-changing
+- Next-generation
+- World-class
+- Best-in-class
+- Unicorn
+- Hyper-growth
 
-Prefer practical language over marketing language.
-
-Avoid generic claims.
-
-Avoid meaningless adjectives.
-
-Avoid buzzwords such as:
-
-- revolutionary
-- disruptive
-- cutting-edge
-- game-changing
-- world-class
-- next generation
-
-Every statement should feel credible.
+unless directly quoted from source documents.
 
 ---
 
-# Design Philosophy
+# Design System Principles
 
 Content first.
 
@@ -139,257 +187,235 @@ Trust first.
 
 Readability first.
 
-Use whitespace generously.
+Visual hierarchy must support comprehension.
 
-Keep layouts simple.
+Website should resemble:
 
-Keep navigation obvious.
+- technical advisory firms
+- enterprise consulting firms
+- audit firms
+- professional legal services
 
-Use visual hierarchy instead of decoration.
-
-The site should feel closer to:
-
-- enterprise consulting
-- technical advisory
-- professional services
-
-than:
+More than:
 
 - startup landing pages
-- design portfolios
-- marketing agencies
+- agency portfolios
+- SaaS marketing sites
 
 ---
 
-# Visual Guidelines
+# Visual Constraints
 
 Preferred:
 
-- clean typography
-- restrained colors
-- strong spacing
-- structured layouts
-- subtle interactions
+- monochrome palette
+- charcoal
+- slate
+- neutral gray
+- restrained accent colors
 
-Avoid:
+Required:
 
-- flashy animations
+- generous whitespace
+- strong typography hierarchy
+- semantic layout
+- accessibility compliance
+
+Forbidden:
+
 - parallax effects
-- animated backgrounds
-- excessive gradients
-- startup illustrations
-- stock business people photos
-- decorative effects without purpose
+- decorative animations
+- auto-playing video
+- animated counters
+- flashy gradients
+- stock photography
+- fake dashboards
+- 3D illustrations
 
 ---
 
-# Content Structure
+# Engineering Standards
 
-Every page should answer:
+## Framework
 
-1. What problem exists?
-2. Why does it matter?
-3. How does ETERNOps help?
-4. What outcome can be expected?
-5. What action should the visitor take next?
+Use:
 
----
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
 
-# Case Studies
+Prefer:
 
-Case studies are critical.
-
-Every case study should contain:
-
-- Context
-- Problem
-- Analysis
-- Solution
-- Outcome
-- Lessons Learned
-
-Focus on:
-
-- business impact
-- operational impact
-- technical decision making
-
-Avoid purely technical storytelling.
+- Server Components
+- Static Rendering
+- Minimal Client Components
 
 ---
 
-# SEO Rules
+## Performance Targets
 
-Every page must include:
-
-- title
-- meta description
-- Open Graph metadata
-
-Use semantic HTML.
-
-Use proper heading hierarchy.
-
-Prefer descriptive URLs.
-
-Use structured content whenever possible.
-
-Target search intent rather than keyword stuffing.
-
----
-
-# Accessibility
-
-WCAG friendly.
-
-Keyboard accessible.
-
-Proper contrast ratios.
-
-Semantic elements preferred.
-
-Accessible forms.
-
-Accessible navigation.
-
----
-
-# Performance
-
-Target Lighthouse:
+Lighthouse Targets:
 
 - Performance > 90
 - Accessibility > 95
-- SEO > 95
 - Best Practices > 95
-
-Avoid unnecessary dependencies.
-
-Prefer static rendering when possible.
-
-Optimize images.
-
-Minimize JavaScript complexity.
+- SEO > 95
 
 ---
 
-# Technical Stack
+## HTML Standards
 
-Framework:
+Use semantic structure:
 
-- React
-- Vite
+```html
+<header>
+<main>
+<section>
+<article>
+<footer>
+```
 
-Language:
-
-- TypeScript
-
-Styling:
-
-- Tailwind CSS
-
-Routing:
-
-- React Router
-
-Deployment:
-
-- Static hosting compatible
+Avoid div-heavy layouts when semantic elements exist.
 
 ---
 
-# Component Principles
+## Accessibility
 
-Create reusable components.
+Required:
 
-Avoid page-specific duplication.
-
-Keep components small and composable.
-
-Prefer composition over complexity.
-
-Avoid premature abstractions.
+- proper heading hierarchy
+- alt text
+- keyboard accessibility
+- sufficient color contrast
 
 ---
 
-# Expected Pages
+# Repository Source of Truth
 
-Home
+Implementation must follow repository documents.
 
-Services
+No external assumptions.
 
-Case Studies
+No invented business logic.
 
-About
+No invented service offerings.
 
-Blog
-
-Contact
+No invented copy.
 
 ---
 
-# Navigation
+## Priority 1 — Core Business Documents
 
-Navigation should remain simple.
+Highest authority.
 
-Recommended structure:
+- docs/business/BRAND.md
+- docs/business/POSITIONING.md
+- docs/business/SERVICES.md
+- docs/business/OFFER.md
+- docs/business/NOT_TO_DO.md
+- docs/business/SPEC.md
 
-Home
+If conflicts occur:
 
-Services
+BRAND.md overrides all documents.
 
-Case Studies
-
-About
-
-Blog
-
-Contact
-
----
-
-# Non-Negotiable Rules
-
-The website must never feel like:
-
-- a freelancer portfolio
-- a software outsourcing company
-- a generic development agency
-- a startup landing page
-- a SaaS marketing website
-
-The website must consistently communicate:
-
-"We help existing services evolve safely."
-
-Every design and content decision should reinforce this message.
+POSIITONING.md overrides implementation decisions.
 
 ---
 
-# Source Documents
+## Priority 2 — Business Operations
 
-Use the following documents as the source of truth:
+- docs/business/BUSINESS.md
+- docs/business/IDEAS.md
+- docs/business/OPERATING_SYSTEM.md
+- docs/business/DISCOVERY_CALL.md
+- docs/business/FAQ.md
 
-docs/BRAND.md
+---
 
-docs/BUSINESS.md
+## Priority 3 — Marketing Layer
 
-docs/SERVICES.md
+- docs/business/MARKETING.md
+- docs/business/CONTENT_STRATEGY.md
+- docs/business/CONTENT_PLAN_90D.md
+- docs/business/CASE_STUDIES.md
+- docs/business/LANDING_PAGE.md
 
-docs/OFFER.md
+LANDING_PAGE.md is the primary homepage blueprint.
 
-docs/LANDING_PAGE.md
+Homepage structure should follow it unless explicitly instructed otherwise.
 
-docs/CASE_STUDIES.md
+---
 
-docs/FAQ.md
+## Priority 4 — Delivery Artifacts
 
-docs/SITE_MAP.md
+Reference only.
 
-When conflicts exist:
+- docs/business/AUDIT_CHECKLIST.md
 
-BRAND.md has highest priority.
+- docs/templates/ASSESSMENT_TEMPLATE.md
+- docs/templates/CONTRACT_TEMPLATE.md
+- docs/templates/PROPOSAL_TEMPLATE.md
+- docs/templates/SOW_TEMPLATE.md
+- docs/templates/RUNBOOK_TEMPLATE.md
+- docs/templates/RECOVERY_GUIDE_TEMPLATE.md
 
-BUSINESS.md is second.
+These documents explain methodology and deliverables.
 
-All implementation decisions should align with the brand positioning.
+They do not define homepage layout.
+
+---
+
+# Routing Rules
+
+Only create routes supported by repository content.
+
+Do not invent pages.
+
+Possible routes may include:
+
+- /
+- /services
+- /case-studies
+- /faq
+- /contact
+
+Only if corresponding content exists.
+
+---
+
+# Content Generation Rules
+
+Never create:
+
+- fake case studies
+- fake metrics
+- fake client logos
+- fake reviews
+- fake partner badges
+
+Never exaggerate outcomes.
+
+Never promise:
+
+- zero risk
+- guaranteed success
+- guaranteed uptime
+
+Use precise engineering language.
+
+---
+
+# Final Principle
+
+Every implementation decision must reinforce:
+
+Business Continuity.
+
+Data Integrity.
+
+Operational Sustainability.
+
+If a design choice increases visual excitement but decreases credibility,
+
+choose credibility.
