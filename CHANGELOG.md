@@ -1,5 +1,14 @@
 # Release Notes
 
+## v3.0.0 - 2026-05-27
+
+### What's Changed
+
+* feat: do rebranding by [@cable8mm](https://github.com/cable8mm) in https://github.com/eternops/etern.co.kr/pull/48
+* docs: do renew `README.md` by [@cable8mm](https://github.com/cable8mm) in https://github.com/eternops/etern.co.kr/pull/49
+
+**Full Changelog**: https://github.com/eternops/etern.co.kr/compare/v2.16.0...v3.0.0
+
 ## v2.16.0 - 2026-05-20
 
 ### What's Changed
