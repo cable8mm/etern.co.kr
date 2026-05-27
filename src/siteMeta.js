@@ -32,7 +32,7 @@ export const pageMeta = {
   '/faq': {
     title: 'FAQ | ETERNOps',
     description:
-      '문서 없는 시스템, 퇴사한 개발자, PHP5, 쇼핑몰 이전, 서버 접근 권한, 운영 중 작업에 대한 답변.',
+      '문서 없는 시스템, 개발자 퇴사, PHP 5.x 현대화, 쇼핑몰 데이터 이전, 접근 권한 분실, 운영 중 작업, 비용과 유지보수에 대한 답변.',
   },
   '/assessment': {
     title: 'Technical Assessment | ETERNOps',
