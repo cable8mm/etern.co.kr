@@ -1,58 +1,60 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import App from './App';
 
-describe('Legacy Revival Studio site', () => {
+describe('ETERNOps site', () => {
   beforeEach(() => {
-    window.history.pushState({}, '', '/en');
+    window.history.pushState({}, '', '/');
     window.scrollTo = vi.fn();
   });
 
   it('renders the landing page identity', () => {
     render(<App />);
 
-    expect(
-      screen.getAllByText(/Legacy Revival Studio/i).length,
-    ).toBeGreaterThan(0);
-    expect(
-      screen.getByText(/Old software can live again/i),
-    ).toBeInTheDocument();
-  });
-
-  it('renders the multi-page navigation', () => {
-    render(<App />);
-
-    expect(screen.getByRole('link', { name: 'Projects' })).toBeInTheDocument();
-    expect(
-      screen.getByRole('link', { name: 'Philosophy' }),
-    ).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Workflow' })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Services' })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'About' })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Contact' })).toBeInTheDocument();
-  });
-
-  it('navigates to the projects page without a router dependency', () => {
-    render(<App />);
-
-    fireEvent.click(screen.getByRole('link', { name: 'Projects' }));
-
-    expect(window.location.pathname).toBe('/en/projects');
+    expect(screen.getAllByText(/ETERNOps/i).length).toBeGreaterThan(0);
     expect(
       screen.getByRole('heading', {
-        name: /A growing archive of revived software/i,
+        name: /가동 중인 비즈니스의 영속성을 위한 기술 진화/i,
       }),
     ).toBeInTheDocument();
   });
 
-  it('renders a future-ready project detail route', () => {
-    window.history.pushState({}, '', '/en/projects/archive-record-template');
+  it('renders the primary navigation', () => {
+    render(<App />);
+
+    expect(screen.getByRole('link', { name: 'Services' })).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: 'Case Studies' }),
+    ).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'About' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'FAQ' })).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: 'Assessment' }),
+    ).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Contact' })).toBeInTheDocument();
+  });
+
+  it('navigates to the services page without a router dependency', () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole('link', { name: 'Services' }));
+
+    expect(window.location.pathname).toBe('/services');
+    expect(
+      screen.getByRole('heading', {
+        name: /운영 중인 서비스를 위한 Migration/i,
+      }),
+    ).toBeInTheDocument();
+  });
+
+  it('renders a service detail route', () => {
+    window.history.pushState({}, '', '/services/php-modernization');
 
     render(<App />);
 
     expect(
-      screen.getByRole('heading', { name: 'Archive Record Template' }),
+      screen.getByRole('heading', { name: 'PHP Modernization' }),
     ).toBeInTheDocument();
-    expect(screen.getByText(/Recovery notes/i)).toBeInTheDocument();
+    expect(screen.getByText(/PHP 버전 업그레이드/i)).toBeInTheDocument();
   });
 });
