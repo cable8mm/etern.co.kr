@@ -2,7 +2,7 @@ Read and follow AGENTS.md.
 
 Read every document inside /docs and use them as the source of truth.
 
-Redesign the existing Vite + React website into the official Next State Studio website.
+Redesign the existing Vite + React website into the official ETERNOps website.
 
 Goals:
 
