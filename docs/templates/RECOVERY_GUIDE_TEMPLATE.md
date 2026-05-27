@@ -6,15 +6,15 @@ Version 2.0
 
 # Project Information
 
-| Item | Value |
-|--------|--------|
-| Project Name | |
-| Customer | |
-| Environment | Production / Staging |
-| Last Updated | 2026-00-00 |
-| Prepared By | ETERNOps Lead Architect |
-| Emergency Contact | |
-| Secondary Contact | |
+| Item              | Value                   |
+| ----------------- | ----------------------- |
+| Project Name      |                         |
+| Customer          |                         |
+| Environment       | Production / Staging    |
+| Last Updated      | 2026-00-00              |
+| Prepared By       | ETERNOps Lead Architect |
+| Emergency Contact |                         |
+| Secondary Contact |                         |
 
 ---
 
@@ -86,11 +86,11 @@ Recovery Time Objective
 
 서비스 중단 허용 시간
 
-| Severity | Target |
-|----------|----------|
-| P0 Critical | 30분 이내 |
-| P1 High | 4시간 이내 |
-| P2 Medium | 1영업일 이내 |
+| Severity    | Target       |
+| ----------- | ------------ |
+| P0 Critical | 30분 이내    |
+| P1 High     | 4시간 이내   |
+| P2 Medium   | 1영업일 이내 |
 
 ---
 
@@ -100,11 +100,11 @@ Recovery Point Objective
 
 허용 가능한 데이터 손실 범위
 
-| System Type | Target |
-|-------------|---------|
+| System Type       | Target |
+| ----------------- | ------ |
 | Commerce Platform | 0~15분 |
-| CMS / WordPress | 1시간 |
-| Internal System | 협의 |
+| CMS / WordPress   | 1시간  |
+| Internal System   | 협의   |
 
 ---
 

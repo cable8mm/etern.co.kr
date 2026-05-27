@@ -269,10 +269,14 @@ Use semantic structure:
 
 ```html
 <header>
-<main>
-<section>
-<article>
-<footer>
+  <main>
+    <section>
+      <article>
+        <footer></footer>
+      </article>
+    </section>
+  </main>
+</header>
 ```
 
 Avoid div-heavy layouts when semantic elements exist.

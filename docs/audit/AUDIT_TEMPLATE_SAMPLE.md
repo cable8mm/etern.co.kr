@@ -8,12 +8,12 @@
 
 ## Assessment Information
 
-| Item | Value |
-|--------|--------|
-| Company | (주)올라커머스 (Olapet Shop) |
-| Service | 올라펫 반려동물 쇼핑몰 (Web + Mobile App) |
-| Assessment Date | 2026-05-26 |
-| Prepared By | ETERNOps Senior Architect |
+| Item            | Value                                     |
+| --------------- | ----------------------------------------- |
+| Company         | (주)올라커머스 (Olapet Shop)              |
+| Service         | 올라펫 반려동물 쇼핑몰 (Web + Mobile App) |
+| Assessment Date | 2026-05-26                                |
+| Prepared By     | ETERNOps Senior Architect                 |
 
 ---
 
@@ -29,12 +29,12 @@
 
 ## Risk Dashboard
 
-| Category | Score | Status |
-|-----------|-----------|-----------|
+| Category         | Score    | Status   |
+| ---------------- | -------- | -------- |
 | Development Risk | 90 / 100 | Critical |
 | Operational Risk | 85 / 100 | Critical |
-| Security Risk | 65 / 100 | High |
-| Data Risk | 90 / 100 | Critical |
+| Security Risk    | 65 / 100 | High     |
+| Data Risk        | 90 / 100 | Critical |
 
 ---
 
@@ -546,6 +546,6 @@ PHP 8.2+
 
 **Prepared by ETERNOps**
 
-*Migration · Modernization · Stabilization*
+_Migration · Modernization · Stabilization_
 
 운영 중인 웹·모바일 서비스를 안전하게 다음 상태(Next State)로 이동시킵니다.

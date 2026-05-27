@@ -26,13 +26,13 @@ docs/marketing/SITE_MAP.md
 
 1.
 
-docs/company/*
-docs/business/*
-docs/marketing/*
+docs/company/_
+docs/business/_
+docs/marketing/\*
 
 1.
 
-docs/templates/*
+docs/templates/\*
 (only as reference for services and deliverables)
 
 ==================================================

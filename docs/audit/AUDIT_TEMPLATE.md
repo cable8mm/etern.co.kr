@@ -320,7 +320,7 @@ ETERNOps 권장안
 ### [Current Architecture Diagram]
 
 - (여기에 Mermaid 다이어그램 코드 또는 정돈된 구조도 이미지 삽입)
-- *아키텍트 코멘트: 현재 프론트엔드와 백엔드가 단일 인스턴스에 결합되어 있어 트래픽 분산이 불가능한 구조입니다.*
+- _아키텍트 코멘트: 현재 프론트엔드와 백엔드가 단일 인스턴스에 결합되어 있어 트래픽 분산이 불가능한 구조입니다._
 
 ### [Infrastructure Topology]
 
@@ -333,7 +333,7 @@ ETERNOps 권장안
 ### [Production Database ERD]
 
 - (핵심 테이블 간의 관계도 또는 스키마 캡처 삽입)
-- *아키텍트 코멘트: 주문(Orders) 테이블과 결제(Payments) 테이블의 Foreign Key 인덱스가 누락되어 데이터 정합성 리스크가 높습니다.*
+- _아키텍트 코멘트: 주문(Orders) 테이블과 결제(Payments) 테이블의 Foreign Key 인덱스가 누락되어 데이터 정합성 리스크가 높습니다._
 
 ---
 
@@ -342,7 +342,7 @@ ETERNOps 권장안
 ### [Performance Profiling Report]
 
 - (구글 Lighthouse 성능 측정 스크린샷 또는 APM 병목 로깅 캡처)
-- *증적: 메인 페이지 진입 시 TTFB(첫 번째 바이트 수신 시간)가 3.2초로 계측됨.*
+- _증적: 메인 페이지 진입 시 TTFB(첫 번째 바이트 수신 시간)가 3.2초로 계측됨._
 
 ### [Runtime Compatibility & Dependency Inventory]
 
