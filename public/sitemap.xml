@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://etern.co.kr/</loc>
+    <loc>https://www.etern.co.kr/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://etern.co.kr/services</loc>
+    <loc>https://www.etern.co.kr/services</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://etern.co.kr/services/commerce-migration</loc>
+    <loc>https://www.etern.co.kr/services/commerce-migration</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://etern.co.kr/services/php-modernization</loc>
+    <loc>https://www.etern.co.kr/services/php-modernization</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://etern.co.kr/services/wordpress-modernization</loc>
+    <loc>https://www.etern.co.kr/services/wordpress-modernization</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://etern.co.kr/services/mobile-modernization</loc>
+    <loc>https://www.etern.co.kr/services/mobile-modernization</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://etern.co.kr/services/infrastructure-modernization</loc>
+    <loc>https://www.etern.co.kr/services/infrastructure-modernization</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://etern.co.kr/services/recovery-stabilization</loc>
+    <loc>https://www.etern.co.kr/services/recovery-stabilization</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://etern.co.kr/case-studies</loc>
+    <loc>https://www.etern.co.kr/case-studies</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://etern.co.kr/about</loc>
+    <loc>https://www.etern.co.kr/about</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://etern.co.kr/faq</loc>
+    <loc>https://www.etern.co.kr/faq</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://etern.co.kr/assessment</loc>
+    <loc>https://www.etern.co.kr/assessment</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://etern.co.kr/contact</loc>
+    <loc>https://www.etern.co.kr/contact</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>

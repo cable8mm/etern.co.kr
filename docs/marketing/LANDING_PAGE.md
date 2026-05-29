@@ -394,7 +394,7 @@ Migration Blueprint
 
 **Domain**
 
-<https://etern.co.kr>
+<https://www.etern.co.kr>
 
 ---
 
