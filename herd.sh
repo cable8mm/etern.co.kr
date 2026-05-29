@@ -28,9 +28,9 @@ if [ "$1" == "start" ] || [ -z "$1" ]; then
             echo "📝 [${SERVER_DISPLAY}] ${DOMAIN} (포트: ${PORT})에 대한 프록시 설정을 주입하는 중..."
             
             if grep -q "proxy_pass" "$NGINX_CONF"; then
-                sed -i '' "s|proxy_pass http://127.0.0.1:[0-9]*/;|proxy_pass http://127.0.0.1:${PORT}/;|g" "$NGINX_CONF"
+                sed -i '' "s|proxy_pass http://localhost:[0-9]*/;|proxy_pass http://localhost:${PORT}/;|g" "$NGINX_CONF"
             else
-                PROXY_BLOCK="    map \$sent_http_content_type \$expires {\n        \"text/html\"                 epoch;\n        \"text/html; charset=utf-8\"  epoch;\n        default                     off;\n    }\n\n    location / {\n        expires \$expires;\n        proxy_redirect                      off;\n        proxy_set_header Host               \$host;\n        proxy_set_header X-Real-IP          \$remote_addr;\n        proxy_set_header X-Forwarded-For    \$proxy_add_x_forwarded_for;\n        proxy_set_header X-Forwarded-Proto  \$scheme;\n        proxy_read_timeout          1m;\n        proxy_connect_timeout       1m;\n        proxy_pass                          http://127.0.0.1:${PORT};\n    }"
+                PROXY_BLOCK="    map \$sent_http_content_type \$expires {\n        \"text/html\"                 epoch;\n        \"text/html; charset=utf-8\"  epoch;\n        default                     off;\n    }\n\n    location / {\n        expires \$expires;\n        proxy_redirect                      off;\n        proxy_set_header Host               \$host;\n        proxy_set_header X-Real-IP          \$remote_addr;\n        proxy_set_header X-Forwarded-For    \$proxy_add_x_forwarded_for;\n        proxy_set_header X-Forwarded-Proto  \$scheme;\n        proxy_read_timeout          1m;\n        proxy_connect_timeout       1m;\n        proxy_pass                          http://localhost:${PORT};\n    }"
                 sed -i '' "s|location / {|${PROXY_BLOCK}\n\n    #_VALET_PROXY_DISABLED_# location / {|g" "$NGINX_CONF"
             fi
             
