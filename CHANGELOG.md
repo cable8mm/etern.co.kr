@@ -1,5 +1,13 @@
 # Release Notes
 
+## v3.0.1 - 2026-05-29
+
+### What's Changed
+
+* chore: change contact email to `ops@etern.co.kr` by [@cable8mm](https://github.com/cable8mm) in https://github.com/eternops/etern.co.kr/pull/50
+
+**Full Changelog**: https://github.com/eternops/etern.co.kr/compare/v3.0.0...v3.0.1
+
 ## v3.0.0 - 2026-05-27
 
 ### What's Changed
