@@ -6,13 +6,13 @@ Version 1.0
 
 # Project Information
 
-| Item            | Value                 |
-| --------------- | --------------------- |
-| Project         |                       |
-| Client          |                       |
-| Assessment Date |                       |
-| Lead Architect  | ETERNOps              |
-| Contact         | <contact@etern.co.kr> |
+| Item            | Value             |
+| --------------- | ----------------- |
+| Project         |                   |
+| Client          |                   |
+| Assessment Date |                   |
+| Lead Architect  | ETERNOps          |
+| Contact         | <ops@etern.co.kr> |
 
 ---
 

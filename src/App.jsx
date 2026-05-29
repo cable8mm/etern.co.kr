@@ -19,7 +19,7 @@ import {
 import { pageMeta } from './siteMeta';
 
 const baseTitle = 'ETERNOps';
-const contactEmail = 'contact@etern.co.kr';
+const contactEmail = 'ops@etern.co.kr';
 
 const navLinks = [
   { label: 'Services', href: '/services' },

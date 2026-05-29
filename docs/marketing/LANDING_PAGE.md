@@ -400,7 +400,7 @@ Migration Blueprint
 
 **Contact**
 
-<contact@etern.co.kr>
+<ops@etern.co.kr>
 
 ---
 
