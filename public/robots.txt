@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://etern.co.kr/sitemap.xml
+Sitemap: https://www.etern.co.kr/sitemap.xml
 #DaumWebMasterTool:0509b79accf03caea85cfaec9f3056f4b5c1c47b423cf7decfbb3b994b40db5b:URM8VDHRn3s/PsmUxT0Z+w==

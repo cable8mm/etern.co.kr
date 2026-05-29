@@ -9,7 +9,7 @@ const DIST_PATH = path.resolve(__dirname, 'dist');
 const CLIENT_DIST_PATH = path.resolve(DIST_PATH, 'client');
 const SERVER_DIST_PATH = path.resolve(DIST_PATH, 'server');
 
-const BASE_URL = 'https://etern.co.kr';
+const BASE_URL = 'https://www.etern.co.kr';
 
 fs.rmSync(DIST_PATH, { recursive: true, force: true });
 

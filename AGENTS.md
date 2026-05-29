@@ -8,7 +8,7 @@ Version 5.0
 
 # Mission
 
-Build and maintain the official ETERNOps website (`https://etern.co.kr`).
+Build and maintain the official ETERNOps website (`https://www.etern.co.kr`).
 
 The website exists to establish trust with business owners, executives, and technical decision-makers responsible for operating existing production systems.
 

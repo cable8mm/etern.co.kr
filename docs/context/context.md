@@ -285,7 +285,7 @@ Primary channels:
 
 Current website:
 
-<https://etern.co.kr>
+<https://www.etern.co.kr>
 
 Technology:
 

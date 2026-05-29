@@ -5,7 +5,7 @@
 
 ETERNOps는 운영 중인 웹·모바일 서비스의 Migration, Modernization, Stabilization을 전문으로 하는 기술 자문 및 엔지니어링 스튜디오입니다.
 
-본 저장소는 ETERNOps [공식 웹사이트(https://etern.co.kr)](https://etern.co.kr)의 소스 코드와 비즈니스 운영 문서, 엔지니어링 템플릿을 관리하는 단일 진실 공급원(Single Source of Truth)입니다.
+본 저장소는 ETERNOps [공식 웹사이트(https://www.etern.co.kr)](https://www.etern.co.kr)의 소스 코드와 비즈니스 운영 문서, 엔지니어링 템플릿을 관리하는 단일 진실 공급원(Single Source of Truth)입니다.
 
 ---
 
@@ -224,7 +224,7 @@ npm run preview
 
 Website
 
-<https://etern.co.kr>
+<https://www.etern.co.kr>
 
 Email
 
