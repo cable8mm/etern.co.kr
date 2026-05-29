@@ -1,5 +1,13 @@
 # Release Notes
 
+## v3.1.0 - 2026-05-29
+
+### What's Changed
+
+* chore: add prefix www by [@cable8mm](https://github.com/cable8mm) in https://github.com/eternops/etern.co.kr/pull/51
+
+**Full Changelog**: https://github.com/eternops/etern.co.kr/compare/v3.0.1...v3.1.0
+
 ## v3.0.1 - 2026-05-29
 
 ### What's Changed
